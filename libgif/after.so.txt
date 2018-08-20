@@ -1,6583 +1,6583 @@
 
-ter.so:     file format elf64-x86-64
-
-
-ly of section .init:
-
-0002000 <_init>:
-	endbr64 
-	sub    $0x8,%rsp
-	mov    0x7fd1(%rip),%rax        # 9fe0 <__gmon_start__>
-	test   %rax,%rax
-	je     2016 <_init+0x16>
-	callq  *%rax
-	add    $0x8,%rsp
-	retq   
-
-ly of section .plt:
-
-0002020 <.plt>:
-	pushq  0x7fe2(%rip)        # a008 <_GLOBAL_OFFSET_TABLE_+0x8>
-	jmpq   *0x7fe4(%rip)        # a010 <_GLOBAL_OFFSET_TABLE_+0x10>
-	nopl   0x0(%rax)
-
-0002030 <free@plt>:
-	jmpq   *0x7fe2(%rip)        # a018 <free@GLIBC_2.2.5>
-	pushq  $0x0
-	jmpq   2020 <.plt>
-
-0002040 <DGifExtensionToGCB@plt>:
-	jmpq   *0x7fda(%rip)        # a020 <DGifExtensionToGCB@@Base+0x6560>
-	pushq  $0x1
-	jmpq   2020 <.plt>
-
-0002050 <__errno_location@plt>:
-	jmpq   *0x7fd2(%rip)        # a028 <__errno_location@GLIBC_2.2.5>
-	pushq  $0x2
-	jmpq   2020 <.plt>
-
-0002060 <strncmp@plt>:
-	jmpq   *0x7fca(%rip)        # a030 <strncmp@GLIBC_2.2.5>
-	pushq  $0x3
-	jmpq   2020 <.plt>
-
-0002070 <GifAddExtensionBlock@plt>:
-	jmpq   *0x7fc2(%rip)        # a038 <GifAddExtensionBlock@@Base+0x3798>
-	pushq  $0x4
-	jmpq   2020 <.plt>
-
-0002080 <strcpy@plt>:
-	jmpq   *0x7fba(%rip)        # a040 <strcpy@GLIBC_2.2.5>
-	pushq  $0x5
-	jmpq   2020 <.plt>
-
-0002090 <qsort@plt>:
-	jmpq   *0x7fb2(%rip)        # a048 <qsort@GLIBC_2.2.5>
-	pushq  $0x6
-	jmpq   2020 <.plt>
-
-00020a0 <GifFreeMapObject@plt>:
-	jmpq   *0x7faa(%rip)        # a050 <GifFreeMapObject@@Base+0x3ae0>
-	pushq  $0x7
-	jmpq   2020 <.plt>
-
-00020b0 <fread@plt>:
-	jmpq   *0x7fa2(%rip)        # a058 <fread@GLIBC_2.2.5>
-	pushq  $0x8
-	jmpq   2020 <.plt>
-
-00020c0 <DGifGetLine@plt>:
-	jmpq   *0x7f9a(%rip)        # a060 <DGifGetLine@@Base+0x6af0>
-	pushq  $0x9
-	jmpq   2020 <.plt>
-
-00020d0 <fclose@plt>:
-	jmpq   *0x7f92(%rip)        # a068 <fclose@GLIBC_2.2.5>
-	pushq  $0xa
-	jmpq   2020 <.plt>
-
-00020e0 <GifDrawText8x8@plt>:
-	jmpq   *0x7f8a(%rip)        # a070 <GifDrawText8x8@@Base+0x40d0>
-	pushq  $0xb
-	jmpq   2020 <.plt>
-
-00020f0 <EGifPutExtensionTrailer@plt>:
-	jmpq   *0x7f82(%rip)        # a078 <EGifPutExtensionTrailer@@Base+0x4b88>
-	pushq  $0xc
-	jmpq   2020 <.plt>
-
-0002100 <strlen@plt>:
-	jmpq   *0x7f7a(%rip)        # a080 <strlen@GLIBC_2.2.5>
-	pushq  $0xd
-	jmpq   2020 <.plt>
-
-0002110 <EGifOpenFileHandle@plt>:
-	jmpq   *0x7f72(%rip)        # a088 <EGifOpenFileHandle@@Base+0x5ba8>
-	pushq  $0xe
-	jmpq   2020 <.plt>
-
-0002120 <FreeLastSavedImage@plt>:
-	jmpq   *0x7f6a(%rip)        # a090 <FreeLastSavedImage@@Base+0x3450>
-	pushq  $0xf
-	jmpq   2020 <.plt>
-
-0002130 <EGifPutExtension@plt>:
-	jmpq   *0x7f62(%rip)        # a098 <EGifPutExtension@@Base+0x4b68>
-	pushq  $0x10
-	jmpq   2020 <.plt>
-
-0002140 <EGifGCBToExtension@plt>:
-	jmpq   *0x7f5a(%rip)        # a0a0 <EGifGCBToExtension@@Base+0x49e0>
-	pushq  $0x11
-	jmpq   2020 <.plt>
-
-0002150 <memset@plt>:
-	jmpq   *0x7f52(%rip)        # a0a8 <memset@GLIBC_2.2.5>
-	pushq  $0x12
-	jmpq   2020 <.plt>
-
-0002160 <EGifPutLine@plt>:
-	jmpq   *0x7f4a(%rip)        # a0b0 <EGifPutLine@@Base+0x4ea0>
-	pushq  $0x13
-	jmpq   2020 <.plt>
-
-0002170 <close@plt>:
-	jmpq   *0x7f42(%rip)        # a0b8 <close@GLIBC_2.2.5>
-	pushq  $0x14
-	jmpq   2020 <.plt>
-
-0002180 <memcmp@plt>:
-	jmpq   *0x7f3a(%rip)        # a0c0 <memcmp@GLIBC_2.2.5>
-	pushq  $0x15
-	jmpq   2020 <.plt>
-
-0002190 <calloc@plt>:
-	jmpq   *0x7f32(%rip)        # a0c8 <calloc@GLIBC_2.2.5>
-	pushq  $0x16
-	jmpq   2020 <.plt>
-
-00021a0 <_InitHashTable@plt>:
-	jmpq   *0x7f2a(%rip)        # a0d0 <_InitHashTable@@Base+0x3d80>
-	pushq  $0x17
-	jmpq   2020 <.plt>
-
-00021b0 <memcpy@plt>:
-	jmpq   *0x7f22(%rip)        # a0d8 <memcpy@GLIBC_2.14>
-	pushq  $0x18
-	jmpq   2020 <.plt>
-
-00021c0 <EGifPutExtensionBlock@plt>:
-	jmpq   *0x7f1a(%rip)        # a0e0 <EGifPutExtensionBlock@@Base+0x4c70>
-	pushq  $0x19
-	jmpq   2020 <.plt>
-
-00021d0 <EGifPutCodeNext@plt>:
-	jmpq   *0x7f12(%rip)        # a0e8 <EGifPutCodeNext@@Base+0x4ac8>
-	pushq  $0x1a
-	jmpq   2020 <.plt>
-
-00021e0 <DGifGetScreenDesc@plt>:
-	jmpq   *0x7f0a(%rip)        # a0f0 <DGifGetScreenDesc@@Base+0x7270>
-	pushq  $0x1b
-	jmpq   2020 <.plt>
-
-00021f0 <GifBitSize@plt>:
-	jmpq   *0x7f02(%rip)        # a0f8 <GifBitSize@@Base+0x38b8>
-	pushq  $0x1c
-	jmpq   2020 <.plt>
-
-0002200 <reallocarray@plt>:
-	jmpq   *0x7efa(%rip)        # a100 <reallocarray@@Base+0x3430>
-	pushq  $0x1d
-	jmpq   2020 <.plt>
-
-0002210 <_ExistsHashTable@plt>:
-	jmpq   *0x7ef2(%rip)        # a108 <_ExistsHashTable@@Base+0x3cf8>
-	pushq  $0x1e
-	jmpq   2020 <.plt>
-
-0002220 <malloc@plt>:
-	jmpq   *0x7eea(%rip)        # a110 <malloc@GLIBC_2.2.5>
-	pushq  $0x1f
-	jmpq   2020 <.plt>
-
-0002230 <EGifPutImageDesc@plt>:
-	jmpq   *0x7ee2(%rip)        # a118 <EGifPutImageDesc@@Base+0x5268>
-	pushq  $0x20
-	jmpq   2020 <.plt>
-
-0002240 <GifDrawRectangle@plt>:
-	jmpq   *0x7eda(%rip)        # a120 <GifDrawRectangle@@Base+0x4040>
-	pushq  $0x21
-	jmpq   2020 <.plt>
-
-0002250 <EGifPutExtensionLeader@plt>:
-	jmpq   *0x7ed2(%rip)        # a128 <EGifPutExtensionLeader@@Base+0x4cf8>
-	pushq  $0x22
-	jmpq   2020 <.plt>
-
-0002260 <realloc@plt>:
-	jmpq   *0x7eca(%rip)        # a130 <realloc@GLIBC_2.2.5>
-	pushq  $0x23
-	jmpq   2020 <.plt>
-
-0002270 <fdopen@plt>:
-	jmpq   *0x7ec2(%rip)        # a138 <fdopen@GLIBC_2.2.5>
-	pushq  $0x24
-	jmpq   2020 <.plt>
-
-0002280 <GifMakeMapObject@plt>:
-	jmpq   *0x7eba(%rip)        # a140 <GifMakeMapObject@@Base+0x3ca0>
-	pushq  $0x25
-	jmpq   2020 <.plt>
-
-0002290 <GifFreeExtensions@plt>:
-	jmpq   *0x7eb2(%rip)        # a148 <GifFreeExtensions@@Base+0x37b8>
-	pushq  $0x26
-	jmpq   2020 <.plt>
-
-00022a0 <_InsertHashTable@plt>:
-	jmpq   *0x7eaa(%rip)        # a150 <_InsertHashTable@@Base+0x3db0>
-	pushq  $0x27
-	jmpq   2020 <.plt>
-
-00022b0 <EGifGetGifVersion@plt>:
-	jmpq   *0x7ea2(%rip)        # a158 <EGifGetGifVersion@@Base+0x5738>
-	pushq  $0x28
-	jmpq   2020 <.plt>
-
-00022c0 <open@plt>:
-	jmpq   *0x7e9a(%rip)        # a160 <open@GLIBC_2.2.5>
-	pushq  $0x29
-	jmpq   2020 <.plt>
-
-00022d0 <DGifGetExtensionNext@plt>:
-	jmpq   *0x7e92(%rip)        # a168 <DGifGetExtensionNext@@Base+0x69a8>
-	pushq  $0x2a
-	jmpq   2020 <.plt>
-
-00022e0 <strtok@plt>:
-	jmpq   *0x7e8a(%rip)        # a170 <strtok@GLIBC_2.2.5>
-	pushq  $0x2b
-	jmpq   2020 <.plt>
-
-00022f0 <GifFreeSavedImages@plt>:
-	jmpq   *0x7e82(%rip)        # a178 <GifFreeSavedImages@@Base+0x35d8>
-	pushq  $0x2c
-	jmpq   2020 <.plt>
-
-0002300 <DGifGetCodeNext@plt>:
-	jmpq   *0x7e7a(%rip)        # a180 <DGifGetCodeNext@@Base+0x68a0>
-	pushq  $0x2d
-	jmpq   2020 <.plt>
-
-0002310 <GifDrawBox@plt>:
-	jmpq   *0x7e72(%rip)        # a188 <GifDrawBox@@Base+0x4118>
-	pushq  $0x2e
-	jmpq   2020 <.plt>
-
-0002320 <EGifCloseFile@plt>:
-	jmpq   *0x7e6a(%rip)        # a190 <EGifCloseFile@@Base+0x5690>
-	pushq  $0x2f
-	jmpq   2020 <.plt>
-
-0002330 <fwrite@plt>:
-	jmpq   *0x7e62(%rip)        # a198 <fwrite@GLIBC_2.2.5>
-	pushq  $0x30
-	jmpq   2020 <.plt>
-
-0002340 <DGifGetRecordType@plt>:
-	jmpq   *0x7e5a(%rip)        # a1a0 <DGifGetRecordType@@Base+0x70e0>
-	pushq  $0x31
-	jmpq   2020 <.plt>
-
-0002350 <DGifOpenFileHandle@plt>:
-	jmpq   *0x7e52(%rip)        # a1a8 <DGifOpenFileHandle@@Base+0x7ce8>
-	pushq  $0x32
-	jmpq   2020 <.plt>
-
-0002360 <_ClearHashTable@plt>:
-	jmpq   *0x7e4a(%rip)        # a1b0 <_ClearHashTable@@Base+0x3e30>
-	pushq  $0x33
-	jmpq   2020 <.plt>
-
-0002370 <DGifGetExtension@plt>:
-	jmpq   *0x7e42(%rip)        # a1b8 <DGifGetExtension@@Base+0x6aa8>
-	pushq  $0x34
-	jmpq   2020 <.plt>
-
-0002380 <DGifGetImageDesc@plt>:
-	jmpq   *0x7e3a(%rip)        # a1c0 <DGifGetImageDesc@@Base+0x7000>
-	pushq  $0x35
-	jmpq   2020 <.plt>
-
-0002390 <EGifPutScreenDesc@plt>:
-	jmpq   *0x7e32(%rip)        # a1c8 <EGifPutScreenDesc@@Base+0x5588>
-	pushq  $0x36
-	jmpq   2020 <.plt>
-
-ly of section .text:
-
-00023a0 <deregister_tm_clones>:
-	lea    0x7e31(%rip),%rdi        # a1d8 <__TMC_END__>
-	lea    0x7e2a(%rip),%rax        # a1d8 <__TMC_END__>
-	cmp    %rdi,%rax
-	je     23c8 <deregister_tm_clones+0x28>
-	mov    0x7c1e(%rip),%rax        # 9fd8 <_ITM_deregisterTMCloneTable>
-	test   %rax,%rax
-	je     23c8 <deregister_tm_clones+0x28>
-	jmpq   *%rax
-	nopl   0x0(%rax)
-	retq   
-	nopl   0x0(%rax)
-
-00023d0 <register_tm_clones>:
-	lea    0x7e01(%rip),%rdi        # a1d8 <__TMC_END__>
-	lea    0x7dfa(%rip),%rsi        # a1d8 <__TMC_END__>
-	sub    %rdi,%rsi
-	sar    $0x3,%rsi
-	mov    %rsi,%rax
-	shr    $0x3f,%rax
-	add    %rax,%rsi
-	sar    %rsi
-	je     2408 <register_tm_clones+0x38>
-	mov    0x7bf5(%rip),%rax        # 9ff0 <_ITM_registerTMCloneTable>
-	test   %rax,%rax
-	je     2408 <register_tm_clones+0x38>
-	jmpq   *%rax
-	nopw   0x0(%rax,%rax,1)
-	retq   
-	nopl   0x0(%rax)
-
-0002410 <__do_global_dtors_aux>:
-	endbr64 
-	cmpb   $0x0,0x7dbd(%rip)        # a1d8 <__TMC_END__>
-	jne    2450 <__do_global_dtors_aux+0x40>
-	push   %rbp
-	cmpq   $0x0,0x7bd2(%rip)        # 9ff8 <__cxa_finalize@GLIBC_2.2.5>
-	mov    %rsp,%rbp
-	je     2438 <__do_global_dtors_aux+0x28>
-	mov    0x7d9e(%rip),%rdi        # a1d0 <__dso_handle>
-	callq  *0x7bc0(%rip)        # 9ff8 <__cxa_finalize@GLIBC_2.2.5>
-	callq  23a0 <deregister_tm_clones>
-	movb   $0x1,0x7d94(%rip)        # a1d8 <__TMC_END__>
-	pop    %rbp
-	retq   
-	nopw   %cs:0x0(%rax,%rax,1)
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nopl   0x0(%rax)
-
-0002460 <frame_dummy>:
-	endbr64 
-	jmpq   23d0 <register_tm_clones>
-	nopl   0x0(%rax)
-
-0002470 <DGifOpenFileName>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x10,%rsp
-	mov    %r15,-0x8(%rbp)
-	mov    %rsi,%r15
-	xor    %eax,%eax
-	mov    %rax,%rsi
-	callq  22c0 <open@plt>
-	cmp    $0xffffffff,%eax
-	je     249f <DGifOpenFileName+0x2f>
-	mov    %r15,%rsi
-	mov    %rax,%rdi
-	callq  2350 <DGifOpenFileHandle@plt>
-	mov    -0x8(%rbp),%r15
-	leaveq 
-	retq   
-	test   %r15,%r15
-	jne    24ac <DGifOpenFileName+0x3c>
-	xor    %eax,%eax
-	mov    -0x8(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x65,(%r15)
-	xor    %eax,%eax
-	mov    -0x8(%rbp),%r15
-	leaveq 
-	retq   
-	nopl   0x0(%rax,%rax,1)
-
-00024c0 <DGifOpenFileHandle>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x40,%rsp
-	mov    %r14,-0x28(%rbp)
-	mov    %r15,-0x30(%rbp)
-	xor    %eax,%eax
-	mov    %rax,-0x10(%rbp)
-	mov    %r13,%r14
-	mov    %rdi,%r13
-	mov    %rsi,%r15
-	mov    $0x78,%edi
-	callq  2220 <malloc@plt>
-	test   %rax,%rax
-	je     260c <DGifOpenFileHandle+0x14c>
-	mov    %rax,%rdi
-	xor    %esi,%esi
-	mov    %r14,-0x20(%rbp)
-	mov    %rax,%r14
-	mov    $0x78,%edx
-	callq  2150 <memset@plt>
-	movq   $0x0,0x48(%r14)
-	movq   $0x0,0x18(%r14)
-	mov    $0x1,%edi
-	mov    %rdi,-0x8(%rbp)
-	mov    $0x6168,%esi
-	callq  2190 <calloc@plt>
-	test   %rax,%rax
-	je     262f <DGifOpenFileHandle+0x16f>
-	mov    %rax,%rdi
-	xor    %esi,%esi
-	mov    %r12,-0x18(%rbp)
-	mov    %rax,%r12
-	mov    $0x6168,%edx
-	callq  2150 <memset@plt>
-	lea    0x5aaf(%rip),%rsi        # 8000 <_fini+0x9d8>
-	mov    %r13,%rdi
-	callq  2270 <fdopen@plt>
-	mov    %r12,0x70(%r14)
-	mov    %r13d,0x4(%r12)
-	mov    %rax,0x40(%r12)
-	movl   $0x8,(%r12)
-	movq   $0x0,0x48(%r12)
-	movq   $0x0,0x68(%r14)
-	mov    %rax,%r13
-	lea    -0x37(%rbp),%rdi
-	mov    $0x6,%edx
-	mov    $0x1,%esi
-	mov    %r13,%rcx
-	callq  20b0 <fread@plt>
-	cmp    $0x6,%rax
-	jne    265b <DGifOpenFileHandle+0x19b>
-	movb   $0x0,-0x31(%rbp)
-	lea    0x5a55(%rip),%rdi        # 8003 <_fini+0x9db>
-	lea    -0x37(%rbp),%rsi
-	mov    $0x3,%edx
-	callq  2060 <strncmp@plt>
-	test   %eax,%eax
-	jne    2693 <DGifOpenFileHandle+0x1d3>
-	mov    %r14,%rdi
-	callq  21e0 <DGifGetScreenDesc@plt>
-	test   %eax,%eax
-	je     26cb <DGifOpenFileHandle+0x20b>
-	movl   $0x0,0x60(%r14)
-	movsbq -0x34(%rbp),%rax
-	cmp    $0x39,%al
-	jne    25eb <DGifOpenFileHandle+0x12b>
-	pushq  -0x8(%rbp)
-	popq   -0x10(%rbp)
-	mov    -0x10(%rbp),%rax
-	mov    %al,0x6160(%r12)
-	mov    %r14,%rax
-	mov    -0x18(%rbp),%r12
-	mov    -0x20(%rbp),%r13
-	mov    -0x30(%rbp),%r15
-	mov    -0x28(%rbp),%r14
-	leaveq 
-	retq   
-	test   %r15,%r15
-	je     2618 <DGifOpenFileHandle+0x158>
-	movl   $0x6d,(%r15)
-	mov    %r13,%rdi
-	mov    %r14,%r13
-	callq  2170 <close@plt>
-	xor    %eax,%eax
-	mov    -0x30(%rbp),%r15
-	mov    -0x28(%rbp),%r14
-	leaveq 
-	retq   
-	test   %r15,%r15
-	je     263b <DGifOpenFileHandle+0x17b>
-	movl   $0x6d,(%r15)
-	mov    %r13,%rdi
-	callq  2170 <close@plt>
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	mov    -0x20(%rbp),%r13
-	xor    %eax,%eax
-	mov    -0x30(%rbp),%r15
-	mov    -0x28(%rbp),%r14
-	leaveq 
-	retq   
-	test   %r15,%r15
-	je     2667 <DGifOpenFileHandle+0x1a7>
-	movl   $0x66,(%r15)
-	mov    %r13,%rdi
-	callq  20d0 <fclose@plt>
-	mov    %r12,%rdi
-	callq  2030 <free@plt>
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	mov    -0x18(%rbp),%r12
-	mov    -0x20(%rbp),%r13
-	xor    %eax,%eax
-	mov    -0x30(%rbp),%r15
-	mov    -0x28(%rbp),%r14
-	leaveq 
-	retq   
-	test   %r15,%r15
-	je     269f <DGifOpenFileHandle+0x1df>
-	movl   $0x67,(%r15)
-	mov    %r13,%rdi
-	callq  20d0 <fclose@plt>
-	mov    %r12,%rdi
-	callq  2030 <free@plt>
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	mov    -0x18(%rbp),%r12
-	mov    -0x20(%rbp),%r13
-	xor    %eax,%eax
-	mov    -0x30(%rbp),%r15
-	mov    -0x28(%rbp),%r14
-	leaveq 
-	retq   
-	mov    %r13,%rdi
-	callq  20d0 <fclose@plt>
-	mov    %r12,%rdi
-	callq  2030 <free@plt>
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	mov    -0x18(%rbp),%r12
-	mov    -0x20(%rbp),%r13
-	xor    %eax,%eax
-	mov    -0x30(%rbp),%r15
-	mov    -0x28(%rbp),%r14
-	leaveq 
-	retq   
-	nopw   0x0(%rax,%rax,1)
-
-0002700 <DGifSlurp>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x80,%rsp
-	mov    %r15,-0x28(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %rbx,-0x8(%rbp)
-	mov    %rdi,%r12
-	lea    0x58(%r12),%rbx
-	movq   $0x0,(%rbx)
-	lea    0x50(%r12),%r14
-	movl   $0x0,(%r14)
-	lea    -0x74(%rbp),%rsi
-	lea    -0x64(%rbp),%r15
-	mov    $0x7fffffff,%eax
-	cltd   
-	mov    %rdx,-0x40(%rbp)
-	jmp    2775 <DGifSlurp+0x75>
-	mov    -0x74(%rbp),%eax
-	cmp    $0x2,%eax
-	je     279c <DGifSlurp+0x9c>
-	cmp    $0x3,%eax
-	je     284d <DGifSlurp+0x14d>
-	mov    %r13,%rdx
-	xor    %r13d,%r13d
-	mov    -0x74(%rbp),%eax
-	cmp    $0x4,%eax
-	je     287c <DGifSlurp+0x17c>
-	lea    -0x74(%rbp),%rsi
-	mov    %rdx,%r13
-	mov    %r12,%rdi
-	callq  2340 <DGifGetRecordType@plt>
-	test   %eax,%eax
-	jne    274e <DGifSlurp+0x4e>
-	xor    %eax,%eax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	mov    %r13,%r15
-	mov    %r12,%rdi
-	callq  2380 <DGifGetImageDesc@plt>
-	test   %eax,%eax
-	je     28a4 <DGifSlurp+0x1a4>
-	movslq 0x20(%r12),%rax
-	add    $0xffffffff,%eax
-	movslq %eax,%rcx
-	lea    (%rcx,%rcx,2),%rax
-	shl    $0x4,%rax
-	lea    (%rax,%rcx,8),%r13
-	add    0x48(%r12),%r13
-	movslq 0x8(%r13),%rsi
-	test   %esi,%esi
-	jns    27ed <DGifSlurp+0xed>
-	movslq 0xc(%r13),%rcx
-	test   %ecx,%ecx
-	jns    27ed <DGifSlurp+0xed>
-	mov    $0x7fffffff,%eax
-	mov    %r15,%rdx
-	idiv   %ecx
-	cmp    %eax,%esi
-	jg     28bc <DGifSlurp+0x1bc>
-	movslq 0xc(%r13),%r15
-	imul   0x8(%r13),%r15d
-	movslq %r15d,%rsi
-	xor    %edi,%edi
-	mov    $0x1,%edx
-	callq  2200 <reallocarray@plt>
-	mov    %rax,0x20(%r13)
-	test   %rax,%rax
-	je     28d4 <DGifSlurp+0x1d4>
-	movzbl 0x10(%r13),%ecx
-	test   %cl,%cl
-	jne    28ec <DGifSlurp+0x1ec>
-	mov    %r15,%rdx
-	mov    %rax,%rsi
-	mov    %r12,%rdi
-	callq  20c0 <DGifGetLine@plt>
-	test   %eax,%eax
-	jne    2975 <DGifSlurp+0x275>
-	xor    %eax,%eax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	mov    %r12,%rdi
-	mov    %r15,%rsi
-	lea    -0x70(%rbp),%r15
-	mov    %r15,%rdx
-	callq  2370 <DGifGetExtension@plt>
-	test   %eax,%eax
-	je     2991 <DGifSlurp+0x291>
-	mov    -0x70(%rbp),%rax
-	test   %rax,%rax
-	jne    29a9 <DGifSlurp+0x2a9>
-	xor    %r13d,%r13d
-	jmpq   29ec <DGifSlurp+0x2ec>
-	movslq 0x20(%r12),%rax
-	test   %eax,%eax
-	je     2a02 <DGifSlurp+0x302>
-	mov    $0x1,%eax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	xor    %eax,%eax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	xor    %eax,%eax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	xor    %eax,%eax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	movabs $0x400000000,%rax
-	mov    %rax,-0x60(%rbp)
-	movabs $0x100000002,%rax
-	mov    %rax,-0x58(%rbp)
-	movabs $0x800000008,%rax
-	mov    %rax,-0x50(%rbp)
-	movabs $0x200000004,%rax
-	mov    %rax,-0x48(%rbp)
-	mov    %rbx,-0x38(%rbp)
-	mov    %r14,-0x30(%rbp)
-	xor    %r14d,%r14d
-	jmp    2963 <DGifSlurp+0x263>
-	movslq 0x8(%r13),%rdx
-	mov    %rdx,%rax
-	imul   %ebx,%eax
-	movslq %eax,%rsi
-	add    0x20(%r13),%rsi
-	mov    %r12,%rdi
-	callq  20c0 <DGifGetLine@plt>
-	test   %eax,%eax
-	je     2a24 <DGifSlurp+0x324>
-	add    -0x50(%rbp,%r15,4),%ebx
-	movslq 0xc(%r13),%rax
-	cmp    %ebx,%eax
-	jg     2931 <DGifSlurp+0x231>
-	add    $0x1,%r14d
-	cmp    $0x3,%r14d
-	jle    2a3c <DGifSlurp+0x33c>
-	mov    -0x30(%rbp),%r14
-	mov    -0x38(%rbp),%rbx
-	mov    (%rbx),%rax
-	test   %rax,%rax
-	jne    2a49 <DGifSlurp+0x349>
-	mov    -0x40(%rbp),%rdx
-	lea    -0x64(%rbp),%r15
-	xor    %r13d,%r13d
-	jmpq   2765 <DGifSlurp+0x65>
-	xor    %eax,%eax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	movslq -0x64(%rbp),%rdx
-	movzbl (%rax),%ecx
-	lea    0x1(%rax),%r8
-	mov    %r14,%rdi
-	mov    %rbx,%rsi
-	callq  2070 <GifAddExtensionBlock@plt>
-	test   %eax,%eax
-	je     2a72 <DGifSlurp+0x372>
-	xor    %r13d,%r13d
-	jmp    29ec <DGifSlurp+0x2ec>
-	mov    %r12,%rdi
-	mov    %r15,%rsi
-	callq  22d0 <DGifGetExtensionNext@plt>
-	test   %eax,%eax
-	je     2a8a <DGifSlurp+0x38a>
-	mov    -0x70(%rbp),%rax
-	test   %rax,%rax
-	jne    2aa3 <DGifSlurp+0x3a3>
-	mov    -0x70(%rbp),%rax
-	test   %rax,%rax
-	jne    29cc <DGifSlurp+0x2cc>
-	mov    -0x40(%rbp),%rdx
-	lea    -0x64(%rbp),%r15
-	jmpq   2765 <DGifSlurp+0x65>
-	movl   $0x69,0x60(%r12)
-	mov    %r13,%rax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	xor    %eax,%eax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	movslq %r14d,%r15
-	movslq -0x60(%rbp,%r15,4),%rbx
-	jmpq   2957 <DGifSlurp+0x257>
-	mov    %rax,0x30(%r13)
-	movslq (%r14),%rax
-	mov    %eax,0x28(%r13)
-	movq   $0x0,(%rbx)
-	movl   $0x0,(%r14)
-	mov    -0x40(%rbp),%rdx
-	lea    -0x64(%rbp),%r15
-	xor    %r13d,%r13d
-	jmpq   2765 <DGifSlurp+0x65>
-	xor    %eax,%eax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	mov    %r13,%rax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	movzbl (%rax),%ecx
-	lea    0x1(%rax),%r8
-	mov    %r14,%rdi
-	mov    %rbx,%rsi
-	mov    %r13,%rdx
-	callq  2070 <GifAddExtensionBlock@plt>
-	test   %eax,%eax
-	jne    29ec <DGifSlurp+0x2ec>
-	mov    %r13,%rax
-	mov    -0x8(%rbp),%rbx
-	mov    -0x10(%rbp),%r12
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	nopl   0x0(%rax)
-
-0002ae0 <DGifOpen>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x40,%rsp
-	mov    %r15,-0x28(%rbp)
-	mov    %rsi,-0x38(%rbp)
-	mov    %rdi,-0x30(%rbp)
-	xor    %eax,%eax
-	mov    %rax,-0x10(%rbp)
-	mov    %r14,%r15
-	mov    %r13,%r14
-	mov    %rdx,%r13
-	mov    $0x78,%edi
-	callq  2220 <malloc@plt>
-	test   %rax,%rax
-	je     2b74 <DGifOpen+0x94>
-	mov    %rax,%rdi
-	xor    %esi,%esi
-	mov    %r15,-0x20(%rbp)
-	mov    %rax,%r15
-	mov    $0x78,%edx
-	callq  2150 <memset@plt>
-	movq   $0x0,0x48(%r15)
-	movq   $0x0,0x18(%r15)
-	mov    $0x1,%edi
-	mov    %rdi,-0x8(%rbp)
-	mov    $0x6168,%esi
-	callq  2190 <calloc@plt>
-	test   %rax,%rax
-	jne    2b87 <DGifOpen+0xa7>
-	test   %r13,%r13
-	je     2b5d <DGifOpen+0x7d>
-	movl   $0x6d,0x0(%r13)
-	mov    %r15,%rdi
-	callq  2030 <free@plt>
-	mov    %r14,%r13
-	mov    -0x20(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	test   %r13,%r13
-	jne    2be4 <DGifOpen+0x104>
-	mov    %r14,%r13
-	mov    %r15,%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	mov    %rax,%rdi
-	xor    %esi,%esi
-	mov    %r14,-0x18(%rbp)
-	mov    %rax,%r14
-	mov    $0x6168,%edx
-	callq  2150 <memset@plt>
-	mov    %r14,0x70(%r15)
-	movl   $0x0,0x4(%r14)
-	movq   $0x0,0x40(%r14)
-	movl   $0x8,(%r14)
-	mov    -0x38(%rbp),%rax
-	mov    %rax,0x48(%r14)
-	mov    -0x30(%rbp),%rcx
-	mov    %rcx,0x68(%r15)
-	mov    $0x6,%edx
-	test   %rax,%rax
-	jne    2bfa <DGifOpen+0x11a>
-	lea    -0x3f(%rbp),%rdi
-	mov    $0x1,%esi
-	xor    %ecx,%ecx
-	callq  20b0 <fread@plt>
-	jmp    2c06 <DGifOpen+0x126>
-	movl   $0x6d,0x0(%r13)
-	mov    %r14,%r13
-	mov    %r15,%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	lea    -0x3f(%rbp),%rsi
-	mov    %r15,%rdi
-	callq  *%rax
-	movslq %eax,%rax
-	cmp    $0x6,%rax
-	jne    2c6c <DGifOpen+0x18c>
-	movb   $0x0,-0x39(%rbp)
-	lea    0x53ec(%rip),%rdi        # 8003 <_fini+0x9db>
-	lea    -0x3f(%rbp),%rsi
-	mov    $0x3,%edx
-	callq  2060 <strncmp@plt>
-	test   %eax,%eax
-	jne    2c99 <DGifOpen+0x1b9>
-	mov    %r15,%rdi
-	callq  21e0 <DGifGetScreenDesc@plt>
-	test   %eax,%eax
-	je     2cc6 <DGifOpen+0x1e6>
-	movl   $0x0,0x60(%r15)
-	movsbq -0x3c(%rbp),%rax
-	cmp    $0x39,%al
-	jne    2c50 <DGifOpen+0x170>
-	pushq  -0x8(%rbp)
-	popq   -0x10(%rbp)
-	mov    -0x10(%rbp),%rax
-	mov    %al,0x6160(%r14)
-	mov    %r15,%rax
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	test   %r13,%r13
-	je     2c79 <DGifOpen+0x199>
-	movl   $0x66,0x0(%r13)
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	mov    %r15,%rdi
-	callq  2030 <free@plt>
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	test   %r13,%r13
-	je     2ca6 <DGifOpen+0x1c6>
-	movl   $0x67,0x0(%r13)
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	mov    %r15,%rdi
-	callq  2030 <free@plt>
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	mov    %r15,%rdi
-	callq  2030 <free@plt>
-	test   %r13,%r13
-	jne    2ceb <DGifOpen+0x20b>
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x68,0x0(%r13)
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	xchg   %ax,%ax
-
-0002d10 <DGifCloseFile>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	xor    %eax,%eax
-	test   %rdi,%rdi
-	jne    2d21 <DGifCloseFile+0x11>
-	leaveq 
-	retq   
-	mov    0x70(%rdi),%rcx
-	test   %rcx,%rcx
-	jne    2d2c <DGifCloseFile+0x1c>
-	leaveq 
-	retq   
-	mov    0x40(%rdi),%rax
-	test   %rax,%rax
-	jne    2d43 <DGifCloseFile+0x33>
-	mov    %r14,%rax
-	mov    %rdi,%r14
-	mov    %r15,%rcx
-	mov    %rsi,%r15
-	jmp    2d69 <DGifCloseFile+0x59>
-	mov    %r14,-0x10(%rbp)
-	mov    %r15,-0x18(%rbp)
-	mov    %rdi,%r14
-	mov    %rax,%rdi
-	mov    %rsi,%r15
-	callq  20a0 <GifFreeMapObject@plt>
-	movq   $0x0,0x40(%r14)
-	mov    -0x18(%rbp),%rcx
-	mov    -0x10(%rbp),%rax
-	mov    0x18(%r14),%rdi
-	test   %rdi,%rdi
-	je     2d8f <DGifCloseFile+0x7f>
-	mov    %rax,-0x10(%rbp)
-	mov    %rcx,-0x18(%rbp)
-	callq  20a0 <GifFreeMapObject@plt>
-	movq   $0x0,0x18(%r14)
-	mov    -0x18(%rbp),%rcx
-	mov    -0x10(%rbp),%rax
-	mov    0x48(%r14),%rdx
-	test   %rdx,%rdx
-	je     2db8 <DGifCloseFile+0xa8>
-	mov    %r14,%rdi
-	mov    %rax,-0x8(%rbp)
-	mov    %rcx,-0x18(%rbp)
-	callq  22f0 <GifFreeSavedImages@plt>
-	movq   $0x0,0x48(%r14)
-	mov    -0x18(%rbp),%rcx
-	mov    -0x8(%rbp),%rax
-	lea    0x50(%r14),%rdi
-	lea    0x58(%r14),%rsi
-	mov    %rax,-0x8(%rbp)
-	mov    %rcx,-0x18(%rbp)
-	callq  2290 <GifFreeExtensions@plt>
-	mov    0x70(%r14),%rcx
-	movslq (%rcx),%rax
-	and    $0x8,%eax
-	test   %eax,%eax
-	jg     2e04 <DGifCloseFile+0xf4>
-	test   %r15,%r15
-	je     2de7 <DGifCloseFile+0xd7>
-	movl   $0x6f,(%r15)
-	mov    0x70(%r14),%rdi
-	callq  2030 <free@plt>
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	mov    0x40(%rcx),%rdi
-	test   %rdi,%rdi
-	jne    2e32 <DGifCloseFile+0x122>
-	mov    0x70(%r14),%rdi
-	callq  2030 <free@plt>
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	mov    $0x1,%eax
-	test   %r15,%r15
-	jne    2e64 <DGifCloseFile+0x154>
-	mov    -0x18(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	callq  20d0 <fclose@plt>
-	test   %eax,%eax
-	je     2e0d <DGifCloseFile+0xfd>
-	test   %r15,%r15
-	je     2e47 <DGifCloseFile+0x137>
-	movl   $0x6e,(%r15)
-	mov    0x70(%r14),%rdi
-	callq  2030 <free@plt>
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	movl   $0x0,(%r15)
-	mov    -0x18(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-
-0002e80 <DGifGetScreenDesc>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x30,%rsp
-	xor    %eax,%eax
-	mov    %rax,-0x20(%rbp)
-	mov    0x70(%rdi),%rcx
-	movslq (%rcx),%rcx
-	and    $0x8,%ecx
-	test   %ecx,%ecx
-	jg     2ea5 <DGifGetScreenDesc+0x25>
-	movl   $0x6f,0x60(%rdi)
-	leaveq 
-	retq   
-	mov    %rdi,%rsi
-	mov    %rdi,%rax
-	mov    %rdi,-0x28(%rbp)
-	mov    %rax,%rdi
-	callq  3ba0 <DGifGetWord>
-	test   %eax,%eax
-	jne    2ebf <DGifGetScreenDesc+0x3f>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    -0x28(%rbp),%rdi
-	lea    0x4(%rdi),%rsi
-	callq  3ba0 <DGifGetWord>
-	test   %eax,%eax
-	jne    2ed4 <DGifGetScreenDesc+0x54>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    $0x1,%esi
-	mov    %rsi,-0x18(%rbp)
-	mov    $0x3,%edx
-	mov    -0x28(%rbp),%r8
-	mov    0x70(%r8),%rcx
-	mov    0x48(%rcx),%rax
-	test   %rax,%rax
-	jne    2f09 <DGifGetScreenDesc+0x89>
-	lea    -0x2b(%rbp),%rdi
-	mov    0x40(%rcx),%rcx
-	mov    %r15,-0x28(%rbp)
-	mov    %r8,%r15
-	callq  20b0 <fread@plt>
-	jmp    2f1c <DGifGetScreenDesc+0x9c>
-	lea    -0x2b(%rbp),%rsi
-	mov    %r8,%rdi
-	mov    %r15,-0x28(%rbp)
-	mov    %r8,%r15
-	callq  *%rax
-	movslq %eax,%rax
-	cmp    $0x3,%rax
-	jne    2f78 <DGifGetScreenDesc+0xf8>
-	movzbl -0x2b(%rbp),%ecx
-	mov    %rcx,%rax
-	and    $0x70,%eax
-	add    $0x1,%eax
-	shr    $0x4,%eax
-	add    $0x1,%eax
-	mov    %eax,0x8(%r15)
-	mov    %rcx,%rax
-	and    $0x8,%eax
-	test   %eax,%eax
-	jle    2f49 <DGifGetScreenDesc+0xc9>
-	pushq  -0x18(%rbp)
-	popq   -0x20(%rbp)
-	movzbl -0x2a(%rbp),%eax
-	mov    %eax,0xc(%r15)
-	movzbl -0x29(%rbp),%eax
-	mov    %al,0x10(%r15)
-	mov    %rcx,%rax
-	and    $0x80,%eax
-	test   %eax,%eax
-	jg     2f99 <DGifGetScreenDesc+0x119>
-	movq   $0x0,0x18(%r15)
-	mov    $0x1,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x66,0x60(%r15)
-	mov    0x18(%r15),%rdi
-	callq  20a0 <GifFreeMapObject@plt>
-	movq   $0x0,0x18(%r15)
-	mov    -0x28(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	and    $0x7,%ecx
-	add    $0x1,%ecx
-	mov    $0x1,%edi
-	shl    %cl,%edi
-	xor    %esi,%esi
-	callq  2280 <GifMakeMapObject@plt>
-	mov    %rax,0x18(%r15)
-	test   %rax,%rax
-	je     2fe4 <DGifGetScreenDesc+0x164>
-	mov    -0x20(%rbp),%rcx
-	mov    %cl,0x8(%rax)
-	lea    -0x2b(%rbp),%rax
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %rax,%r14
-	mov    $0x3,%r13d
-	mov    $0x1,%ebx
-	xor    %r12d,%r12d
-	jmp    3043 <DGifGetScreenDesc+0x1c3>
-	movl   $0x6d,0x60(%r15)
-	mov    -0x28(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    %r15,%rdi
-	mov    %r14,%rsi
-	mov    %r13,%rdx
-	callq  *%rax
-	movslq %eax,%rax
-	cmp    $0x3,%rax
-	jne    3065 <DGifGetScreenDesc+0x1e5>
-	movzbl -0x2b(%rbp),%esi
-	mov    0x18(%r15),%rax
-	mov    0x10(%rax),%rcx
-	movslq %r12d,%rax
-	lea    (%rax,%rax,2),%rdx
-	mov    %sil,(%rcx,%rdx,1)
-	movzbl -0x2a(%rbp),%ecx
-	mov    0x18(%r15),%rax
-	mov    0x10(%rax),%rax
-	mov    %cl,0x1(%rax,%rdx,1)
-	movzbl -0x29(%rbp),%ecx
-	mov    0x18(%r15),%rax
-	mov    0x10(%rax),%rax
-	mov    %cl,0x2(%rax,%rdx,1)
-	add    $0x1,%r12d
-	mov    0x18(%r15),%rax
-	cmp    (%rax),%r12d
-	jl     3096 <DGifGetScreenDesc+0x216>
-	mov    %rbx,%rax
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	mov    0x18(%r15),%rdi
-	callq  20a0 <GifFreeMapObject@plt>
-	movq   $0x0,0x18(%r15)
-	movl   $0x66,0x60(%r15)
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	mov    -0x28(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    0x70(%r15),%rcx
-	mov    0x48(%rcx),%rax
-	test   %rax,%rax
-	jne    2ff4 <DGifGetScreenDesc+0x174>
-	mov    0x40(%rcx),%rcx
-	mov    %r14,%rdi
-	mov    %rbx,%rsi
-	mov    %r13,%rdx
-	callq  20b0 <fread@plt>
-	jmpq   3002 <DGifGetScreenDesc+0x182>
-	xchg   %ax,%ax
-
-00030c0 <DGifGetRecordType>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	xor    %eax,%eax
-	mov    0x70(%rdi),%r8
-	movslq (%r8),%rcx
-	and    $0x8,%ecx
-	test   %ecx,%ecx
-	jg     30e1 <DGifGetRecordType+0x21>
-	movl   $0x6f,0x60(%rdi)
-	leaveq 
-	retq   
-	mov    $0x1,%edx
-	mov    0x48(%r8),%rax
-	test   %rax,%rax
-	jne    3115 <DGifGetRecordType+0x55>
-	lea    -0x11(%rbp),%rax
-	mov    0x40(%r8),%rcx
-	mov    %rdx,%r8
-	mov    %r15,-0x10(%rbp)
-	mov    %rsi,-0x8(%rbp)
-	mov    %rdx,%rsi
-	mov    %r8,%rdx
-	mov    %rdi,%r15
-	mov    %rax,%rdi
-	callq  20b0 <fread@plt>
-	jmp    3132 <DGifGetRecordType+0x72>
-	lea    -0x11(%rbp),%rcx
-	mov    %rdi,%r8
-	mov    %r15,-0x10(%rbp)
-	mov    %rsi,-0x8(%rbp)
-	mov    %rcx,%rsi
-	mov    %rdi,%r15
-	mov    %r8,%rdi
-	callq  *%rax
-	movslq %eax,%rax
-	cmp    $0x1,%rax
-	jne    315d <DGifGetRecordType+0x9d>
-	movzbl -0x11(%rbp),%eax
-	cmp    $0x2b,%al
-	jbe    316d <DGifGetRecordType+0xad>
-	cmp    $0x2c,%al
-	je     318b <DGifGetRecordType+0xcb>
-	cmp    $0x3b,%al
-	jne    3171 <DGifGetRecordType+0xb1>
-	mov    -0x8(%rbp),%rax
-	movl   $0x4,(%rax)
-	mov    $0x1,%eax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x66,0x60(%r15)
-	xor    %eax,%eax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	cmp    $0x21,%al
-	je     31a0 <DGifGetRecordType+0xe0>
-	mov    -0x8(%rbp),%rax
-	movl   $0x0,(%rax)
-	movl   $0x6b,0x60(%r15)
-	xor    %eax,%eax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	mov    -0x8(%rbp),%rax
-	movl   $0x2,(%rax)
-	mov    $0x1,%eax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	mov    -0x8(%rbp),%rax
-	movl   $0x3,(%rax)
-	mov    $0x1,%eax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-
-00031c0 <DGifGetImageDesc>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x50,%rsp
-	xor    %eax,%eax
-	mov    %rax,-0x38(%rbp)
-	mov    0x70(%rdi),%rdx
-	movslq (%rdx),%rcx
-	and    $0x8,%ecx
-	test   %ecx,%ecx
-	jg     31e5 <DGifGetImageDesc+0x25>
-	movl   $0x6f,0x60(%rdi)
-	leaveq 
-	retq   
-	lea    0x28(%rdi),%rsi
-	mov    %rsi,-0x30(%rbp)
-	mov    %rdi,%rax
-	mov    %rdi,-0x48(%rbp)
-	mov    %rdx,-0x8(%rbp)
-	mov    %rax,%rdi
-	callq  3ba0 <DGifGetWord>
-	test   %eax,%eax
-	jne    3208 <DGifGetImageDesc+0x48>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    -0x48(%rbp),%rdi
-	lea    0x2c(%rdi),%rsi
-	callq  3ba0 <DGifGetWord>
-	test   %eax,%eax
-	jne    321d <DGifGetImageDesc+0x5d>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    -0x48(%rbp),%rdi
-	lea    0x30(%rdi),%rsi
-	mov    %rsi,-0x10(%rbp)
-	callq  3ba0 <DGifGetWord>
-	test   %eax,%eax
-	jne    3236 <DGifGetImageDesc+0x76>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    -0x48(%rbp),%rdi
-	lea    0x34(%rdi),%rsi
-	mov    %rsi,-0x18(%rbp)
-	callq  3ba0 <DGifGetWord>
-	test   %eax,%eax
-	jne    324f <DGifGetImageDesc+0x8f>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    $0x1,%edx
-	mov    %rdx,-0x40(%rbp)
-	mov    -0x48(%rbp),%r8
-	mov    0x70(%r8),%rcx
-	mov    0x48(%rcx),%rax
-	test   %rax,%rax
-	jne    3288 <DGifGetImageDesc+0xc8>
-	lea    -0x4b(%rbp),%rdi
-	mov    0x40(%rcx),%rcx
-	mov    %rdx,%rax
-	mov    %r15,-0x28(%rbp)
-	mov    %rdx,%rsi
-	mov    %rax,%rdx
-	mov    %r8,%r15
-	callq  20b0 <fread@plt>
-	jmp    329b <DGifGetImageDesc+0xdb>
-	lea    -0x4b(%rbp),%rsi
-	mov    %r8,%rdi
-	mov    %r15,-0x28(%rbp)
-	mov    %r8,%r15
-	callq  *%rax
-	movslq %eax,%rax
-	cmp    $0x1,%rax
-	jne    32b7 <DGifGetImageDesc+0xf7>
-	movzbl -0x4b(%rbp),%eax
-	mov    %rax,%rcx
-	and    $0x40,%ecx
-	test   %ecx,%ecx
-	jg     32d8 <DGifGetImageDesc+0x118>
-	pushq  -0x38(%rbp)
-	popq   -0x48(%rbp)
-	jmp    32de <DGifGetImageDesc+0x11e>
-	movl   $0x66,0x60(%r15)
-	mov    0x40(%r15),%rdi
-	callq  20a0 <GifFreeMapObject@plt>
-	movq   $0x0,0x40(%r15)
-	mov    -0x28(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	pushq  -0x40(%rbp)
-	popq   -0x48(%rbp)
-	mov    -0x48(%rbp),%rcx
-	test   %ecx,%ecx
-	jle    32ec <DGifGetImageDesc+0x12c>
-	pushq  -0x40(%rbp)
-	popq   -0x38(%rbp)
-	mov    -0x38(%rbp),%rcx
-	mov    %cl,0x38(%r15)
-	mov    0x40(%r15),%rdi
-	test   %rdi,%rdi
-	je     3318 <DGifGetImageDesc+0x158>
-	mov    %r14,-0x48(%rbp)
-	mov    %rax,%r14
-	callq  20a0 <GifFreeMapObject@plt>
-	movq   $0x0,0x40(%r15)
-	mov    %r14,%rax
-	mov    -0x48(%rbp),%r14
-	movzbl -0x4b(%rbp),%ecx
-	and    $0x80,%ecx
-	test   %ecx,%ecx
-	jg     3355 <DGifGetImageDesc+0x195>
-	mov    $0x38,%edx
-	mov    0x48(%r15),%rdi
-	test   %rdi,%rdi
-	jne    33a3 <DGifGetImageDesc+0x1e3>
-	mov    %rdx,%rdi
-	callq  2220 <malloc@plt>
-	mov    %rax,0x48(%r15)
-	test   %rax,%rax
-	jne    33bf <DGifGetImageDesc+0x1ff>
-	movl   $0x6d,0x60(%r15)
-	mov    -0x28(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	and    $0x7,%eax
-	lea    0x1(%rax),%ecx
-	mov    $0x1,%edi
-	shl    %cl,%edi
-	xor    %esi,%esi
-	callq  2280 <GifMakeMapObject@plt>
-	mov    %rax,0x40(%r15)
-	test   %rax,%rax
-	je     3447 <DGifGetImageDesc+0x287>
-	lea    -0x4b(%rbp),%rcx
-	mov    $0x3,%eax
-	mov    %r14,-0x48(%rbp)
-	mov    %rbx,-0x20(%rbp)
-	mov    %r12,-0x38(%rbp)
-	mov    %r13,-0x40(%rbp)
-	mov    %rax,%rbx
-	mov    %rcx,%r13
-	mov    $0x1,%r12d
-	xor    %r14d,%r14d
-	jmpq   34aa <DGifGetImageDesc+0x2ea>
-	movslq 0x20(%r15),%rax
-	add    $0x1,%eax
-	movslq %eax,%rsi
-	callq  2200 <reallocarray@plt>
-	test   %rax,%rax
-	je     34cc <DGifGetImageDesc+0x30c>
-	mov    %rax,0x48(%r15)
-	movslq 0x20(%r15),%rcx
-	lea    (%rcx,%rcx,2),%rax
-	shl    $0x4,%rax
-	lea    (%rax,%rcx,8),%rax
-	add    0x48(%r15),%rax
-	mov    $0x20,%edx
-	mov    %rax,%rdi
-	mov    %r14,-0x48(%rbp)
-	mov    %rax,%r14
-	mov    -0x30(%rbp),%rsi
-	callq  21b0 <memcpy@plt>
-	mov    0x40(%r15),%rax
-	test   %rax,%rax
-	jne    34dc <DGifGetImageDesc+0x31c>
-	movq   $0x0,0x20(%r14)
-	movl   $0x0,0x28(%r14)
-	movq   $0x0,0x30(%r14)
-	movslq 0x20(%r15),%rax
-	add    $0x1,%eax
-	mov    %eax,0x20(%r15)
-	mov    -0x18(%rbp),%rax
-	movslq (%rax),%rax
-	mov    -0x10(%rbp),%rcx
-	movslq (%rcx),%rcx
-	imul   %rcx,%rax
-	mov    -0x8(%rbp),%rcx
-	mov    %rax,0x38(%rcx)
-	mov    %r15,%rdi
-	callq  3c20 <DGifSetupDecompress>
-	mov    -0x48(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x6d,0x60(%r15)
-	mov    -0x28(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    %r15,%rdi
-	mov    %r13,%rsi
-	mov    %rbx,%rdx
-	callq  *%rax
-	movslq %eax,%rax
-	cmp    $0x3,%rax
-	jne    3509 <DGifGetImageDesc+0x349>
-	movzbl -0x4b(%rbp),%esi
-	mov    0x40(%r15),%rax
-	mov    0x10(%rax),%rcx
-	mov    %r14d,%eax
-	lea    (%rax,%rax,2),%rdx
-	mov    %sil,(%rcx,%rdx,1)
-	movzbl -0x4a(%rbp),%ecx
-	mov    0x40(%r15),%rax
-	mov    0x10(%rax),%rax
-	mov    %cl,0x1(%rax,%rdx,1)
-	movzbl -0x49(%rbp),%ecx
-	mov    0x40(%r15),%rax
-	mov    0x10(%rax),%rax
-	mov    %cl,0x2(%rax,%rdx,1)
-	add    $0x1,%r14d
-	mov    0x40(%r15),%rax
-	cmp    (%rax),%r14d
-	jb     353a <DGifGetImageDesc+0x37a>
-	mov    -0x40(%rbp),%r13
-	mov    -0x38(%rbp),%r12
-	mov    -0x20(%rbp),%rbx
-	mov    -0x48(%rbp),%r14
-	jmpq   3326 <DGifGetImageDesc+0x166>
-	movl   $0x6d,0x60(%r15)
-	mov    -0x28(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movslq (%rax),%rdi
-	mov    0x10(%rax),%rsi
-	callq  2280 <GifMakeMapObject@plt>
-	mov    %rax,0x18(%r14)
-	test   %rax,%rax
-	jne    33f8 <DGifGetImageDesc+0x238>
-	movl   $0x6d,0x60(%r15)
-	mov    -0x48(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    0x40(%r15),%rdi
-	callq  20a0 <GifFreeMapObject@plt>
-	movl   $0x66,0x60(%r15)
-	movq   $0x0,0x40(%r15)
-	mov    -0x40(%rbp),%r13
-	mov    -0x38(%rbp),%r12
-	mov    -0x20(%rbp),%rbx
-	mov    -0x48(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    0x70(%r15),%rcx
-	mov    0x48(%rcx),%rax
-	test   %rax,%rax
-	jne    3457 <DGifGetImageDesc+0x297>
-	mov    0x40(%rcx),%rcx
-	mov    %r13,%rdi
-	mov    %r12,%rsi
-	mov    %rbx,%rdx
-	callq  20b0 <fread@plt>
-	jmpq   3465 <DGifGetImageDesc+0x2a5>
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nopl   (%rax)
-
-0003570 <DGifGetLine>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	xor    %eax,%eax
-	mov    0x70(%rdi),%r9
-	movslq (%r9),%rcx
-	and    $0x8,%ecx
-	test   %ecx,%ecx
-	jg     3591 <DGifGetLine+0x21>
-	movl   $0x6f,0x60(%rdi)
-	leaveq 
-	retq   
-	test   %edx,%edx
-	jne    3599 <DGifGetLine+0x29>
-	movslq 0x30(%rdi),%rdx
-	mov    0x38(%r9),%rcx
-	movslq %edx,%r8
-	sub    %r8,%rcx
-	mov    %rcx,0x38(%r9)
-	mov    $0xffff0000,%r8d
-	cmp    %r8,%rcx
-	ja     35ce <DGifGetLine+0x5e>
-	mov    %rdi,%rax
-	mov    %r9,-0x18(%rbp)
-	mov    %rdi,-0x10(%rbp)
-	mov    %rax,%rdi
-	callq  3d00 <DGifDecompressLine>
-	cmp    $0x1,%eax
-	je     35d7 <DGifGetLine+0x67>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movl   $0x6c,0x60(%rdi)
-	leaveq 
-	retq   
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%rcx
-	mov    0x38(%rcx),%rcx
-	test   %rcx,%rcx
-	je     35eb <DGifGetLine+0x7b>
-	leaveq 
-	retq   
-	lea    -0x20(%rbp),%rax
-	mov    %r14,-0x8(%rbp)
-	mov    %r15,-0x18(%rbp)
-	mov    %rax,%r15
-	mov    -0x10(%rbp),%r14
-	jmp    3609 <DGifGetLine+0x99>
-	mov    -0x20(%rbp),%rax
-	test   %rax,%rax
-	je     3624 <DGifGetLine+0xb4>
-	mov    %r14,%rdi
-	mov    %r15,%rsi
-	callq  2300 <DGifGetCodeNext@plt>
-	test   %eax,%eax
-	jne    3600 <DGifGetLine+0x90>
-	mov    -0x18(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    -0x18(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	mov    $0x1,%eax
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	xchg   %ax,%ax
-
-0003640 <DGifGetPixel>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x30,%rsp
-	mov    %sil,-0x21(%rbp)
-	xor    %eax,%eax
-	mov    0x70(%rdi),%r8
-	movslq (%r8),%rcx
-	and    $0x8,%ecx
-	test   %ecx,%ecx
-	jg     3665 <DGifGetPixel+0x25>
-	movl   $0x6f,0x60(%rdi)
-	leaveq 
-	retq   
-	mov    0x38(%r8),%rcx
-	add    $0xffffffffffffffff,%rcx
-	mov    %rcx,0x38(%r8)
-	mov    $0xffff0000,%edx
-	cmp    %rdx,%rcx
-	ja     36a7 <DGifGetPixel+0x67>
-	mov    $0x1,%edx
-	lea    -0x21(%rbp),%rsi
-	mov    %rdi,%rax
-	mov    %r15,-0x18(%rbp)
-	mov    %rdi,-0x10(%rbp)
-	mov    %rax,%rdi
-	mov    %r8,%r15
-	callq  3d00 <DGifDecompressLine>
-	cmp    $0x1,%eax
-	je     36b0 <DGifGetPixel+0x70>
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x6c,0x60(%rdi)
-	leaveq 
-	retq   
-	mov    0x38(%r15),%rax
-	test   %rax,%rax
-	je     36c4 <DGifGetPixel+0x84>
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	lea    -0x20(%rbp),%r15
-	mov    %r14,-0x8(%rbp)
-	mov    -0x10(%rbp),%r14
-	jmp    36db <DGifGetPixel+0x9b>
-	mov    -0x20(%rbp),%rax
-	test   %rax,%rax
-	je     36f6 <DGifGetPixel+0xb6>
-	mov    %r14,%rdi
-	mov    %r15,%rsi
-	callq  2300 <DGifGetCodeNext@plt>
-	test   %eax,%eax
-	jne    36d2 <DGifGetPixel+0x92>
-	mov    -0x8(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	mov    -0x8(%rbp),%r14
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-
-0003710 <DGifGetExtension>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	xor    %eax,%eax
-	mov    0x70(%rdi),%r8
-	movslq (%r8),%rcx
-	and    $0x8,%ecx
-	test   %ecx,%ecx
-	jg     3731 <DGifGetExtension+0x21>
-	movl   $0x6f,0x60(%rdi)
-	leaveq 
-	retq   
-	mov    $0x1,%r9d
-	mov    0x48(%r8),%rax
-	test   %rax,%rax
-	jne    376a <DGifGetExtension+0x5a>
-	lea    -0x19(%rbp),%r10
-	mov    0x40(%r8),%rcx
-	mov    %r9,%rax
-	mov    %r15,-0x18(%rbp)
-	mov    %rsi,-0x10(%rbp)
-	mov    %rdx,-0x8(%rbp)
-	mov    %rax,%rdx
-	mov    %r9,%rsi
-	mov    %rdi,%r15
-	mov    %r10,%rdi
-	callq  20b0 <fread@plt>
-	jmp    378e <DGifGetExtension+0x7e>
-	lea    -0x19(%rbp),%r8
-	mov    %rdi,%rcx
-	mov    %r15,-0x18(%rbp)
-	mov    %rsi,-0x10(%rbp)
-	mov    %rdx,-0x8(%rbp)
-	mov    %r9,%rdx
-	mov    %r8,%rsi
-	mov    %rdi,%r15
-	mov    %rcx,%rdi
-	callq  *%rax
-	movslq %eax,%rax
-	cmp    $0x1,%rax
-	jne    37b0 <DGifGetExtension+0xa0>
-	movzbl -0x19(%rbp),%ecx
-	mov    -0x10(%rbp),%rax
-	mov    %ecx,(%rax)
-	mov    %r15,%rdi
-	mov    -0x8(%rbp),%rsi
-	callq  22d0 <DGifGetExtensionNext@plt>
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x66,0x60(%r15)
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-
-00037c0 <DGifGetExtensionNext>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    %r15,-0x18(%rbp)
-	mov    %rsi,-0x10(%rbp)
-	mov    $0x1,%edx
-	mov    0x70(%rdi),%rcx
-	mov    %rcx,-0x8(%rbp)
-	mov    0x48(%rcx),%rax
-	test   %rax,%rax
-	jne    37fe <DGifGetExtensionNext+0x3e>
-	lea    -0x19(%rbp),%rax
-	mov    0x40(%rcx),%rcx
-	mov    %rdi,%r15
-	mov    %rax,%rdi
-	mov    %rdx,%rsi
-	callq  20b0 <fread@plt>
-	jmp    380a <DGifGetExtensionNext+0x4a>
-	lea    -0x19(%rbp),%rsi
-	mov    %rdi,%r15
-	callq  *%rax
-	movslq %eax,%rax
-	xor    %ecx,%ecx
-	cmp    $0x1,%rax
-	jne    3830 <DGifGetExtensionNext+0x70>
-	movzbl -0x19(%rbp),%eax
-	test   %al,%al
-	jne    3841 <DGifGetExtensionNext+0x81>
-	mov    -0x10(%rbp),%rax
-	movq   $0x0,(%rax)
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x66,0x60(%r15)
-	mov    %rcx,%rax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	mov    -0x8(%rbp),%rax
-	add    $0x58,%rax
-	mov    -0x10(%rbp),%rsi
-	mov    %rax,(%rsi)
-	movzbl -0x19(%rbp),%edx
-	mov    %dl,(%rax)
-	mov    0x70(%r15),%rcx
-	mov    0x48(%rcx),%rax
-	test   %rax,%rax
-	jne    387a <DGifGetExtensionNext+0xba>
-	mov    (%rsi),%rdi
-	add    $0x1,%rdi
-	mov    0x40(%rcx),%rcx
-	mov    $0x1,%esi
-	callq  20b0 <fread@plt>
-	jmp    3889 <DGifGetExtensionNext+0xc9>
-	mov    (%rsi),%rsi
-	add    $0x1,%rsi
-	mov    %r15,%rdi
-	callq  *%rax
-	movslq %eax,%rax
-	movzbl -0x19(%rbp),%ecx
-	cmp    %rax,%rcx
-	jne    389d <DGifGetExtensionNext+0xdd>
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x66,0x60(%r15)
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	nopl   (%rax)
-
-00038b0 <DGifGetCode>:
-	push   %rbp
-	mov    %rsp,%rbp
-	mov    0x70(%rdi),%rcx
-	movslq (%rcx),%rax
-	and    $0x8,%eax
-	test   %eax,%eax
-	jg     38cd <DGifGetCode+0x1d>
-	movl   $0x6f,0x60(%rdi)
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movslq 0x8(%rcx),%rax
-	mov    %eax,(%rsi)
-	mov    %rdx,%rsi
-	callq  2300 <DGifGetCodeNext@plt>
-	leaveq 
-	retq   
-	nopl   (%rax)
-
-00038e0 <DGifGetCodeNext>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    %r15,-0x18(%rbp)
-	mov    %rsi,-0x10(%rbp)
-	mov    $0x1,%edx
-	mov    0x70(%rdi),%rcx
-	mov    %rcx,-0x8(%rbp)
-	mov    0x48(%rcx),%rax
-	test   %rax,%rax
-	jne    391e <DGifGetCodeNext+0x3e>
-	lea    -0x19(%rbp),%rax
-	mov    0x40(%rcx),%rcx
-	mov    %rdi,%r15
-	mov    %rax,%rdi
-	mov    %rdx,%rsi
-	callq  20b0 <fread@plt>
-	jmp    392a <DGifGetCodeNext+0x4a>
-	lea    -0x19(%rbp),%rsi
-	mov    %rdi,%r15
-	callq  *%rax
-	movslq %eax,%rax
-	xor    %ecx,%ecx
-	cmp    $0x1,%rax
-	jne    3960 <DGifGetCodeNext+0x80>
-	movzbl -0x19(%rbp),%eax
-	test   %al,%al
-	jne    3971 <DGifGetCodeNext+0x91>
-	mov    -0x10(%rbp),%rax
-	movq   $0x0,(%rax)
-	mov    -0x8(%rbp),%rax
-	movb   $0x0,0x58(%rax)
-	movq   $0x0,0x38(%rax)
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x66,0x60(%r15)
-	mov    %rcx,%rax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	mov    -0x8(%rbp),%rax
-	add    $0x58,%rax
-	mov    -0x10(%rbp),%rsi
-	mov    %rax,(%rsi)
-	movzbl -0x19(%rbp),%edx
-	mov    %dl,(%rax)
-	mov    0x70(%r15),%rcx
-	mov    0x48(%rcx),%rax
-	test   %rax,%rax
-	jne    39aa <DGifGetCodeNext+0xca>
-	mov    (%rsi),%rdi
-	add    $0x1,%rdi
-	mov    0x40(%rcx),%rcx
-	mov    $0x1,%esi
-	callq  20b0 <fread@plt>
-	jmp    39b9 <DGifGetCodeNext+0xd9>
-	mov    (%rsi),%rsi
-	add    $0x1,%rsi
-	mov    %r15,%rdi
-	callq  *%rax
-	movslq %eax,%rax
-	movzbl -0x19(%rbp),%ecx
-	cmp    %rax,%rcx
-	jne    39cd <DGifGetCodeNext+0xed>
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x66,0x60(%r15)
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	nopl   (%rax)
-
-00039e0 <DGifGetLZCodes>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x30,%rsp
-	xor    %eax,%eax
-	mov    0x70(%rdi),%rdx
-	movslq (%rdx),%rcx
-	and    $0x8,%ecx
-	test   %ecx,%ecx
-	jg     3a01 <DGifGetLZCodes+0x21>
-	movl   $0x6f,0x60(%rdi)
-	leaveq 
-	retq   
-	mov    %rdi,%rax
-	mov    %rsi,%rcx
-	mov    %rdx,-0x18(%rbp)
-	mov    %rsi,-0x20(%rbp)
-	mov    %rdi,-0x10(%rbp)
-	mov    %rcx,%rsi
-	mov    %rax,%rdi
-	callq  41a0 <DGifDecompressInput>
-	test   %eax,%eax
-	jne    3a26 <DGifGetLZCodes+0x46>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%rdx
-	movslq 0x10(%rdx),%rsi
-	mov    -0x20(%rbp),%rcx
-	movslq (%rcx),%rcx
-	cmp    %ecx,%esi
-	jne    3a53 <DGifGetLZCodes+0x73>
-	lea    -0x28(%rbp),%rax
-	mov    %r14,-0x8(%rbp)
-	mov    %r15,-0x18(%rbp)
-	mov    %rax,%r14
-	mov    -0x10(%rbp),%r15
-	jmp    3a63 <DGifGetLZCodes+0x83>
-	cmp    0xc(%rdx),%ecx
-	je     3a7e <DGifGetLZCodes+0x9e>
-	leaveq 
-	retq   
-	mov    -0x28(%rbp),%rax
-	test   %rax,%rax
-	je     3a98 <DGifGetLZCodes+0xb8>
-	mov    %r15,%rdi
-	mov    %r14,%rsi
-	callq  2300 <DGifGetCodeNext@plt>
-	test   %eax,%eax
-	jne    3a5a <DGifGetLZCodes+0x7a>
-	mov    -0x18(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	lea    0x1(%rsi),%ecx
-	mov    %ecx,0x14(%rdx)
-	movslq 0x8(%rdx),%rcx
-	add    $0x1,%ecx
-	mov    %ecx,0x18(%rdx)
-	mov    %rax,%rsi
-	shl    %cl,%esi
-	mov    %esi,0x1c(%rdx)
-	leaveq 
-	retq   
-	mov    -0x20(%rbp),%rax
-	movl   $0xffffffff,(%rax)
-	mov    -0x18(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	mov    $0x1,%eax
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nopl   0x0(%rax)
-
-0003ac0 <DGifExtensionToGCB>:
-	push   %rbp
-	mov    %rsp,%rbp
-	xor    %eax,%eax
-	cmp    $0x4,%rdi
-	je     3ace <DGifExtensionToGCB+0xe>
-	leaveq 
-	retq   
-	movzbl (%rsi),%ecx
-	and    $0x1c,%ecx
-	shr    $0x2,%ecx
-	mov    %ecx,(%rdx)
-	mov    $0x1,%edi
-	movzbl (%rsi),%ecx
-	and    $0x2,%ecx
-	test   %ecx,%ecx
-	jle    3aeb <DGifExtensionToGCB+0x2b>
-	mov    %rdi,%rax
-	mov    %al,0x4(%rdx)
-	movzbl 0x1(%rsi),%eax
-	movzbl 0x2(%rsi),%ecx
-	shl    $0x8,%ecx
-	add    %ecx,%eax
-	mov    %eax,0x8(%rdx)
-	movzbl (%rsi),%ecx
-	and    $0x1,%ecx
-	test   %ecx,%ecx
-	jg     3b14 <DGifExtensionToGCB+0x54>
-	movl   $0xffffffff,0xc(%rdx)
-	mov    %rdi,%rax
-	leaveq 
-	retq   
-	movzbl 0x3(%rsi),%eax
-	mov    %eax,0xc(%rdx)
-	mov    %rdi,%rax
-	leaveq 
-	retq   
-
-0003b20 <DGifSavedExtensionToGCB>:
-	push   %rbp
-	mov    %rsp,%rbp
-	xor    %eax,%eax
-	test   %esi,%esi
-	jns    3b2c <DGifSavedExtensionToGCB+0xc>
-	leaveq 
-	retq   
-	movslq 0x20(%rdi),%rcx
-	add    $0xffffffff,%ecx
-	cmp    %ecx,%esi
-	jle    3b39 <DGifSavedExtensionToGCB+0x19>
-	leaveq 
-	retq   
-	movl   $0x0,(%rdx)
-	movb   $0x0,0x4(%rdx)
-	movl   $0x0,0x8(%rdx)
-	movl   $0xffffffff,0xc(%rdx)
-	movslq %esi,%rsi
-	lea    (%rsi,%rsi,2),%rcx
-	shl    $0x4,%rcx
-	lea    (%rcx,%rsi,8),%r8
-	mov    %rax,%rsi
-	jmp    3b85 <DGifSavedExtensionToGCB+0x65>
-	movslq %esi,%rcx
-	lea    (%rcx,%rcx,2),%rcx
-	shl    $0x3,%rcx
-	add    0x30(%r9,%r8,1),%rcx
-	movslq 0x10(%rcx),%r9
-	cmp    $0xf9,%r9d
-	je     3b92 <DGifSavedExtensionToGCB+0x72>
-	add    $0x1,%esi
-	mov    0x48(%rdi),%r9
-	cmp    0x28(%r9,%r8,1),%esi
-	jl     3b65 <DGifSavedExtensionToGCB+0x45>
-	leaveq 
-	retq   
-	movslq (%rcx),%rdi
-	mov    0x8(%rcx),%rsi
-	callq  2040 <DGifExtensionToGCB@plt>
-	leaveq 
-	retq   
-
-0003ba0 <DGifGetWord>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    %r15,-0x10(%rbp)
-	mov    %rsi,-0x8(%rbp)
-	mov    $0x1,%esi
-	mov    $0x2,%edx
-	mov    0x70(%rdi),%rcx
-	mov    0x48(%rcx),%rax
-	test   %rax,%rax
-	jne    3bdc <DGifGetWord+0x3c>
-	lea    -0x12(%rbp),%rax
-	mov    0x40(%rcx),%rcx
-	mov    %rdi,%r15
-	mov    %rax,%rdi
-	callq  20b0 <fread@plt>
-	jmp    3be8 <DGifGetWord+0x48>
-	lea    -0x12(%rbp),%rsi
-	mov    %rdi,%r15
-	callq  *%rax
-	movslq %eax,%rax
-	cmp    $0x2,%rax
-	jne    3c0c <DGifGetWord+0x6c>
-	movzbl -0x12(%rbp),%ecx
-	movzbl -0x11(%rbp),%eax
-	shl    $0x8,%eax
-	add    %ecx,%eax
-	mov    -0x8(%rbp),%rcx
-	mov    %eax,(%rcx)
-	mov    $0x1,%eax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x66,0x60(%r15)
-	xor    %eax,%eax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	nopl   0x0(%rax)
-
-0003c20 <DGifSetupDecompress>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    %rdi,-0x8(%rbp)
-	mov    $0x1,%edx
-	mov    0x70(%rdi),%rcx
-	mov    %rcx,-0x10(%rbp)
-	mov    0x48(%rcx),%rax
-	test   %rax,%rax
-	jne    3c57 <DGifSetupDecompress+0x37>
-	lea    -0x11(%rbp),%rdi
-	mov    0x40(%rcx),%rcx
-	mov    %rdx,%rsi
-	callq  20b0 <fread@plt>
-	mov    %rax,%rcx
-	jmp    3c60 <DGifSetupDecompress+0x40>
-	lea    -0x11(%rbp),%rsi
-	callq  *%rax
-	movslq %eax,%rcx
-	xor    %eax,%eax
-	test   %rcx,%rcx
-	jne    3c69 <DGifSetupDecompress+0x49>
-	leaveq 
-	retq   
-	movzbl -0x11(%rbp),%ecx
-	cmp    $0x8,%cl
-	ja     3cc7 <DGifSetupDecompress+0xa7>
-	mov    -0x10(%rbp),%rsi
-	movb   $0x0,0x58(%rsi)
-	mov    %ecx,0x8(%rsi)
-	mov    $0x1,%edx
-	mov    %rdx,%r8
-	shl    %cl,%r8d
-	mov    %r8d,0xc(%rsi)
-	lea    0x1(%r8),%edi
-	mov    %edi,0x10(%rsi)
-	lea    0x2(%r8),%edi
-	mov    %edi,0x14(%rsi)
-	add    $0x1,%ecx
-	mov    %ecx,0x18(%rsi)
-	mov    %rdx,%rdi
-	shl    %cl,%edi
-	mov    %edi,0x1c(%rsi)
-	movl   $0x0,0x28(%rsi)
-	movl   $0x1002,0x20(%rsi)
-	movl   $0x0,0x2c(%rsi)
-	movq   $0x0,0x30(%rsi)
-	jmp    3ce5 <DGifSetupDecompress+0xc5>
-	mov    -0x8(%rbp),%rcx
-	movl   $0x66,0x60(%rcx)
-	leaveq 
-	retq   
-	movslq %eax,%rcx
-	movl   $0x1002,0x2158(%rsi,%rcx,4)
-	add    $0x1,%eax
-	cmp    $0xfff,%eax
-	jle    3cd4 <DGifSetupDecompress+0xb4>
-	mov    %rdx,%rax
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nopl   0x0(%rax)
-
-0003d00 <DGifDecompressLine>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x80,%rsp
-	mov    %rdx,-0x40(%rbp)
-	mov    %rdi,-0x50(%rbp)
-	mov    0x70(%rdi),%r10
-	movslq 0x10(%r10),%r11
-	movslq 0xc(%r10),%r9
-	movslq 0x20(%r10),%rcx
-	xor    %eax,%eax
-	movslq 0x28(%r10),%r8
-	cmp    $0xfff,%r8d
-	jle    3d34 <DGifDecompressLine+0x34>
-	leaveq 
-	retq   
-	mov    %r15,-0x28(%rbp)
-	lea    -0x74(%rbp),%r15
-	mov    %r14,-0x20(%rbp)
-	lea    0x2158(%r10),%r14
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x68(%rbp)
-	test   %r8d,%r8d
-	jne    3d73 <DGifDecompressLine+0x73>
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r10,%rbx
-	mov    %r9,%r12
-	mov    %r11,%r14
-	mov    %r15,%r10
-	mov    %rsi,%r15
-	mov    %r10,%rsi
-	mov    %rax,%r13
-	jmp    3dce <DGifDecompressLine+0xce>
-	mov    %r9,-0x48(%rbp)
-	mov    %rcx,-0x70(%rbp)
-	mov    %rax,%r13
-	jmpq   3e14 <DGifDecompressLine+0x114>
-	movslq %ecx,%rdx
-	movl   $0x1002,(%rsi,%rdx,4)
-	add    $0x1,%ecx
-	cmp    $0xfff,%ecx
-	jle    3d83 <DGifDecompressLine+0x83>
-	movslq 0x10(%rbx),%rcx
-	add    $0x1,%ecx
-	mov    %ecx,0x14(%rbx)
-	movslq 0x8(%rbx),%rcx
-	add    $0x1,%ecx
-	mov    %ecx,0x18(%rbx)
-	mov    $0x1,%edx
-	shl    %cl,%edx
-	mov    %edx,0x1c(%rbx)
-	movl   $0x1002,0x20(%rbx)
-	lea    -0x74(%rbp),%rsi
-	mov    -0x50(%rbp),%rdi
-	mov    -0x40(%rbp),%rdx
-	mov    $0x1002,%ecx
-	cmp    %edx,%r13d
-	jl     3e3a <DGifDecompressLine+0x13a>
-	mov    %ecx,0x20(%rbx)
-	mov    %eax,0x28(%rbx)
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	mov    -0x18(%rbp),%r13
-	mov    $0x1,%eax
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	cmp    %edx,%r13d
-	jge    3e68 <DGifDecompressLine+0x168>
-	add    $0xffffffff,%r8d
-	movslq %r8d,%rcx
-	movzbl 0x158(%r10,%rcx,1),%r9d
-	movslq %r13d,%rcx
-	mov    %r9b,(%rsi,%rcx,1)
-	add    $0x1,%r13d
-	test   %r8d,%r8d
-	jne    3df4 <DGifDecompressLine+0xf4>
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r10,%rbx
-	mov    %r11,%r14
-	mov    %r15,%r10
-	mov    %rsi,%r15
-	mov    %r10,%rsi
-	mov    -0x70(%rbp),%rcx
-	mov    -0x48(%rbp),%r12
-	jmp    3dce <DGifDecompressLine+0xce>
-	mov    %rax,-0x70(%rbp)
-	mov    %rcx,-0x60(%rbp)
-	callq  41a0 <DGifDecompressInput>
-	test   %eax,%eax
-	je     3e8f <DGifDecompressLine+0x18f>
-	movslq -0x74(%rbp),%rsi
-	cmp    %r14d,%esi
-	je     3ea7 <DGifDecompressLine+0x1a7>
-	cmp    %r12d,%esi
-	jne    3eca <DGifDecompressLine+0x1ca>
-	xor    %ecx,%ecx
-	mov    -0x70(%rbp),%rax
-	mov    -0x68(%rbp),%rsi
-	jmpq   3d90 <DGifDecompressLine+0x90>
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r8,%rax
-	mov    %r10,%rbx
-	mov    %r11,%r14
-	mov    %r15,%r8
-	mov    %rsi,%r15
-	mov    %r8,%rsi
-	mov    -0x70(%rbp),%rcx
-	mov    -0x48(%rbp),%r12
-	jmpq   3dce <DGifDecompressLine+0xce>
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	mov    -0x50(%rbp),%rax
-	movl   $0x71,0x60(%rax)
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	cmp    %r12d,%esi
-	jl     3ef6 <DGifDecompressLine+0x1f6>
-	mov    0x2158(%rbx,%rsi,4),%eax
-	cmp    $0x1002,%eax
-	je     3f2e <DGifDecompressLine+0x22e>
-	mov    %r15,-0x58(%rbp)
-	mov    %r14,-0x38(%rbp)
-	mov    -0x60(%rbp),%rcx
-	mov    -0x70(%rbp),%rax
-	mov    -0x68(%rbp),%rdi
-	jmpq   3fb4 <DGifDecompressLine+0x2b4>
-	movslq %r13d,%rax
-	mov    %sil,(%r15,%rax,1)
-	add    $0x1,%r13d
-	mov    -0x40(%rbp),%rdx
-	mov    -0x60(%rbp),%rcx
-	mov    -0x70(%rbp),%rax
-	mov    -0x68(%rbp),%rdi
-	cmp    $0x1002,%ecx
-	jne    3fed <DGifDecompressLine+0x2ed>
-	movslq -0x74(%rbp),%rcx
-	lea    -0x74(%rbp),%rsi
-	mov    -0x50(%rbp),%rdi
-	jmpq   3dce <DGifDecompressLine+0xce>
-	mov    -0x70(%rbp),%r8
-	movslq %r8d,%rcx
-	movslq 0x14(%rbx),%rax
-	add    $0xfffffffe,%eax
-	cmp    %eax,%esi
-	je     4058 <DGifDecompressLine+0x358>
-	mov    -0x68(%rbp),%rdi
-	mov    %r12,%rdx
-	mov    %r13,-0x70(%rbp)
-	mov    %r15,-0x58(%rbp)
-	mov    %r14,-0x38(%rbp)
-	mov    %r8,%r13
-	mov    %rcx,%r14
-	mov    %rax,%r15
-	callq  4160 <DGifGetPrefixChar>
-	mov    %al,0x158(%rbx,%r14,1)
-	movslq %r15d,%rcx
-	mov    %al,0x1157(%rbx,%rcx,1)
-	lea    0x1(%r13),%eax
-	mov    -0x70(%rbp),%r13
-	mov    -0x60(%rbp),%rcx
-	mov    -0x68(%rbp),%rdi
-	mov    %rcx,%rsi
-	jmp    3fb4 <DGifDecompressLine+0x2b4>
-	cmp    %r12d,%esi
-	jle    3fbe <DGifDecompressLine+0x2be>
-	cmp    $0xfff,%esi
-	jg     3fbe <DGifDecompressLine+0x2be>
-	movslq %esi,%r8
-	movzbl 0x1157(%rbx,%r8,1),%esi
-	mov    %sil,0x158(%rbx,%rdx,1)
-	movslq (%rdi,%r8,4),%rsi
-	add    $0x1,%eax
-	movslq %eax,%rdx
-	cmp    $0xffe,%eax
-	jle    3f8c <DGifDecompressLine+0x28c>
-	cmp    $0xffe,%eax
-	jg     40b5 <DGifDecompressLine+0x3b5>
-	cmp    $0xfff,%esi
-	jg     40b5 <DGifDecompressLine+0x3b5>
-	mov    %sil,0x158(%rbx,%rdx,1)
-	add    $0x1,%eax
-	mov    -0x58(%rbp),%r15
-	mov    -0x40(%rbp),%rdx
-	jmpq   40f7 <DGifDecompressLine+0x3f7>
-	movslq 0x14(%rbx),%r8
-	add    $0xfffffffe,%r8d
-	movslq %r8d,%r9
-	mov    (%rdi,%r9,4),%esi
-	cmp    $0x1002,%esi
-	jne    3f1d <DGifDecompressLine+0x21d>
-	mov    %ecx,(%rdi,%r9,4)
-	movslq -0x74(%rbp),%rsi
-	cmp    %esi,%r8d
-	je     4106 <DGifDecompressLine+0x406>
-	mov    %r12,%rcx
-	mov    %r15,-0x70(%rbp)
-	mov    %r14,-0x38(%rbp)
-	mov    %r12,-0x58(%rbp)
-	mov    %r9,%r12
-	mov    %rax,%r14
-	mov    %rdx,%r15
-	mov    %rcx,%rdx
-	callq  4160 <DGifGetPrefixChar>
-	mov    %al,0x1157(%r12,%rbx,1)
-	mov    %r14,%rax
-	mov    %r15,%rdx
-	mov    -0x58(%rbp),%r12
-	mov    -0x38(%rbp),%r14
-	mov    -0x70(%rbp),%r15
-	jmpq   3f1d <DGifDecompressLine+0x21d>
-	mov    -0x68(%rbp),%rdi
-	mov    -0x60(%rbp),%r9
-	mov    %r9,%rsi
-	mov    %r12,%rdx
-	mov    %r13,-0x70(%rbp)
-	mov    %r15,-0x58(%rbp)
-	mov    %r14,-0x38(%rbp)
-	mov    %r12,-0x60(%rbp)
-	mov    %r8,%r12
-	mov    %rcx,%r13
-	mov    %r9,%r14
-	mov    %rax,%r15
-	callq  4160 <DGifGetPrefixChar>
-	mov    %al,0x158(%rbx,%r13,1)
-	movslq %r15d,%rcx
-	mov    %al,0x1157(%rbx,%rcx,1)
-	lea    0x1(%r12),%eax
-	mov    %r14,%rsi
-	mov    -0x60(%rbp),%r12
-	mov    -0x70(%rbp),%r13
-	mov    -0x68(%rbp),%rdi
-	mov    %rsi,%rcx
-	jmpq   3fb4 <DGifDecompressLine+0x2b4>
-	mov    -0x50(%rbp),%rax
-	movl   $0x70,0x60(%rax)
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	cmp    %edx,%r13d
-	jge    4148 <DGifDecompressLine+0x448>
-	add    $0xffffffff,%eax
-	movslq %eax,%rsi
-	movzbl 0x158(%rbx,%rsi,1),%r8d
-	movslq %r13d,%rsi
-	mov    %r8b,(%r15,%rsi,1)
-	add    $0x1,%r13d
-	test   %eax,%eax
-	jne    40d8 <DGifDecompressLine+0x3d8>
-	mov    -0x38(%rbp),%r14
-	xor    %eax,%eax
-	jmpq   3f11 <DGifDecompressLine+0x211>
-	mov    %r12,%rsi
-	mov    %r15,-0x70(%rbp)
-	mov    %r14,-0x30(%rbp)
-	mov    %r12,-0x48(%rbp)
-	mov    %r9,%r12
-	mov    %rdx,%r14
-	mov    %rsi,%rdx
-	mov    %rcx,%rsi
-	mov    %rax,%r15
-	callq  4160 <DGifGetPrefixChar>
-	mov    %al,0x1157(%r12,%rbx,1)
-	mov    %r15,%rax
-	mov    %r14,%rdx
-	mov    -0x48(%rbp),%r12
-	mov    -0x30(%rbp),%r14
-	mov    -0x70(%rbp),%r15
-	jmpq   3f1d <DGifDecompressLine+0x21d>
-	mov    -0x38(%rbp),%r14
-	jmpq   3f11 <DGifDecompressLine+0x211>
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nopl   0x0(%rax)
-
-0004160 <DGifGetPrefixChar>:
-	push   %rbp
-	mov    %rsp,%rbp
-	xor    %eax,%eax
-	jmp    4181 <DGifGetPrefixChar+0x21>
-	cmp    $0xfff,%eax
-	jg     418a <DGifGetPrefixChar+0x2a>
-	cmp    $0xfff,%esi
-	jg     418f <DGifGetPrefixChar+0x2f>
-	movslq %esi,%rcx
-	movslq (%rdi,%rcx,4),%rsi
-	add    $0x1,%eax
-	cmp    %edx,%esi
-	jg     4168 <DGifGetPrefixChar+0x8>
-	mov    %rsi,%rax
-	leaveq 
-	retq   
-	mov    %rsi,%rax
-	leaveq 
-	retq   
-	mov    $0x1002,%eax
-	leaveq 
-	retq   
-	nopw   %cs:0x0(%rax,%rax,1)
-
-00041a0 <DGifDecompressInput>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x40,%rsp
-	xor    %eax,%eax
-	mov    0x70(%rdi),%r8
-	movslq 0x18(%r8),%rcx
-	cmp    $0xc,%ecx
-	jg     41e8 <DGifDecompressInput+0x48>
-	lea    0x58(%r8),%rcx
-	lea    -0x31(%rbp),%rdx
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	mov    %rsi,-0x30(%rbp)
-	mov    %rax,%rbx
-	mov    %r8,%r12
-	mov    %rdi,%r13
-	mov    %rcx,%r14
-	mov    %rdx,%r15
-	jmp    4225 <DGifDecompressInput+0x85>
-	movl   $0x70,0x60(%rdi)
-	leaveq 
-	retq   
-	mov    %r13,%rdi
-	mov    %r14,%rsi
-	mov    %r15,%rdx
-	callq  4310 <DGifBufferedInput>
-	test   %eax,%eax
-	je     428d <DGifDecompressInput+0xed>
-	movzbl -0x31(%rbp),%eax
-	mov    0x2c(%r12),%ecx
-	shl    %cl,%rax
-	or     0x30(%r12),%rax
-	mov    %rax,0x30(%r12)
-	lea    0x8(%rcx),%eax
-	mov    %eax,0x2c(%r12)
-	movslq 0x18(%r12),%rcx
-	cmp    0x2c(%r12),%ecx
-	jg     41f1 <DGifDecompressInput+0x51>
-	lea    0x3dd2(%rip),%rax        # 800a <CodeMasks.4>
-	movzwl (%rax,%rcx,2),%eax
-	and    0x30(%r12),%eax
-	mov    -0x30(%rbp),%rcx
-	mov    %eax,(%rcx)
-	mov    0x30(%r12),%rax
-	mov    0x18(%r12),%ecx
-	shr    %cl,%rax
-	mov    %rax,0x30(%r12)
-	movslq 0x2c(%r12),%rax
-	sub    %ecx,%eax
-	mov    %eax,0x2c(%r12)
-	mov    $0x1,%eax
-	movslq 0x14(%r12),%rdx
-	cmp    $0x1000,%edx
-	jle    42a6 <DGifDecompressInput+0x106>
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	mov    %rbx,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	add    $0x1,%edx
-	mov    %edx,0x14(%r12)
-	movslq 0x1c(%r12),%rsi
-	cmp    %edx,%esi
-	jl     42cd <DGifDecompressInput+0x12d>
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	cmp    $0xb,%ecx
-	jle    42e8 <DGifDecompressInput+0x148>
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	lea    (%rsi,%rsi,1),%edx
-	mov    %edx,0x1c(%r12)
-	add    $0x1,%ecx
-	mov    %ecx,0x18(%r12)
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	xchg   %ax,%ax
-
-0004310 <DGifBufferedInput>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    $0x1,%eax
-	movzbl (%rsi),%ecx
-	test   %cl,%cl
-	je     4341 <DGifBufferedInput+0x31>
-	movzbl 0x1(%rsi),%edi
-	lea    0x1(%rdi),%ecx
-	mov    %cl,0x1(%rsi)
-	movzbl (%rsi,%rdi,1),%ecx
-	mov    %cl,(%rdx)
-	movzbl (%rsi),%ecx
-	add    $0xff,%ecx
-	mov    %cl,(%rsi)
-	leaveq 
-	retq   
-	mov    0x70(%rdi),%r8
-	mov    0x48(%r8),%rcx
-	test   %rcx,%rcx
-	jne    437a <DGifBufferedInput+0x6a>
-	mov    0x40(%r8),%rcx
-	mov    %rax,%r9
-	mov    %rsi,%r8
-	mov    %r14,-0x10(%rbp)
-	mov    %r15,-0x18(%rbp)
-	mov    %rdx,-0x8(%rbp)
-	mov    %r9,%rdx
-	mov    %rdi,%r14
-	mov    %r8,%rdi
-	mov    %rsi,%r15
-	mov    %rax,%rsi
-	callq  20b0 <fread@plt>
-	jmp    43a0 <DGifBufferedInput+0x90>
-	mov    %rdi,%r8
-	mov    %rsi,%r9
-	mov    %r14,-0x10(%rbp)
-	mov    %r15,-0x18(%rbp)
-	mov    %rdx,-0x8(%rbp)
-	mov    %rax,%rdx
-	mov    %rdi,%r14
-	mov    %r8,%rdi
-	mov    %rsi,%r15
-	mov    %r9,%rsi
-	callq  *%rcx
-	movslq %eax,%rax
-	xor    %ecx,%ecx
-	cmp    $0x1,%rax
-	jne    43d1 <DGifBufferedInput+0xc1>
-	movzbl (%r15),%edx
-	test   %dl,%dl
-	je     43e6 <DGifBufferedInput+0xd6>
-	mov    0x70(%r14),%rcx
-	mov    0x48(%rcx),%rax
-	test   %rax,%rax
-	jne    43fb <DGifBufferedInput+0xeb>
-	lea    0x1(%r15),%rdi
-	mov    0x40(%rcx),%rcx
-	mov    $0x1,%esi
-	callq  20b0 <fread@plt>
-	jmp    4407 <DGifBufferedInput+0xf7>
-	movl   $0x66,0x60(%r14)
-	mov    %rcx,%rax
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	leaveq 
-	retq   
-	movl   $0x70,0x60(%r14)
-	mov    %rcx,%rax
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	leaveq 
-	retq   
-	lea    0x1(%r15),%rsi
-	mov    %r14,%rdi
-	callq  *%rax
-	movslq %eax,%rax
-	movzbl (%r15),%ecx
-	cmp    %rax,%rcx
-	jne    443b <DGifBufferedInput+0x12b>
-	movzbl 0x1(%r15),%eax
-	mov    -0x8(%rbp),%rcx
-	mov    %al,(%rcx)
-	movb   $0x2,0x1(%r15)
-	movzbl (%r15),%eax
-	add    $0xff,%eax
-	mov    %al,(%r15)
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	leaveq 
-	retq   
-	movl   $0x66,0x60(%r14)
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	leaveq 
-	retq   
-	nop
-
-0004450 <EGifOpenFileName>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x10,%rsp
-	mov    %r15,-0x8(%rbp)
-	mov    $0x180,%ecx
-	test   %sil,%sil
-	jne    447a <EGifOpenFileName+0x2a>
-	mov    %rdx,%r15
-	mov    %rcx,%rdx
-	xor    %eax,%eax
-	mov    $0x241,%esi
-	callq  22c0 <open@plt>
-	jmp    448c <EGifOpenFileName+0x3c>
-	mov    %rdx,%r15
-	mov    %rcx,%rdx
-	xor    %eax,%eax
-	mov    $0xc1,%esi
-	callq  22c0 <open@plt>
-	xor    %ecx,%ecx
-	cmp    $0xffffffff,%eax
-	je     44ac <EGifOpenFileName+0x5c>
-	mov    %r15,%rsi
-	mov    %rax,%r15
-	mov    %r15,%rdi
-	callq  2110 <EGifOpenFileHandle@plt>
-	test   %rax,%rax
-	je     44ba <EGifOpenFileName+0x6a>
-	mov    -0x8(%rbp),%r15
-	leaveq 
-	retq   
-	test   %r15,%r15
-	jne    44ca <EGifOpenFileName+0x7a>
-	mov    %rcx,%rax
-	mov    -0x8(%rbp),%r15
-	leaveq 
-	retq   
-	mov    %r15,%rdi
-	callq  2170 <close@plt>
-	xor    %eax,%eax
-	mov    -0x8(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x1,(%r15)
-	mov    %rcx,%rax
-	mov    -0x8(%rbp),%r15
-	leaveq 
-	retq   
-	nopw   0x0(%rax,%rax,1)
-
-00044e0 <EGifOpenFileHandle>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    %rsi,-0x8(%rbp)
-	mov    %rdi,-0x10(%rbp)
-	mov    $0x78,%edi
-	callq  2220 <malloc@plt>
-	test   %rax,%rax
-	jne    4503 <EGifOpenFileHandle+0x23>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    %rax,%rdi
-	xor    %esi,%esi
-	mov    %r15,-0x20(%rbp)
-	mov    %rax,%r15
-	mov    $0x78,%edx
-	callq  2150 <memset@plt>
-	mov    $0x6168,%edi
-	callq  2220 <malloc@plt>
-	test   %rax,%rax
-	je     45b0 <EGifOpenFileHandle+0xd0>
-	mov    %rax,%rdi
-	xor    %esi,%esi
-	mov    %r14,-0x18(%rbp)
-	mov    %rax,%r14
-	mov    $0x6168,%edx
-	callq  2150 <memset@plt>
-	callq  21a0 <_InitHashTable@plt>
-	mov    %rax,0x6158(%r14)
-	test   %rax,%rax
-	je     45c9 <EGifOpenFileHandle+0xe9>
-	lea    0x3ad3(%rip),%rsi        # 802d <CodeMask+0x9>
-	mov    -0x10(%rbp),%rax
-	mov    %rax,%rdi
-	mov    %r13,-0x10(%rbp)
-	mov    %rax,%r13
-	callq  2270 <fdopen@plt>
-	mov    %r14,0x70(%r15)
-	mov    %r13d,0x4(%r14)
-	mov    %rax,0x40(%r14)
-	movl   $0x1,(%r14)
-	movb   $0x0,0x6160(%r14)
-	movq   $0x0,0x50(%r14)
-	mov    %r15,%rax
-	movq   $0x0,0x68(%rax)
-	movl   $0x0,0x60(%rax)
-	mov    -0x10(%rbp),%r13
-	mov    -0x18(%rbp),%r14
-	mov    -0x20(%rbp),%r15
-	leaveq 
-	retq   
-	mov    %r15,%rdi
-	callq  2030 <free@plt>
-	mov    -0x8(%rbp),%rax
-	test   %rax,%rax
-	jne    45ee <EGifOpenFileHandle+0x10e>
-	mov    -0x20(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    %r15,%rdi
-	callq  2030 <free@plt>
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	mov    -0x8(%rbp),%rax
-	test   %rax,%rax
-	jne    45fc <EGifOpenFileHandle+0x11c>
-	mov    -0x18(%rbp),%r14
-	mov    -0x20(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movl   $0x7,(%rax)
-	mov    -0x20(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movl   $0x7,(%rax)
-	mov    -0x18(%rbp),%r14
-	mov    -0x20(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	xchg   %ax,%ax
-
-0004610 <EGifOpen>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x30,%rsp
-	mov    %r15,-0x28(%rbp)
-	mov    %rsi,-0x8(%rbp)
-	mov    %rdi,-0x10(%rbp)
-	mov    %r14,%r15
-	mov    %r13,%r14
-	mov    %rdx,%r13
-	mov    $0x78,%edi
-	callq  2220 <malloc@plt>
-	test   %rax,%rax
-	je     46db <EGifOpen+0xcb>
-	mov    %rax,%rdi
-	xor    %esi,%esi
-	mov    %r15,-0x20(%rbp)
-	mov    %rax,%r15
-	mov    $0x78,%edx
-	callq  2150 <memset@plt>
-	mov    $0x6168,%edi
-	callq  2220 <malloc@plt>
-	test   %rax,%rax
-	je     46ee <EGifOpen+0xde>
-	mov    %rax,%rdi
-	xor    %esi,%esi
-	mov    %r14,-0x18(%rbp)
-	mov    %rax,%r14
-	mov    $0x6168,%edx
-	callq  2150 <memset@plt>
-	callq  21a0 <_InitHashTable@plt>
-	mov    %rax,0x6158(%r14)
-	test   %rax,%rax
-	je     470a <EGifOpen+0xfa>
-	mov    %r14,0x70(%r15)
-	movl   $0x0,0x4(%r14)
-	movq   $0x0,0x40(%r14)
-	movl   $0x1,(%r14)
-	mov    -0x8(%rbp),%rax
-	mov    %rax,0x50(%r14)
-	mov    -0x10(%rbp),%rax
-	mov    %rax,0x68(%r15)
-	movb   $0x0,0x6160(%r14)
-	mov    %r15,%rax
-	movl   $0x0,0x60(%rax)
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	test   %r13,%r13
-	jne    472f <EGifOpen+0x11f>
-	mov    %r14,%r13
-	mov    %r15,%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	mov    %r15,%rdi
-	callq  2030 <free@plt>
-	test   %r13,%r13
-	jne    4745 <EGifOpen+0x135>
-	mov    %r14,%r13
-	mov    -0x20(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	mov    %r15,%rdi
-	callq  2030 <free@plt>
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	test   %r13,%r13
-	jne    475c <EGifOpen+0x14c>
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x7,0x0(%r13)
-	mov    %r14,%r13
-	mov    %r15,%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x7,0x0(%r13)
-	mov    %r14,%r13
-	mov    -0x20(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x7,0x0(%r13)
-	mov    -0x18(%rbp),%r13
-	mov    -0x20(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nop
-
-0004780 <EGifSpew>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x60,%rsp
-	mov    %rdi,-0x40(%rbp)
-	movslq (%rdi),%rsi
-	movslq 0x4(%rdi),%rdx
-	movslq 0x8(%rdi),%rcx
-	movslq 0xc(%rdi),%r8
-	mov    0x18(%rdi),%r9
-	callq  2390 <EGifPutScreenDesc@plt>
-	test   %eax,%eax
-	jne    47ac <EGifSpew+0x2c>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    $0x1,%eax
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	xor    %ebx,%ebx
-	mov    -0x40(%rbp),%rdi
-	mov    %rbx,%rcx
-	jmp    4812 <EGifSpew+0x92>
-	mov    %r13,%rax
-	imul   %ebx,%eax
-	movslq %eax,%rsi
-	add    0x20(%r12),%rsi
-	mov    %r13,%rdx
-	callq  2160 <EGifPutLine@plt>
-	test   %eax,%eax
-	je     484b <EGifSpew+0xcb>
-	add    -0x50(%rbp,%r15,4),%ebx
-	mov    -0x40(%rbp),%rdi
-	cmp    %ebx,%r14d
-	jg     47d0 <EGifSpew+0x50>
-	mov    -0x38(%rbp),%rax
-	add    $0x1,%eax
-	cmp    $0x3,%eax
-	jle    4863 <EGifSpew+0xe3>
-	mov    -0x30(%rbp),%rcx
-	mov    $0x1,%eax
-	add    $0x1,%ecx
-	xor    %ebx,%ebx
-	cmp    0x20(%rdi),%ecx
-	jl     4871 <EGifSpew+0xf1>
-	mov    %rax,%r12
-	mov    0x58(%rdi),%rsi
-	movslq 0x50(%rdi),%rdx
-	mov    %rdi,%r13
-	callq  5ea0 <EGifWriteExtensions>
-	test   %eax,%eax
-	jne    48d4 <EGifSpew+0x154>
-	mov    %rbx,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movslq %eax,%r15
-	movslq -0x60(%rbp,%r15,4),%rbx
-	mov    %rax,-0x38(%rbp)
-	jmp    47f3 <EGifSpew+0x73>
-	movslq %ecx,%rsi
-	lea    (%rsi,%rsi,2),%rdx
-	shl    $0x4,%rdx
-	lea    (%rdx,%rsi,8),%r12
-	add    0x48(%rdi),%r12
-	movslq 0xc(%r12),%r14
-	movslq 0x8(%r12),%r13
-	mov    0x20(%r12),%rdx
-	test   %rdx,%rdx
-	je     480d <EGifSpew+0x8d>
-	mov    0x30(%r12),%rsi
-	movslq 0x28(%r12),%rdx
-	mov    %rdi,%rax
-	mov    %rcx,-0x30(%rbp)
-	mov    %rdi,%r15
-	mov    %rax,%rdi
-	callq  5ea0 <EGifWriteExtensions>
-	test   %eax,%eax
-	je     48fc <EGifSpew+0x17c>
-	movslq (%r12),%rsi
-	movslq 0x4(%r12),%rdx
-	movzbl 0x10(%r12),%eax
-	test   %al,%al
-	jne    4915 <EGifSpew+0x195>
-	mov    %rbx,%r9
-	jmp    491b <EGifSpew+0x19b>
-	mov    %r13,%rdi
-	mov    %rbx,%rsi
-	callq  2320 <EGifCloseFile@plt>
-	test   %eax,%eax
-	jne    4953 <EGifSpew+0x1d3>
-	mov    %rbx,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	mov    %rbx,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	mov    $0x1,%r9d
-	sub    $0x10,%rsp
-	mov    0x18(%r12),%rax
-	mov    %rax,(%rsp)
-	mov    %r15,%rdi
-	mov    %r13,%rcx
-	mov    %r14,%r8
-	callq  2230 <EGifPutImageDesc@plt>
-	add    $0x10,%rsp
-	test   %eax,%eax
-	je     496c <EGifSpew+0x1ec>
-	movzbl 0x10(%r12),%eax
-	test   %al,%al
-	jne    4985 <EGifSpew+0x205>
-	mov    %r15,%rdi
-	mov    %rbx,%r15
-	jmpq   49e6 <EGifSpew+0x266>
-	mov    %r12,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	mov    %rbx,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	movabs $0x400000000,%rax
-	mov    %rax,-0x60(%rbp)
-	movabs $0x100000002,%rax
-	mov    %rax,-0x58(%rbp)
-	movabs $0x800000008,%rax
-	mov    %rax,-0x50(%rbp)
-	movabs $0x200000004,%rax
-	mov    %rax,-0x48(%rbp)
-	mov    %rbx,%rax
-	mov    %r15,%rdi
-	jmpq   47ff <EGifSpew+0x7f>
-	movslq %r15d,%rsi
-	add    0x20(%r12),%rsi
-	mov    %r13,%rdx
-	callq  2160 <EGifPutLine@plt>
-	test   %eax,%eax
-	je     49f9 <EGifSpew+0x279>
-	add    %r13d,%r15d
-	add    $0x1,%ebx
-	mov    -0x40(%rbp),%rdi
-	cmp    %r14d,%ebx
-	jl     49c8 <EGifSpew+0x248>
-	mov    -0x30(%rbp),%rcx
-	mov    $0x1,%eax
-	jmpq   480d <EGifSpew+0x8d>
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nopl   0x0(%rax)
-
-0004a20 <EGifGetGifVersion>:
-	push   %rbp
-	mov    %rsp,%rbp
-	mov    0x70(%rdi),%r9
-	xor    %ecx,%ecx
-	mov    %rcx,%rdx
-	jmp    4a7d <EGifGetGifVersion+0x5d>
-	mov    0x30(%r8,%rsi,1),%r10
-	movslq %eax,%r8
-	lea    (%r8,%r8,2),%r8
-	movslq 0x10(%r10,%r8,8),%r8
-	cmp    $0xfe,%r8d
-	je     4a61 <EGifGetGifVersion+0x41>
-	cmp    $0xf9,%r8d
-	je     4a61 <EGifGetGifVersion+0x41>
-	cmp    $0x1,%r8d
-	je     4a61 <EGifGetGifVersion+0x41>
-	cmp    $0xff,%r8d
-	jne    4a69 <EGifGetGifVersion+0x49>
-	movb   $0x1,0x6160(%r9)
-	add    $0x1,%eax
-	mov    0x48(%rdi),%r8
-	movslq 0x28(%r8,%rsi,1),%r10
-	cmp    %eax,%r10d
-	jg     4a2f <EGifGetGifVersion+0xf>
-	add    $0x1,%edx
-	movslq 0x20(%rdi),%rax
-	cmp    %edx,%eax
-	jle    4ace <EGifGetGifVersion+0xae>
-	movslq %edx,%rsi
-	lea    (%rsi,%rsi,2),%rax
-	shl    $0x4,%rax
-	lea    (%rax,%rsi,8),%rsi
-	mov    %rcx,%rax
-	jmp    4a6c <EGifGetGifVersion+0x4c>
-	mov    0x58(%rdi),%rdx
-	movslq %ecx,%rax
-	lea    (%rax,%rax,2),%rax
-	movslq 0x10(%rdx,%rax,8),%rax
-	cmp    $0xfe,%eax
-	je     4ac3 <EGifGetGifVersion+0xa3>
-	cmp    $0xf9,%eax
-	je     4ac3 <EGifGetGifVersion+0xa3>
-	cmp    $0x1,%eax
-	je     4ac3 <EGifGetGifVersion+0xa3>
-	cmp    $0xff,%eax
-	jne    4acb <EGifGetGifVersion+0xab>
-	movb   $0x1,0x6160(%r9)
-	add    $0x1,%ecx
-	movslq 0x50(%rdi),%rax
-	cmp    %ecx,%eax
-	jg     4a99 <EGifGetGifVersion+0x79>
-	movzbl 0x6160(%r9),%eax
-	test   %al,%al
-	je     4aeb <EGifGetGifVersion+0xcb>
-	lea    0x3547(%rip),%rax        # 8030 <CodeMask+0xc>
-	leaveq 
-	retq   
-	lea    0x3545(%rip),%rax        # 8037 <CodeMask+0x13>
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nop
-
-0004b00 <EGifCloseFile>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x30,%rsp
-	xor    %eax,%eax
-	test   %rdi,%rdi
-	jne    4b11 <EGifCloseFile+0x11>
-	leaveq 
-	retq   
-	mov    0x70(%rdi),%rcx
-	test   %rcx,%rcx
-	jne    4b1c <EGifCloseFile+0x1c>
-	leaveq 
-	retq   
-	movslq (%rcx),%rax
-	and    $0x1,%eax
-	test   %eax,%eax
-	jg     4b3a <EGifCloseFile+0x3a>
-	test   %rsi,%rsi
-	je     4b31 <EGifCloseFile+0x31>
-	movl   $0xa,(%rsi)
-	callq  2030 <free@plt>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    0x40(%rcx),%r8
-	movb   $0x3b,-0x21(%rbp)
-	mov    $0x1,%edx
-	lea    -0x21(%rbp),%rax
-	mov    %rdi,%r9
-	mov    %r12,-0x8(%rbp)
-	mov    %r13,-0x10(%rbp)
-	mov    %r14,-0x18(%rbp)
-	mov    %r15,-0x20(%rbp)
-	mov    %rdi,%r12
-	mov    %r9,%rdi
-	mov    %rsi,%r13
-	mov    %rax,%rsi
-	mov    %r8,%r14
-	mov    %rcx,%r15
-	callq  5e70 <InternalWrite>
-	mov    0x40(%r12),%rdi
-	test   %rdi,%rdi
-	je     4b8d <EGifCloseFile+0x8d>
-	callq  20a0 <GifFreeMapObject@plt>
-	movq   $0x0,0x40(%r12)
-	mov    0x18(%r12),%rdi
-	test   %rdi,%rdi
-	je     4ba5 <EGifCloseFile+0xa5>
-	callq  20a0 <GifFreeMapObject@plt>
-	movq   $0x0,0x18(%r12)
-	mov    0x6158(%r15),%rdi
-	test   %rdi,%rdi
-	je     4bb6 <EGifCloseFile+0xb6>
-	callq  2030 <free@plt>
-	mov    %r15,%rdi
-	callq  2030 <free@plt>
-	test   %r14,%r14
-	jne    4be7 <EGifCloseFile+0xe7>
-	mov    %r12,%rdi
-	callq  2030 <free@plt>
-	test   %r13,%r13
-	jne    4c1c <EGifCloseFile+0x11c>
-	mov    $0x1,%eax
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	mov    -0x10(%rbp),%r13
-	mov    -0x8(%rbp),%r12
-	leaveq 
-	retq   
-	mov    %r14,%rdi
-	callq  20d0 <fclose@plt>
-	test   %eax,%eax
-	je     4bc3 <EGifCloseFile+0xc3>
-	test   %r13,%r13
-	je     4c00 <EGifCloseFile+0x100>
-	movl   $0x9,0x0(%r13)
-	mov    %r12,%rdi
-	callq  2030 <free@plt>
-	xor    %eax,%eax
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	mov    -0x10(%rbp),%r13
-	mov    -0x8(%rbp),%r12
-	leaveq 
-	retq   
-	movl   $0x0,0x0(%r13)
-	mov    $0x1,%eax
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	mov    -0x10(%rbp),%r13
-	mov    -0x8(%rbp),%r12
-	leaveq 
-	retq   
-	nopl   0x0(%rax,%rax,1)
-
-0004c40 <EGifPutScreenDesc>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x50,%rsp
-	xor    %eax,%eax
-	mov    %rax,-0x28(%rbp)
-	mov    0x70(%rdi),%r10
-	mov    %r10,-0x8(%rbp)
-	movslq (%r10),%r10
-	mov    %r10,%r11
-	and    $0x2,%r11d
-	test   %r11d,%r11d
-	jg     4c77 <EGifPutScreenDesc+0x37>
-	and    $0x1,%r10d
-	test   %r10d,%r10d
-	jg     4c80 <EGifPutScreenDesc+0x40>
-	movl   $0xa,0x60(%rdi)
-	leaveq 
-	retq   
-	movl   $0x3,0x60(%rdi)
-	leaveq 
-	retq   
-	mov    %rdi,%rax
-	mov    %r14,-0x18(%rbp)
-	mov    %r15,-0x20(%rbp)
-	mov    %rdx,-0x30(%rbp)
-	mov    %rcx,-0x38(%rbp)
-	mov    %r8,-0x40(%rbp)
-	mov    %r9,-0x48(%rbp)
-	mov    %rsi,%r14
-	mov    %r13,%r15
-	mov    %rdi,%r13
-	mov    %rax,%rdi
-	callq  22b0 <EGifGetGifVersion@plt>
-	mov    %rax,%rdi
-	mov    %r15,-0x10(%rbp)
-	mov    %rax,%r15
-	callq  2100 <strlen@plt>
-	mov    %rax,%rdx
-	mov    %r13,%rdi
-	mov    %r15,%rsi
-	callq  5e70 <InternalWrite>
-	movslq %eax,%rax
-	mov    %r15,%rdi
-	mov    %rax,%r15
-	callq  2100 <strlen@plt>
-	cmp    %r15,%rax
-	jne    4d4f <EGifPutScreenDesc+0x10f>
-	mov    %r14d,0x0(%r13)
-	mov    -0x30(%rbp),%rdi
-	mov    %edi,0x4(%r13)
-	mov    -0x38(%rbp),%rcx
-	mov    %ecx,0x8(%r13)
-	mov    -0x40(%rbp),%rax
-	mov    %eax,0xc(%r13)
-	mov    $0x1,%edx
-	mov    %rdx,-0x30(%rbp)
-	mov    -0x48(%rbp),%r15
-	test   %r15,%r15
-	jne    4d67 <EGifPutScreenDesc+0x127>
-	movq   $0x0,0x18(%r13)
-	pushq  -0x28(%rbp)
-	popq   -0x48(%rbp)
-	mov    %r13,%rsi
-	mov    %rbx,-0x38(%rbp)
-	mov    %r12,-0x40(%rbp)
-	mov    %rcx,%rbx
-	mov    %rax,%r12
-	mov    %r14,%rcx
-	mov    %rdi,%r14
-	mov    %rcx,%rdi
-	callq  57e0 <EGifPutWord>
-	mov    %r14,%rdi
-	mov    %r13,%rsi
-	callq  57e0 <EGifPutWord>
-	mov    -0x48(%rbp),%rax
-	test   %rax,%rax
-	jne    4d9c <EGifPutScreenDesc+0x15c>
-	xor    %edx,%edx
-	jmp    4da1 <EGifPutScreenDesc+0x161>
-	movl   $0x2,0x60(%r13)
-	mov    -0x10(%rbp),%r13
-	xor    %eax,%eax
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	leaveq 
-	retq   
-	movslq (%r15),%rax
-	mov    0x10(%r15),%rsi
-	mov    %rdi,%r15
-	mov    %rax,%rdi
-	callq  2280 <GifMakeMapObject@plt>
-	mov    %rax,0x18(%r13)
-	test   %rax,%rax
-	je     4dad <EGifPutScreenDesc+0x16d>
-	mov    %r15,%rdi
-	mov    -0x48(%rbp),%r15
-	mov    -0x40(%rbp),%rax
-	mov    -0x38(%rbp),%rcx
-	pushq  -0x30(%rbp)
-	popq   -0x48(%rbp)
-	jmpq   4d18 <EGifPutScreenDesc+0xd8>
-	mov    $0x80,%edx
-	test   %r15,%r15
-	jne    4dc5 <EGifPutScreenDesc+0x185>
-	mov    $0x7,%eax
-	jmp    4dd2 <EGifPutScreenDesc+0x192>
-	movl   $0x7,0x60(%r13)
-	mov    -0x10(%rbp),%r13
-	xor    %eax,%eax
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	leaveq 
-	retq   
-	movslq 0x4(%r15),%rax
-	add    $0xffffffff,%eax
-	pushq  -0x30(%rbp)
-	popq   -0x28(%rbp)
-	shl    $0x4,%ebx
-	lea    -0x10(%rbx),%ecx
-	or     %edx,%ecx
-	or     %ecx,%eax
-	mov    %al,-0x4b(%rbp)
-	mov    -0x28(%rbp),%rcx
-	test   %rcx,%rcx
-	jne    4e15 <EGifPutScreenDesc+0x1d5>
-	mov    %r12b,-0x4a(%rbp)
-	movzbl 0x10(%r13),%eax
-	mov    %al,-0x49(%rbp)
-	lea    -0x4b(%rbp),%r12
-	mov    $0x3,%ebx
-	mov    %r13,%rdi
-	mov    %r12,%rsi
-	mov    %rbx,%rdx
-	callq  5e70 <InternalWrite>
-	test   %r15,%r15
-	je     4e25 <EGifPutScreenDesc+0x1e5>
-	xor    %r14d,%r14d
-	jmp    4e50 <EGifPutScreenDesc+0x210>
-	movzbl 0x8(%r15),%ecx
-	test   %cl,%cl
-	je     4de8 <EGifPutScreenDesc+0x1a8>
-	or     $0x8,%al
-	mov    %al,-0x4b(%rbp)
-	jmp    4de8 <EGifPutScreenDesc+0x1a8>
-	mov    -0x8(%rbp),%rcx
-	movslq (%rcx),%rax
-	or     $0x2,%eax
-	mov    %eax,(%rcx)
-	mov    -0x40(%rbp),%r12
-	mov    -0x38(%rbp),%rbx
-	mov    $0x1,%eax
-	mov    -0x10(%rbp),%r13
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	leaveq 
-	retq   
-	add    $0x1,%r14d
-	cmp    (%r15),%r14d
-	jge    4e25 <EGifPutScreenDesc+0x1e5>
-	movslq %r14d,%rax
-	lea    (%rax,%rax,2),%rax
-	add    0x10(%r15),%rax
-	movzbl (%rax),%ecx
-	mov    %cl,-0x4b(%rbp)
-	movzbl 0x1(%rax),%ecx
-	mov    %cl,-0x4a(%rbp)
-	movzbl 0x2(%rax),%eax
-	mov    %al,-0x49(%rbp)
-	mov    %r13,%rdi
-	mov    %r12,%rsi
-	mov    %rbx,%rdx
-	callq  5e70 <InternalWrite>
-	cmp    $0x3,%eax
-	je     4e4c <EGifPutScreenDesc+0x20c>
-	movl   $0x2,0x60(%r13)
-	mov    -0x40(%rbp),%r12
-	mov    -0x38(%rbp),%rbx
-	mov    -0x10(%rbp),%r13
-	xor    %eax,%eax
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	leaveq 
-	retq   
-	nopw   0x0(%rax,%rax,1)
-
-0004eb0 <EGifPutImageDesc>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x80,%rsp
-	xor    %eax,%eax
-	mov    %rax,-0x60(%rbp)
-	mov    0x70(%rdi),%r11
-	movslq (%r11),%r10
-	and    $0x4,%r10d
-	test   %r10d,%r10d
-	jg     4ee6 <EGifPutImageDesc+0x36>
-	movslq (%r11),%r10
-	and    $0x1,%r10d
-	test   %r10d,%r10d
-	jg     4ef8 <EGifPutImageDesc+0x48>
-	movl   $0xa,0x60(%rdi)
-	leaveq 
-	retq   
-	mov    0x38(%r11),%r10
-	mov    $0xffff0000,%eax
-	cmp    %rax,%r10
-	ja     4f1d <EGifPutImageDesc+0x6d>
-	xor    %eax,%eax
-	jmp    4ed1 <EGifPutImageDesc+0x21>
-	mov    %esi,0x28(%rdi)
-	mov    %edx,0x2c(%rdi)
-	mov    %ecx,0x30(%rdi)
-	mov    %r8d,0x34(%rdi)
-	mov    $0x1,%r10d
-	mov    %r10,-0x58(%rbp)
-	test   %r9b,%r9b
-	jne    4f28 <EGifPutImageDesc+0x78>
-	mov    %r11,-0x8(%rbp)
-	mov    %rax,%r11
-	jmp    4f2f <EGifPutImageDesc+0x7f>
-	movl   $0x4,0x60(%rdi)
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    %r11,-0x8(%rbp)
-	mov    %r10,%r11
-	mov    %r11b,0x38(%rdi)
-	mov    0x10(%rbp),%r11
-	mov    %r11,-0x68(%rbp)
-	test   %r11,%r11
-	jne    4fd5 <EGifPutImageDesc+0x125>
-	movq   $0x0,0x40(%rdi)
-	mov    %r15,-0x30(%rbp)
-	mov    %rdx,%r15
-	mov    %r10,%rdx
-	mov    %rbx,%r10
-	mov    %rdi,%rbx
-	mov    %r13,%rdi
-	mov    %rcx,%r13
-	mov    %rdi,%rcx
-	mov    %r12,%rdi
-	mov    %r8,%r12
-	mov    %rdi,%r8
-	mov    %rax,-0x78(%rbp)
-	movb   $0x2c,-0x7b(%rbp)
-	lea    -0x7b(%rbp),%rax
-	mov    %r14,-0x28(%rbp)
-	mov    %rbx,%rdi
-	mov    %r9,-0x70(%rbp)
-	mov    %r10,-0x10(%rbp)
-	mov    %r8,-0x18(%rbp)
-	mov    %rcx,-0x20(%rbp)
-	mov    %rsi,%r14
-	mov    %rax,%rsi
-	callq  5e70 <InternalWrite>
-	mov    %r14,%rdi
-	mov    %rbx,%rsi
-	callq  57e0 <EGifPutWord>
-	mov    %r15,%rdi
-	mov    %rbx,%rsi
-	callq  57e0 <EGifPutWord>
-	mov    %r13,%rdi
-	mov    %rbx,%rsi
-	callq  57e0 <EGifPutWord>
-	mov    %r12,%rdi
-	mov    %rbx,%rsi
-	callq  57e0 <EGifPutWord>
-	mov    -0x78(%rbp),%rax
-	test   %rax,%rax
-	jne    4fe6 <EGifPutImageDesc+0x136>
-	xor    %edx,%edx
-	jmp    4feb <EGifPutImageDesc+0x13b>
-	mov    0x40(%rdi),%rax
-	test   %rax,%rax
-	jne    4ffe <EGifPutImageDesc+0x14e>
-	mov    %rbx,%r10
-	mov    %rdi,%rbx
-	jmp    5055 <EGifPutImageDesc+0x1a5>
-	mov    $0x80,%edx
-	mov    -0x70(%rbp),%rax
-	test   %al,%al
-	jne    50b2 <EGifPutImageDesc+0x202>
-	xor    %eax,%eax
-	jmpq   50b7 <EGifPutImageDesc+0x207>
-	mov    %r14,-0x30(%rbp)
-	mov    %r15,-0x38(%rbp)
-	mov    %rsi,-0x70(%rbp)
-	mov    %rdx,-0x50(%rbp)
-	mov    %rcx,-0x48(%rbp)
-	mov    %r8,-0x40(%rbp)
-	mov    %r9,-0x78(%rbp)
-	mov    %rbx,%r14
-	mov    %rdi,%rbx
-	mov    %rax,%rdi
-	mov    %r11,%r15
-	callq  20a0 <GifFreeMapObject@plt>
-	movq   $0x0,0x40(%rbx)
-	mov    %r14,%r10
-	mov    %r15,%r11
-	mov    -0x78(%rbp),%r9
-	mov    -0x40(%rbp),%r8
-	mov    -0x48(%rbp),%rcx
-	mov    -0x50(%rbp),%rdx
-	mov    -0x70(%rbp),%rsi
-	mov    -0x38(%rbp),%r15
-	mov    -0x30(%rbp),%r14
-	movslq (%r11),%rdi
-	mov    0x10(%r11),%rax
-	mov    %r15,-0x30(%rbp)
-	mov    %rsi,-0x50(%rbp)
-	mov    %rdx,-0x48(%rbp)
-	mov    %rcx,-0x40(%rbp)
-	mov    %r8,-0x38(%rbp)
-	mov    %r9,-0x78(%rbp)
-	mov    %rax,%rsi
-	mov    %r10,%r15
-	callq  2280 <GifMakeMapObject@plt>
-	mov    %rax,0x40(%rbx)
-	test   %rax,%rax
-	je     50c4 <EGifPutImageDesc+0x214>
-	mov    %r13,%rcx
-	mov    %r12,%r8
-	mov    %r15,%r10
-	mov    -0x78(%rbp),%r9
-	mov    -0x38(%rbp),%r12
-	mov    -0x40(%rbp),%r13
-	mov    -0x48(%rbp),%r15
-	mov    -0x50(%rbp),%rsi
-	mov    $0x1,%edx
-	mov    %rdx,%rax
-	jmpq   4f6e <EGifPutImageDesc+0xbe>
-	mov    $0x40,%eax
-	mov    -0x68(%rbp),%r15
-	test   %r15,%r15
-	jne    50d6 <EGifPutImageDesc+0x226>
-	xor    %ecx,%ecx
-	jmp    50e7 <EGifPutImageDesc+0x237>
-	movl   $0x7,0x60(%rbx)
-	mov    %r15,%rbx
-	mov    -0x30(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movzbl 0x4(%r15),%ecx
-	add    $0xff,%ecx
-	pushq  -0x58(%rbp)
-	popq   -0x60(%rbp)
-	add    %edx,%eax
-	or     %cl,%al
-	mov    %al,-0x7b(%rbp)
-	mov    %rbx,%rdi
-	lea    -0x7b(%rbp),%r14
-	mov    %r14,%rsi
-	mov    $0x1,%edx
-	callq  5e70 <InternalWrite>
-	mov    -0x60(%rbp),%rax
-	test   %rax,%rax
-	je     5163 <EGifPutImageDesc+0x2b3>
-	mov    $0x3,%eax
-	mov    %r13,-0x78(%rbp)
-	mov    %r12,-0x68(%rbp)
-	mov    %rax,%r12
-	xor    %r13d,%r13d
-	jmp    5156 <EGifPutImageDesc+0x2a6>
-	movslq %r13d,%rax
-	lea    (%rax,%rax,2),%rax
-	add    0x10(%r15),%rax
-	movzbl (%rax),%ecx
-	mov    %cl,-0x7b(%rbp)
-	movzbl 0x1(%rax),%ecx
-	mov    %cl,-0x7a(%rbp)
-	movzbl 0x2(%rax),%eax
-	mov    %al,-0x79(%rbp)
-	mov    %rbx,%rdi
-	mov    %r14,%rsi
-	mov    %r12,%rdx
-	callq  5e70 <InternalWrite>
-	cmp    $0x3,%eax
-	jne    5194 <EGifPutImageDesc+0x2e4>
-	add    $0x1,%r13d
-	cmp    (%r15),%r13d
-	jl     5120 <EGifPutImageDesc+0x270>
-	mov    -0x68(%rbp),%r12
-	mov    -0x78(%rbp),%r13
-	mov    0x18(%rbx),%rax
-	test   %rax,%rax
-	jne    51b3 <EGifPutImageDesc+0x303>
-	mov    0x40(%rbx),%rax
-	test   %rax,%rax
-	jne    51b3 <EGifPutImageDesc+0x303>
-	movl   $0x5,0x60(%rbx)
-	mov    -0x20(%rbp),%r13
-	mov    -0x18(%rbp),%r12
-	mov    -0x10(%rbp),%rbx
-	mov    -0x30(%rbp),%r15
-	mov    -0x28(%rbp),%r14
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movl   $0x2,0x60(%rbx)
-	mov    -0x20(%rbp),%r13
-	mov    -0x18(%rbp),%r12
-	mov    -0x10(%rbp),%rbx
-	mov    -0x30(%rbp),%r15
-	mov    -0x28(%rbp),%r14
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    -0x8(%rbp),%rdx
-	movslq (%rdx),%rax
-	or     $0x4,%eax
-	mov    %eax,(%rdx)
-	movslq %r12d,%rax
-	movslq %r13d,%rcx
-	imul   %rcx,%rax
-	mov    %rax,0x38(%rdx)
-	mov    %rbx,%rdi
-	callq  5820 <EGifSetupCompress>
-	mov    -0x20(%rbp),%r13
-	mov    -0x18(%rbp),%r12
-	mov    -0x10(%rbp),%rbx
-	mov    -0x30(%rbp),%r15
-	mov    -0x28(%rbp),%r14
-	mov    $0x1,%eax
-	leaveq 
-	retq   
-
-00051f0 <EGifSetGifVersion>:
-	push   %rbp
-	mov    %rsp,%rbp
-	mov    0x70(%rdi),%rcx
-	test   %sil,%sil
-	jne    5201 <EGifSetGifVersion+0x11>
-	xor    %eax,%eax
-	jmp    5206 <EGifSetGifVersion+0x16>
-	mov    $0x1,%eax
-	mov    %al,0x6160(%rcx)
-	leaveq 
-	retq   
-	xchg   %ax,%ax
-
-0005210 <EGifPutLine>:
-	push   %rbp
-	mov    %rsp,%rbp
-	xor    %eax,%eax
-	mov    0x70(%rdi),%r9
-	movslq (%r9),%rcx
-	and    $0x1,%ecx
-	test   %ecx,%ecx
-	jg     522d <EGifPutLine+0x1d>
-	movl   $0xa,0x60(%rdi)
-	leaveq 
-	retq   
-	test   %edx,%edx
-	jne    5235 <EGifPutLine+0x25>
-	movslq 0x30(%rdi),%rdx
-	mov    %edx,%r8d
-	mov    0x38(%r9),%rcx
-	cmp    %rcx,%r8
-	ja     525d <EGifPutLine+0x4d>
-	movslq 0x8(%r9),%r10
-	lea    0x2dd8(%rip),%r8        # 8024 <CodeMask>
-	movzbl (%r10,%r8,1),%r10d
-	movslq %edx,%r8
-	sub    %r8,%rcx
-	mov    %rcx,0x38(%r9)
-	jmp    5278 <EGifPutLine+0x68>
-	movl   $0x6,0x60(%rdi)
-	leaveq 
-	retq   
-	movslq %eax,%r8
-	movzbl (%rsi,%r8,1),%ecx
-	and    %r10b,%cl
-	mov    %cl,(%rsi,%r8,1)
-	add    $0x1,%eax
-	cmp    %eax,%edx
-	jg     5266 <EGifPutLine+0x56>
-	callq  5930 <EGifCompressLine>
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	xchg   %ax,%ax
-
-0005290 <EGifPutPixel>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x10,%rsp
-	mov    %sil,-0x1(%rbp)
-	xor    %eax,%eax
-	mov    0x70(%rdi),%rdx
-	movslq (%rdx),%rcx
-	and    $0x1,%ecx
-	test   %ecx,%ecx
-	jg     52b5 <EGifPutPixel+0x25>
-	movl   $0xa,0x60(%rdi)
-	leaveq 
-	retq   
-	mov    0x38(%rdx),%rcx
-	test   %rcx,%rcx
-	je     52ee <EGifPutPixel+0x5e>
-	lea    -0x1(%rcx),%rax
-	mov    %rax,0x38(%rdx)
-	movslq 0x8(%rdx),%rcx
-	lea    0x2d53(%rip),%rax        # 8024 <CodeMask>
-	movzbl (%rcx,%rax,1),%ecx
-	movzbl -0x1(%rbp),%eax
-	and    %cl,%al
-	mov    %al,-0x1(%rbp)
-	lea    -0x1(%rbp),%rsi
-	mov    $0x1,%edx
-	callq  5930 <EGifCompressLine>
-	leaveq 
-	retq   
-	movl   $0x6,0x60(%rdi)
-	leaveq 
-	retq   
-	nopw   0x0(%rax,%rax,1)
-
-0005300 <EGifPutComment>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x30,%rsp
-	mov    %r14,-0x18(%rbp)
-	mov    %r15,-0x20(%rbp)
-	mov    %rdi,%r14
-	mov    %r13,%r15
-	mov    %r12,%r13
-	mov    %rsi,%r12
-	mov    %r12,%rdi
-	callq  2100 <strlen@plt>
-	cmp    $0xff,%eax
-	jbe    5359 <EGifPutComment+0x59>
-	mov    %r14,%rdi
-	mov    %r14,-0x28(%rbp)
-	mov    %rax,%r14
-	mov    $0xfe,%esi
-	callq  2250 <EGifPutExtensionLeader@plt>
-	test   %eax,%eax
-	je     537c <EGifPutComment+0x7c>
-	mov    $0xff,%eax
-	mov    %r13,-0x8(%rbp)
-	mov    %r15,-0x10(%rbp)
-	mov    %rax,%r15
-	mov    -0x28(%rbp),%r13
-	jmp    53ae <EGifPutComment+0xae>
-	mov    %r12,%rcx
-	mov    %rax,%rdx
-	mov    %r14,%rdi
-	mov    $0xfe,%esi
-	callq  2130 <EGifPutExtension@plt>
-	mov    %r13,%r12
-	mov    %r15,%r13
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	leaveq 
-	retq   
-	mov    %r13,%r12
-	mov    %r15,%r13
-	xor    %eax,%eax
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	leaveq 
-	retq   
-	mov    %r13,%rdi
-	mov    %r15,%rsi
-	mov    %r12,%rdx
-	callq  21c0 <EGifPutExtensionBlock@plt>
-	test   %eax,%eax
-	je     53e2 <EGifPutComment+0xe2>
-	add    $0xff,%r12
-	add    $0xffffff01,%r14d
-	cmp    $0xff,%r14d
-	ja     538e <EGifPutComment+0x8e>
-	test   %r14d,%r14d
-	je     53f6 <EGifPutComment+0xf6>
-	mov    %r12,%rdx
-	mov    %r14,%rsi
-	mov    %r13,%rdi
-	callq  21c0 <EGifPutExtensionBlock@plt>
-	test   %eax,%eax
-	jne    53f6 <EGifPutComment+0xf6>
-	mov    -0x10(%rbp),%r13
-	mov    -0x8(%rbp),%r12
-	xor    %eax,%eax
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	leaveq 
-	retq   
-	mov    -0x10(%rbp),%r13
-	mov    -0x8(%rbp),%r12
-	xor    %eax,%eax
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	leaveq 
-	retq   
-	mov    %r13,%rdi
-	callq  20f0 <EGifPutExtensionTrailer@plt>
-	test   %eax,%eax
-	jne    5416 <EGifPutComment+0x116>
-	mov    -0x10(%rbp),%r13
-	mov    -0x8(%rbp),%r12
-	xor    %eax,%eax
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	leaveq 
-	retq   
-	mov    $0x1,%eax
-	mov    -0x10(%rbp),%r13
-	mov    -0x8(%rbp),%r12
-	mov    -0x20(%rbp),%r15
-	mov    -0x18(%rbp),%r14
-	leaveq 
-	retq   
-	nopl   (%rax)
-
-0005430 <EGifPutExtensionLeader>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x10,%rsp
-	mov    0x70(%rdi),%rax
-	movslq (%rax),%rax
-	and    $0x1,%eax
-	test   %eax,%eax
-	jg     5451 <EGifPutExtensionLeader+0x21>
-	movl   $0xa,0x60(%rdi)
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movb   $0x21,-0x3(%rbp)
-	mov    %sil,-0x2(%rbp)
-	lea    -0x3(%rbp),%rsi
-	mov    $0x2,%edx
-	callq  5e70 <InternalWrite>
-	mov    $0x1,%eax
-	leaveq 
-	retq   
-	xchg   %ax,%ax
-
-0005470 <EGifPutExtensionBlock>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    0x70(%rdi),%rax
-	movslq (%rax),%rax
-	and    $0x1,%eax
-	test   %eax,%eax
-	jg     5491 <EGifPutExtensionBlock+0x21>
-	movl   $0xa,0x60(%rdi)
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    %sil,-0x19(%rbp)
-	lea    -0x19(%rbp),%r8
-	mov    $0x1,%eax
-	mov    %rdi,%rcx
-	mov    %r13,-0x8(%rbp)
-	mov    %r14,-0x10(%rbp)
-	mov    %r15,-0x18(%rbp)
-	mov    %rdi,%r13
-	mov    %rcx,%rdi
-	mov    %rdx,%r14
-	mov    %rax,%rdx
-	mov    %rsi,%r15
-	mov    %r8,%rsi
-	callq  5e70 <InternalWrite>
-	movslq %r15d,%rdx
-	mov    %r14,%rsi
-	mov    %r13,%rdi
-	callq  5e70 <InternalWrite>
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	mov    -0x8(%rbp),%r13
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-
-00054f0 <EGifPutExtensionTrailer>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x10,%rsp
-	mov    0x70(%rdi),%rax
-	movslq (%rax),%rax
-	and    $0x1,%eax
-	test   %eax,%eax
-	jg     5511 <EGifPutExtensionTrailer+0x21>
-	movl   $0xa,0x60(%rdi)
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movb   $0x0,-0x1(%rbp)
-	lea    -0x1(%rbp),%rsi
-	mov    $0x1,%edx
-	callq  5e70 <InternalWrite>
-	mov    $0x1,%eax
-	leaveq 
-	retq   
-	nopw   0x0(%rax,%rax,1)
-
-0005530 <EGifPutExtension>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    %edx,-0x18(%rbp)
-	mov    0x70(%rdi),%rax
-	movslq (%rax),%rax
-	and    $0x1,%eax
-	test   %eax,%eax
-	jg     5554 <EGifPutExtension+0x24>
-	movl   $0xa,0x60(%rdi)
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	lea    -0x13(%rbp),%r8
-	mov    $0x1,%edx
-	test   %esi,%esi
-	je     5596 <EGifPutExtension+0x66>
-	movb   $0x21,-0x13(%rbp)
-	mov    %sil,-0x12(%rbp)
-	movzbl -0x18(%rbp),%eax
-	mov    %al,-0x11(%rbp)
-	mov    $0x3,%edx
-	mov    %rdi,%rax
-	mov    %r8,%rsi
-	mov    %r14,-0x8(%rbp)
-	mov    %r15,-0x10(%rbp)
-	mov    %rdi,%r14
-	mov    %rax,%rdi
-	mov    %rcx,%r15
-	callq  5e70 <InternalWrite>
-	mov    %r15,%rsi
-	jmp    55b6 <EGifPutExtension+0x86>
-	lea    -0x18(%rbp),%rsi
-	mov    %rdi,%rax
-	mov    %r14,-0x8(%rbp)
-	mov    %r15,-0x10(%rbp)
-	mov    %rdi,%r14
-	mov    %rax,%rdi
-	mov    %rcx,%r15
-	callq  5e70 <InternalWrite>
-	mov    %r15,%rsi
-	movslq -0x18(%rbp),%rdx
-	mov    %r14,%rdi
-	callq  5e70 <InternalWrite>
-	mov    %r14,%rdi
-	movb   $0x0,-0x13(%rbp)
-	mov    $0x1,%r15d
-	mov    %r15,%rdx
-	lea    -0x13(%rbp),%rsi
-	callq  5e70 <InternalWrite>
-	mov    %r15,%rax
-	mov    -0x10(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	nopl   0x0(%rax,%rax,1)
-
-00055f0 <EGifPutCode>:
-	push   %rbp
-	mov    %rsp,%rbp
-	mov    0x70(%rdi),%rax
-	movslq (%rax),%rax
-	and    $0x1,%eax
-	test   %eax,%eax
-	jg     560d <EGifPutCode+0x1d>
-	movl   $0xa,0x60(%rdi)
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    %rdx,%rsi
-	callq  21d0 <EGifPutCodeNext@plt>
-	leaveq 
-	retq   
-	nopw   0x0(%rax,%rax,1)
-
-0005620 <EGifPutCodeNext>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    %r14,-0x8(%rbp)
-	mov    %r15,-0x10(%rbp)
-	mov    0x70(%rdi),%r14
-	mov    $0x1,%edx
-	test   %rsi,%rsi
-	jne    566a <EGifPutCodeNext+0x4a>
-	movb   $0x0,-0x11(%rbp)
-	lea    -0x11(%rbp),%rsi
-	mov    %rdi,%r15
-	callq  5e70 <InternalWrite>
-	cmp    $0x1,%eax
-	jne    5698 <EGifPutCodeNext+0x78>
-	movq   $0x0,0x38(%r14)
-	mov    $0x1,%eax
-	mov    -0x10(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	movzbl (%rsi),%eax
-	add    $0x1,%eax
-	movslq %eax,%rdx
-	mov    %rdi,%r14
-	mov    %rsi,%r15
-	callq  5e70 <InternalWrite>
-	movzbl (%r15),%ecx
-	add    $0x1,%ecx
-	cmp    %eax,%ecx
-	jne    56ac <EGifPutCodeNext+0x8c>
-	mov    $0x1,%eax
-	mov    -0x10(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	movl   $0x2,0x60(%r15)
-	xor    %eax,%eax
-	mov    -0x10(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	movl   $0x2,0x60(%r14)
-	xor    %eax,%eax
-	mov    -0x10(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-
-00056c0 <EGifGCBToExtension>:
-	push   %rbp
-	mov    %rsp,%rbp
-	movb   $0x0,(%rsi)
-	xor    %eax,%eax
-	movslq 0xc(%rdi),%rcx
-	cmp    $0xffffffff,%ecx
-	je     56d9 <EGifGCBToExtension+0x19>
-	mov    $0x1,%ecx
-	jmp    56dc <EGifGCBToExtension+0x1c>
-	mov    %rax,%rcx
-	mov    %cl,(%rsi)
-	movzbl 0x4(%rdi),%edx
-	test   %dl,%dl
-	je     56eb <EGifGCBToExtension+0x2b>
-	mov    $0x2,%eax
-	add    %eax,%ecx
-	mov    %cl,(%rsi)
-	movzbl (%rdi),%eax
-	and    $0x7,%al
-	lea    (%rcx,%rax,4),%eax
-	mov    %al,(%rsi)
-	movzbl 0x8(%rdi),%eax
-	mov    %al,0x1(%rsi)
-	movslq 0x8(%rdi),%rax
-	shr    $0x8,%eax
-	mov    %al,0x2(%rsi)
-	movzbl 0xc(%rdi),%eax
-	mov    %al,0x3(%rsi)
-	mov    $0x4,%eax
-	leaveq 
-	retq   
-	nopl   0x0(%rax,%rax,1)
-
-0005720 <EGifGCBToSavedExtension>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	xor    %eax,%eax
-	test   %edx,%edx
-	jns    5730 <EGifGCBToSavedExtension+0x10>
-	leaveq 
-	retq   
-	movslq 0x20(%rsi),%rcx
-	add    $0xffffffff,%ecx
-	cmp    %ecx,%edx
-	jle    573d <EGifGCBToSavedExtension+0x1d>
-	leaveq 
-	retq   
-	movslq %edx,%rdx
-	lea    (%rdx,%rdx,2),%rcx
-	shl    $0x4,%rcx
-	lea    (%rcx,%rdx,8),%r8
-	jmp    576d <EGifGCBToSavedExtension+0x4d>
-	movslq %eax,%rcx
-	lea    (%rcx,%rcx,2),%rcx
-	shl    $0x3,%rcx
-	add    0x30(%rdx,%r8,1),%rcx
-	movslq 0x10(%rcx),%rdx
-	cmp    $0xf9,%edx
-	je     57bf <EGifGCBToSavedExtension+0x9f>
-	add    $0x1,%eax
-	mov    0x48(%rsi),%rdx
-	cmp    0x28(%rdx,%r8,1),%eax
-	jl     574e <EGifGCBToSavedExtension+0x2e>
-	lea    -0x20(%rbp),%rax
-	mov    %r14,-0x8(%rbp)
-	mov    %r15,-0x10(%rbp)
-	mov    %r8,%r14
-	mov    %rsi,%r15
-	mov    %rax,%rsi
-	callq  2140 <EGifGCBToExtension@plt>
-	add    0x48(%r15),%r14
-	lea    0x28(%r14),%rdi
-	lea    0x30(%r14),%rsi
-	mov    %rax,%rcx
-	mov    $0xf9,%edx
-	lea    -0x20(%rbp),%r8
-	callq  2070 <GifAddExtensionBlock@plt>
-	test   %eax,%eax
-	jne    57cf <EGifGCBToSavedExtension+0xaf>
-	xor    %eax,%eax
-	mov    -0x10(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	mov    0x8(%rcx),%rsi
-	callq  2140 <EGifGCBToExtension@plt>
-	mov    $0x1,%eax
-	leaveq 
-	retq   
-	mov    -0x10(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	mov    $0x1,%eax
-	leaveq 
-	retq   
-	xchg   %ax,%ax
-
-00057e0 <EGifPutWord>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x10,%rsp
-	mov    %dil,-0x2(%rbp)
-	shr    $0x8,%edi
-	mov    %dil,-0x1(%rbp)
-	mov    %rsi,%rdi
-	lea    -0x2(%rbp),%rsi
-	mov    $0x2,%edx
-	callq  5e70 <InternalWrite>
-	cmp    $0x2,%eax
-	jne    5810 <EGifPutWord+0x30>
-	mov    $0x1,%eax
-	leaveq 
-	retq   
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nop
-
-0005820 <EGifSetupCompress>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    0x70(%rdi),%r8
-	xor    %eax,%eax
-	mov    0x40(%rdi),%rcx
-	test   %rcx,%rcx
-	jne    584d <EGifSetupCompress+0x2d>
-	mov    0x18(%rdi),%rcx
-	test   %rcx,%rcx
-	jne    5905 <EGifSetupCompress+0xe5>
-	movl   $0x5,0x60(%rdi)
-	leaveq 
-	retq   
-	movslq 0x4(%rcx),%rax
-	cmp    $0x1,%eax
-	jg     585b <EGifSetupCompress+0x3b>
-	mov    $0x2,%eax
-	mov    %al,-0x19(%rbp)
-	lea    -0x19(%rbp),%rsi
-	mov    $0x1,%edx
-	mov    %rdi,%rcx
-	mov    %r13,-0x8(%rbp)
-	mov    %r14,-0x10(%rbp)
-	mov    %r15,-0x18(%rbp)
-	mov    %rdi,%r13
-	mov    %rcx,%rdi
-	mov    %rax,%r14
-	mov    %r8,%r15
-	callq  5e70 <InternalWrite>
-	movb   $0x0,0x58(%r15)
-	mov    %r14d,0x8(%r15)
-	mov    %r14,%rcx
-	mov    $0x1,%r14d
-	mov    %r14,%rdx
-	shl    %cl,%edx
-	mov    %edx,0xc(%r15)
-	lea    0x1(%rdx),%eax
-	mov    %eax,0x10(%r15)
-	lea    0x2(%rdx),%eax
-	mov    %eax,0x14(%r15)
-	add    $0x1,%ecx
-	mov    %ecx,0x18(%r15)
-	mov    %r14,%rax
-	shl    %cl,%eax
-	mov    %eax,0x1c(%r15)
-	movl   $0x1001,0x24(%r15)
-	movl   $0x0,0x2c(%r15)
-	movq   $0x0,0x30(%r15)
-	mov    0x6158(%r15),%rdi
-	callq  2360 <_ClearHashTable@plt>
-	movslq 0xc(%r15),%rsi
-	mov    %r13,%rdi
-	callq  5bc0 <EGifCompressOutput>
-	test   %eax,%eax
-	je     590e <EGifSetupCompress+0xee>
-	mov    %r14,%rax
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	mov    -0x8(%rbp),%r13
-	leaveq 
-	retq   
-	movslq 0x4(%rcx),%rax
-	jmpq   5851 <EGifSetupCompress+0x31>
-	movl   $0x8,0x60(%r13)
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	mov    -0x8(%rbp),%r13
-	leaveq 
-	retq   
-	nopw   %cs:0x0(%rax,%rax,1)
-
-0005930 <EGifCompressLine>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x50,%rsp
-	mov    %rdi,-0x30(%rbp)
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	mov    0x70(%rdi),%r8
-	mov    %r8,-0x50(%rbp)
-	mov    0x6158(%r8),%rbx
-	mov    %rbx,-0x38(%rbp)
-	xor    %eax,%eax
-	mov    $0x1,%r9d
-	movslq 0x24(%r8),%rcx
-	cmp    $0x1001,%ecx
-	je     5982 <EGifCompressLine+0x52>
-	mov    %rsi,%r12
-	mov    %rdx,%r13
-	mov    %rdi,%r14
-	jmp    59d5 <EGifCompressLine+0xa5>
-	mov    %rsi,%r12
-	mov    %rdx,%r13
-	mov    %rdi,%r14
-	movzbl (%r12),%ecx
-	mov    %r9,%rax
-	jmp    59d5 <EGifCompressLine+0xa5>
-	lea    0x1(%rax),%r15d
-	movslq %eax,%rax
-	movzbl (%r12,%rax,1),%edx
-	mov    %rdx,-0x48(%rbp)
-	mov    %rcx,%rax
-	shl    $0x8,%eax
-	lea    (%rdx,%rax,1),%esi
-	mov    %rbx,%rdi
-	mov    %rcx,%rbx
-	mov    %rsi,-0x40(%rbp)
-	callq  2210 <_ExistsHashTable@plt>
-	test   %eax,%eax
-	js     5a00 <EGifCompressLine+0xd0>
-	mov    %rax,%rcx
-	mov    %r15,%rax
-	mov    $0x1,%r9d
-	mov    -0x38(%rbp),%rbx
-	mov    -0x50(%rbp),%r8
-	cmp    %r13d,%eax
-	jl     5995 <EGifCompressLine+0x65>
-	mov    %ecx,0x24(%r8)
-	mov    0x38(%r8),%rax
-	test   %rax,%rax
-	je     5a59 <EGifCompressLine+0x129>
-	mov    %r9,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	mov    %rbx,%rsi
-	mov    %r14,%rdi
-	callq  5bc0 <EGifCompressOutput>
-	test   %eax,%eax
-	je     5ab5 <EGifCompressLine+0x185>
-	mov    -0x50(%rbp),%rcx
-	movslq 0x14(%rcx),%rdx
-	cmp    $0xffe,%edx
-	jg     5ad5 <EGifCompressLine+0x1a5>
-	lea    0x1(%rdx),%eax
-	mov    %eax,0x14(%rcx)
-	mov    %rcx,%r14
-	mov    -0x38(%rbp),%rbx
-	mov    %rbx,%rdi
-	mov    -0x40(%rbp),%rsi
-	callq  22a0 <_InsertHashTable@plt>
-	mov    %r15,%rax
-	mov    %r14,%r8
-	mov    -0x30(%rbp),%r14
-	mov    $0x1,%r9d
-	mov    -0x48(%rbp),%rcx
-	jmpq   59d5 <EGifCompressLine+0xa5>
-	mov    %rcx,%rsi
-	mov    %r9,%rbx
-	mov    %r8,%r12
-	mov    %r14,%rdi
-	callq  5bc0 <EGifCompressOutput>
-	test   %eax,%eax
-	je     5b34 <EGifCompressLine+0x204>
-	movslq 0x10(%r12),%rsi
-	mov    %r14,%rdi
-	callq  5bc0 <EGifCompressOutput>
-	test   %eax,%eax
-	je     5b54 <EGifCompressLine+0x224>
-	mov    $0x1000,%esi
-	mov    %r14,%rdi
-	callq  5bc0 <EGifCompressOutput>
-	test   %eax,%eax
-	je     5b74 <EGifCompressLine+0x244>
-	mov    %rbx,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	movl   $0x8,0x60(%r14)
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    %rcx,%rbx
-	movslq 0xc(%rbx),%rsi
-	mov    %r14,%rdi
-	callq  5bc0 <EGifCompressOutput>
-	test   %eax,%eax
-	je     5b94 <EGifCompressLine+0x264>
-	movslq 0x10(%rbx),%rax
-	add    $0x1,%eax
-	mov    %eax,0x14(%rbx)
-	movslq 0x8(%rbx),%rcx
-	add    $0x1,%ecx
-	mov    %rbx,%r14
-	mov    %ecx,0x18(%r14)
-	mov    $0x1,%eax
-	shl    %cl,%eax
-	mov    %eax,0x1c(%r14)
-	mov    -0x38(%rbp),%rbx
-	mov    %rbx,%rdi
-	callq  2360 <_ClearHashTable@plt>
-	mov    %r15,%rax
-	mov    %r14,%r8
-	mov    -0x30(%rbp),%r14
-	mov    $0x1,%r9d
-	mov    -0x48(%rbp),%rcx
-	jmpq   59d5 <EGifCompressLine+0xa5>
-	movl   $0x8,0x60(%r14)
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movl   $0x8,0x60(%r14)
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movl   $0x8,0x60(%r14)
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movl   $0x8,0x60(%r14)
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nop
-
-0005bc0 <EGifCompressOutput>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x30,%rsp
-	mov    %rsi,-0x30(%rbp)
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	mov    0x70(%rdi),%r12
-	mov    $0x1,%ebx
-	xor    %r14d,%r14d
-	cmp    $0x1000,%esi
-	jne    5bfe <EGifCompressOutput+0x3e>
-	lea    0x58(%r12),%r13
-	mov    %rdi,%r15
-	jmp    5c5b <EGifCompressOutput+0x9b>
-	mov    0x2c(%r12),%ecx
-	mov    %rcx,%rax
-	add    0x18(%r12),%eax
-	movslq %esi,%rdx
-	mov    %rdi,%r13
-	shl    %cl,%rdx
-	or     0x30(%r12),%rdx
-	mov    %rdx,0x30(%r12)
-	lea    0x58(%r12),%r15
-	jmpq   5cd4 <EGifCompressOutput+0x114>
-	movzbl 0x30(%r12),%edx
-	mov    %r15,%rdi
-	mov    %r13,%rsi
-	callq  5d40 <EGifBufferedOutput>
-	test   %eax,%eax
-	jne    5c40 <EGifCompressOutput+0x80>
-	mov    %r14,%rbx
-	mov    0x30(%r12),%rax
-	shr    $0x8,%rax
-	mov    %rax,0x30(%r12)
-	movslq 0x2c(%r12),%rax
-	add    $0xfffffff8,%eax
-	mov    %eax,0x2c(%r12)
-	movslq 0x2c(%r12),%rax
-	test   %eax,%eax
-	jg     5c28 <EGifCompressOutput+0x68>
-	mov    %r13,%rsi
-	mov    %r15,%rdi
-	movl   $0x0,0x2c(%r12)
-	mov    $0x1000,%edx
-	callq  5d40 <EGifBufferedOutput>
-	test   %eax,%eax
-	je     5ce0 <EGifCompressOutput+0x120>
-	movslq 0x1c(%r12),%rax
-	cmp    0x14(%r12),%eax
-	jle    5ce5 <EGifCompressOutput+0x125>
-	mov    %rbx,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	movzbl 0x30(%r12),%edx
-	mov    %r13,%rdi
-	mov    %r15,%rsi
-	callq  5d40 <EGifBufferedOutput>
-	test   %eax,%eax
-	jne    5cbe <EGifCompressOutput+0xfe>
-	mov    %r14,%rbx
-	mov    0x30(%r12),%rax
-	shr    $0x8,%rax
-	mov    %rax,0x30(%r12)
-	movslq 0x2c(%r12),%rax
-	add    $0xfffffff8,%eax
-	mov    %eax,0x2c(%r12)
-	cmp    $0x7,%eax
-	jg     5ca6 <EGifCompressOutput+0xe6>
-	jmp    5c81 <EGifCompressOutput+0xc1>
-	mov    %r14,%rbx
-	jmp    5c81 <EGifCompressOutput+0xc1>
-	mov    -0x30(%rbp),%rax
-	cmp    $0xfff,%eax
-	jle    5d09 <EGifCompressOutput+0x149>
-	mov    %rbx,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	movslq 0x18(%r12),%rcx
-	add    $0x1,%ecx
-	mov    %ecx,0x18(%r12)
-	mov    $0x1,%eax
-	shl    %cl,%eax
-	mov    %eax,0x1c(%r12)
-	mov    %rbx,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	nopl   0x0(%rax,%rax,1)
-
-0005d40 <EGifBufferedOutput>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    $0x1,%eax
-	cmp    $0x1000,%edx
-	je     5d6d <EGifBufferedOutput+0x2d>
-	movzbl (%rsi),%ecx
-	cmp    $0xff,%cl
-	je     5da0 <EGifBufferedOutput+0x60>
-	movzbl (%rsi),%ecx
-	add    $0x1,%ecx
-	mov    %cl,(%rsi)
-	movzbl %cl,%ecx
-	mov    %dl,(%rsi,%rcx,1)
-	leaveq 
-	retq   
-	movzbl (%rsi),%ecx
-	test   %cl,%cl
-	jne    5df2 <EGifBufferedOutput+0xb2>
-	mov    %r15,%rcx
-	mov    %rdi,%r15
-	movb   $0x0,(%rsi)
-	mov    %r15,%rdi
-	mov    %rcx,-0x18(%rbp)
-	mov    %rax,%rdx
-	callq  5e70 <InternalWrite>
-	cmp    $0x1,%eax
-	jne    5e37 <EGifBufferedOutput+0xf7>
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	mov    $0x100,%ecx
-	mov    %rdi,%r8
-	mov    %rsi,%rax
-	mov    %r14,-0x10(%rbp)
-	mov    %r15,-0x18(%rbp)
-	mov    %rdx,-0x8(%rbp)
-	mov    %rcx,%rdx
-	mov    %rdi,%r14
-	mov    %r8,%rdi
-	mov    %rsi,%r15
-	mov    %rax,%rsi
-	callq  5e70 <InternalWrite>
-	movzbl (%r15),%ecx
-	add    $0x1,%ecx
-	cmp    %eax,%ecx
-	jne    5e47 <EGifBufferedOutput+0x107>
-	mov    %r15,%rsi
-	movb   $0x0,(%rsi)
-	mov    $0x1,%eax
-	mov    -0x8(%rbp),%rdx
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	jmpq   5d5d <EGifBufferedOutput+0x1d>
-	lea    0x1(%rcx),%eax
-	movslq %eax,%rdx
-	mov    %rdi,%rax
-	mov    %rsi,%rcx
-	mov    %r14,-0x10(%rbp)
-	mov    %r15,-0x18(%rbp)
-	mov    %rsi,%r14
-	mov    %rcx,%rsi
-	mov    %rdi,%r15
-	mov    %rax,%rdi
-	callq  5e70 <InternalWrite>
-	movzbl (%r14),%ecx
-	add    $0x1,%ecx
-	cmp    %eax,%ecx
-	jne    5e5b <EGifBufferedOutput+0x11b>
-	mov    %r14,%rsi
-	mov    $0x1,%eax
-	mov    -0x18(%rbp),%rcx
-	mov    -0x10(%rbp),%r14
-	jmpq   5d7a <EGifBufferedOutput+0x3a>
-	movl   $0x2,0x60(%r15)
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	movl   $0x2,0x60(%r14)
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	leaveq 
-	retq   
-	movl   $0x2,0x60(%r15)
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	leaveq 
-	retq   
-	nop
-
-0005e70 <InternalWrite>:
-	push   %rbp
-	mov    %rsp,%rbp
-	mov    0x70(%rdi),%rcx
-	mov    0x50(%rcx),%rax
-	test   %rax,%rax
-	jne    5e97 <InternalWrite+0x27>
-	mov    $0x1,%eax
-	mov    0x40(%rcx),%rcx
-	mov    %rsi,%rdi
-	mov    %rax,%rsi
-	callq  2330 <fwrite@plt>
-	leaveq 
-	retq   
-	callq  *%rax
-	leaveq 
-	retq   
-	nopl   0x0(%rax,%rax,1)
-
-0005ea0 <EGifWriteExtensions>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x30,%rsp
-	mov    %rdx,-0x30(%rbp)
-	mov    $0x1,%eax
-	test   %rsi,%rsi
-	jne    5eb8 <EGifWriteExtensions+0x18>
-	leaveq 
-	retq   
-	xor    %ecx,%ecx
-	lea    -0x1(%rdx),%eax
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	mov    %rcx,%rbx
-	mov    %rsi,%r12
-	mov    %rdi,%r13
-	mov    %rax,%r14
-	jmp    5f28 <EGifWriteExtensions+0x88>
-	movslq %ebx,%rax
-	lea    (%rax,%rax,2),%r15
-	movslq 0x10(%r12,%r15,8),%rsi
-	test   %esi,%esi
-	je     5efb <EGifWriteExtensions+0x5b>
-	mov    %r13,%rdi
-	callq  2250 <EGifPutExtensionLeader@plt>
-	test   %eax,%eax
-	je     5f47 <EGifWriteExtensions+0xa7>
-	movslq (%r12,%r15,8),%rsi
-	mov    0x8(%r12,%r15,8),%rdx
-	mov    %r13,%rdi
-	callq  21c0 <EGifPutExtensionBlock@plt>
-	test   %eax,%eax
-	je     5f5f <EGifWriteExtensions+0xbf>
-	cmp    %r14d,%ebx
-	jne    5f77 <EGifWriteExtensions+0xd7>
-	mov    %r13,%rdi
-	callq  20f0 <EGifPutExtensionTrailer@plt>
-	test   %eax,%eax
-	je     5f82 <EGifWriteExtensions+0xe2>
-	add    $0x1,%ebx
-	mov    -0x30(%rbp),%rdx
-	cmp    %edx,%ebx
-	jl     5edf <EGifWriteExtensions+0x3f>
-	mov    $0x1,%eax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movslq 0x28(%r12,%r15,8),%rax
-	test   %eax,%eax
-	jne    5f15 <EGifWriteExtensions+0x75>
-	jmp    5f21 <EGifWriteExtensions+0x81>
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	nopw   0x0(%rax,%rax,1)
-
-0005fa0 <GifDrawText8x8>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x40,%rsp
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	mov    %rdx,-0x30(%rbp)
-	mov    %rsi,-0x38(%rbp)
-	mov    %rcx,%r9
-	mov    0x401a(%rip),%rax        # 9fe8 <GifAsciiTable8x8@@Base+0x1faa>
-	xor    %ebx,%ebx
-	mov    $0x1,%r10d
-	mov    $0x8,%r11d
-	mov    %rbx,%r12
-	jmp    6032 <GifDrawText8x8+0x92>
-	mov    %r11,%rcx
-	sub    %r14d,%ecx
-	mov    %r10,%r15
-	shl    %cl,%r15d
-	movsbq (%rsi),%rcx
-	lea    0x0(%r13,%rcx,8),%rcx
-	movzbl (%rcx,%rax,1),%ecx
-	and    %ecx,%r15d
-	test   %r15d,%r15d
-	jle    600d <GifDrawText8x8+0x6d>
-	mov    0x20(%rdi),%r15
-	movslq %edx,%rcx
-	mov    %r8b,(%r15,%rcx,1)
-	add    $0x1,%edx
-	add    $0x1,%r14d
-	cmp    $0x7,%r14d
-	jle    5fe1 <GifDrawText8x8+0x41>
-	add    $0x1,%rsi
-	movsbq (%rsi),%rcx
-	test   %cl,%cl
-	jne    604e <GifDrawText8x8+0xae>
-	add    $0x1,%r12d
-	mov    -0x38(%rbp),%rsi
-	mov    -0x30(%rbp),%rdx
-	cmp    $0x7,%r12d
-	jle    6053 <GifDrawText8x8+0xb3>
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	mov    %rbx,%r14
-	jmp    6014 <GifDrawText8x8+0x74>
-	movslq %r12d,%r13
-	lea    (%r12,%rdx,1),%ecx
-	imul   0x8(%rdi),%ecx
-	lea    (%rcx,%rsi,1),%edx
-	mov    %r9,%rsi
-	jmp    601e <GifDrawText8x8+0x7e>
-	nopw   %cs:0x0(%rax,%rax,1)
-
-0006070 <GifDrawBox>:
-	push   %rbp
-	mov    %rsp,%rbp
-	imul   0x8(%rdi),%edx
-	lea    (%rdx,%rsi,1),%r11d
-	xor    %eax,%eax
-	mov    %rax,%rdx
-	jmp    60a8 <GifDrawBox+0x38>
-	mov    %r8,%rsi
-	imul   0x8(%rdi),%esi
-	add    %r11d,%esi
-	add    %edx,%esi
-	movslq %esi,%r10
-	mov    0x20(%rdi),%rsi
-	mov    %r9b,(%rsi,%r10,1)
-	lea    (%rdx,%r11,1),%r10d
-	movslq %r10d,%r10
-	mov    %r9b,(%r10,%rsi,1)
-	add    $0x1,%edx
-	cmp    %ecx,%edx
-	jl     6083 <GifDrawBox+0x13>
-	jmp    60d2 <GifDrawBox+0x62>
-	mov    %rax,%rdx
-	imul   0x8(%rdi),%edx
-	lea    (%rdx,%r11,1),%r10d
-	lea    (%rcx,%r10,1),%edx
-	movslq %edx,%rdx
-	mov    0x20(%rdi),%rsi
-	mov    %r9b,(%rsi,%rdx,1)
-	movslq %r10d,%rdx
-	mov    %r9b,(%rdx,%rsi,1)
-	add    $0x1,%eax
-	cmp    %r8d,%eax
-	jl     60ae <GifDrawBox+0x3e>
-	leaveq 
-	retq   
-	nopl   0x0(%rax)
-
-00060e0 <GifDrawRectangle>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x30,%rsp
-	mov    %rbx,-0x10(%rbp)
-	mov    %r12,-0x18(%rbp)
-	mov    %r13,-0x20(%rbp)
-	mov    %r14,-0x28(%rbp)
-	mov    %r15,-0x30(%rbp)
-	movslq %ecx,%r10
-	mov    %r10,-0x8(%rbp)
-	imul   0x8(%rdi),%edx
-	movslq %edx,%rax
-	add    0x20(%rdi),%rax
-	movslq %esi,%rcx
-	lea    (%rcx,%rax,1),%r14
-	mov    %r10,%rdx
-	mov    %r8,%r12
-	mov    %rdi,%r13
-	mov    %r9,%r15
-	xor    %ebx,%ebx
-	jmp    6143 <GifDrawRectangle+0x63>
-	mov    %rbx,%rax
-	imul   0x8(%r13),%eax
-	movslq %eax,%rax
-	lea    (%rax,%r14,1),%rdi
-	mov    %r15,%rsi
-	callq  2150 <memset@plt>
-	add    $0x1,%ebx
-	mov    -0x8(%rbp),%rdx
-	cmp    %r12d,%ebx
-	jl     6125 <GifDrawRectangle+0x45>
-	mov    -0x30(%rbp),%r15
-	mov    -0x28(%rbp),%r14
-	mov    -0x20(%rbp),%r13
-	mov    -0x18(%rbp),%r12
-	mov    -0x10(%rbp),%rbx
-	leaveq 
-	retq   
-	xchg   %ax,%ax
-
-0006160 <GifDrawBoxedText8x8>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x60,%rsp
-	mov    %r14,-0x58(%rbp)
-	mov    %r15,-0x60(%rbp)
-	mov    %r9,-0x50(%rbp)
-	xor    %r15d,%r15d
-	mov    %rcx,%r10
-	mov    %r15,%rax
-	mov    %rax,%r9
-	mov    %r9,%r14
-	jmp    618f <GifDrawBoxedText8x8+0x2f>
-	mov    %r9,%r14
-	mov    %r15,%r9
-	add    $0x1,%r10
-	movsbq (%r10),%r11
-	test   %r11b,%r11b
-	jne    61ec <GifDrawBoxedText8x8+0x8c>
-	cmp    %r9d,%r14d
-	jge    61a0 <GifDrawBoxedText8x8+0x40>
-	mov    %r9,%r14
-	mov    %rcx,%r9
-	mov    %rax,-0x48(%rbp)
-	mov    %rsi,-0x38(%rbp)
-	mov    %rdx,-0x40(%rbp)
-	mov    %rdi,-0x30(%rbp)
-	mov    %rcx,-0x28(%rbp)
-	mov    %r9,%rdi
-	mov    %r13,%r15
-	mov    %r12,%r13
-	mov    %rbx,%r12
-	mov    %r8,%rbx
-	callq  2100 <strlen@plt>
-	lea    0x1(%rax),%rdi
-	callq  2220 <malloc@plt>
-	test   %rax,%rax
-	jne    6202 <GifDrawBoxedText8x8+0xa2>
-	mov    %r12,%rbx
-	mov    %r13,%r12
-	mov    %r15,%r13
-	mov    -0x60(%rbp),%r15
-	mov    -0x58(%rbp),%r14
-	leaveq 
-	retq   
-	cmp    $0xd,%r11b
-	je     62a1 <GifDrawBoxedText8x8+0x141>
-	cmp    $0x9,%r11b
-	je     618b <GifDrawBoxedText8x8+0x2b>
-	add    $0x1,%r9d
-	jmp    618b <GifDrawBoxedText8x8+0x2b>
-	mov    %r14,%rcx
-	shl    $0x3,%ecx
-	lea    (%rcx,%rbx,2),%ecx
-	mov    %rcx,-0x8(%rbp)
-	add    $0xffffffff,%ecx
-	mov    -0x48(%rbp),%rdx
-	lea    0x8(%rdx,%rbx,2),%edx
-	mov    %rdx,-0x10(%rbp)
-	lea    -0x1(%rdx),%r8d
-	mov    -0x38(%rbp),%r11
-	lea    0x1(%r11),%esi
-	mov    -0x40(%rbp),%r10
-	lea    0x1(%r10),%edx
-	mov    %r15,-0x48(%rbp)
-	mov    %r13,-0x20(%rbp)
-	mov    -0x30(%rbp),%rdi
-	mov    %r12,-0x18(%rbp)
-	mov    %rax,%r12
-	mov    %r11,%r13
-	mov    %r10,%r15
-	mov    -0x50(%rbp),%r9
-	callq  2240 <GifDrawRectangle@plt>
-	mov    %r14,%rax
-	mov    %r12,%r14
-	mov    %rax,%r12
-	mov    %r14,%rdi
-	mov    -0x28(%rbp),%rsi
-	callq  2080 <strcpy@plt>
-	movslq 0x10(%rbp),%rax
-	mov    %rax,-0x50(%rbp)
-	movslq %r12d,%r12
-	lea    0x21c3(%rip),%rsi        # 843e <GifAsciiTable8x8+0x400>
-	mov    %r14,%rdi
-	mov    %r14,-0x28(%rbp)
-	mov    %r13,%r14
-	mov    %r15,%r13
-	mov    %rax,%r15
-	callq  22e0 <strtok@plt>
-	add    %ebx,%r14d
-	add    %ebx,%r13d
-	mov    %rax,%rcx
-	xor    %edx,%edx
-	mov    -0x30(%rbp),%rbx
-	jmp    62be <GifDrawBoxedText8x8+0x15e>
-	cmp    %r9d,%r14d
-	lea    0x8(%rax),%eax
-	jl     6185 <GifDrawBoxedText8x8+0x25>
-	mov    %r15,%r9
-	jmpq   618b <GifDrawBoxedText8x8+0x2b>
-	add    $0x8,%r13d
-	mov    %rax,%rcx
-	xor    %edx,%edx
-	movsbq (%rcx),%rax
-	cmp    $0x9,%al
-	jne    62e2 <GifDrawBoxedText8x8+0x182>
-	lea    0x1(%rcx),%r15
-	mov    %r15,%rdi
-	callq  2100 <strlen@plt>
-	mov    %r12,%rdx
-	sub    %rax,%rdx
-	shr    %rdx
-	mov    %r15,%rcx
-	mov    -0x50(%rbp),%r15
-	lea    (%r14,%rdx,8),%esi
-	mov    %rbx,%rdi
-	mov    %r13,%rdx
-	mov    %r15,%r8
-	callq  20e0 <GifDrawText8x8@plt>
-	xor    %edi,%edi
-	lea    0x2141(%rip),%rsi        # 843e <GifAsciiTable8x8+0x400>
-	callq  22e0 <strtok@plt>
-	test   %rax,%rax
-	jne    62b5 <GifDrawBoxedText8x8+0x155>
-	mov    -0x28(%rbp),%rdi
-	callq  2030 <free@plt>
-	mov    %rbx,%rdi
-	mov    %r15,%r9
-	mov    -0x10(%rbp),%r8
-	mov    -0x8(%rbp),%rcx
-	mov    -0x40(%rbp),%rdx
-	mov    -0x38(%rbp),%rsi
-	callq  2310 <GifDrawBox@plt>
-	mov    -0x18(%rbp),%rbx
-	mov    -0x20(%rbp),%r12
-	mov    -0x48(%rbp),%r13
-	mov    -0x60(%rbp),%r15
-	mov    -0x58(%rbp),%r14
-	leaveq 
-	retq   
-	nopw   %cs:0x0(%rax,%rax,1)
-	nopl   0x0(%rax,%rax,1)
-
-0006350 <_InitHashTable>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x10,%rsp
-	mov    $0x8000,%edi
-	callq  2220 <malloc@plt>
-	test   %rax,%rax
-	jne    636b <_InitHashTable+0x1b>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    %rax,%rdi
-	mov    %rax,-0x8(%rbp)
-	callq  2360 <_ClearHashTable@plt>
-	mov    -0x8(%rbp),%rax
-	leaveq 
-	retq   
-	nopl   (%rax)
-
-0006380 <_ClearHashTable>:
-	push   %rbp
-	mov    %rsp,%rbp
-	mov    $0xff,%esi
-	mov    $0x8000,%edx
-	callq  2150 <memset@plt>
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-
-00063a0 <_InsertHashTable>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    %r13,-0x8(%rbp)
-	mov    %r14,-0x10(%rbp)
-	mov    %r15,-0x18(%rbp)
-	mov    %rsi,%r13
-	mov    %rbx,%r14
-	mov    %rdx,%rbx
-	mov    %rdi,%r15
-	mov    %r13,%rdi
-	callq  6480 <KeyItem>
-	jmp    63d2 <_InsertHashTable+0x32>
-	add    $0x1,%eax
-	and    $0x1fff,%eax
-	movslq %eax,%rdx
-	mov    (%r15,%rdx,4),%ecx
-	and    $0xfffff000,%ecx
-	cmp    $0xffffe000,%ecx
-	jbe    63ca <_InsertHashTable+0x2a>
-	and    $0xfff,%ebx
-	shl    $0xc,%r13d
-	lea    (%rbx,%r13,1),%eax
-	mov    %eax,(%r15,%rdx,4)
-	mov    %r14,%rbx
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	mov    -0x8(%rbp),%r13
-	leaveq 
-	retq   
-	nopw   0x0(%rax,%rax,1)
-
-0006410 <_ExistsHashTable>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x10,%rsp
-	mov    %r14,-0x8(%rbp)
-	mov    %r15,-0x10(%rbp)
-	mov    %rdi,%r14
-	mov    %rsi,%r15
-	mov    %r15,%rdi
-	callq  6480 <KeyItem>
-	jmp    6443 <_ExistsHashTable+0x33>
-	mov    %rdx,%rcx
-	shr    $0xc,%ecx
-	cmp    %r15d,%ecx
-	je     646c <_ExistsHashTable+0x5c>
-	add    $0x1,%eax
-	and    $0x1fff,%eax
-	movslq %eax,%rcx
-	mov    (%r14,%rcx,4),%edx
-	mov    %rdx,%rcx
-	and    $0xfffff000,%ecx
-	cmp    $0xffffe000,%ecx
-	jbe    6430 <_ExistsHashTable+0x20>
-	mov    $0xffffffffffffffff,%rax
-	mov    -0x10(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	mov    %rdx,%rax
-	and    $0xfff,%eax
-	mov    -0x10(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	xchg   %ax,%ax
-
-0006480 <KeyItem>:
-	push   %rbp
-	mov    %rsp,%rbp
-	mov    %rdi,%rax
-	shr    $0xc,%eax
-	xor    %edi,%eax
-	and    $0x1fff,%eax
-	leaveq 
-	retq   
-	nopw   %cs:0x0(%rax,%rax,1)
-	nopl   (%rax)
-
-00064a0 <GifMakeMapObject>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    %r15,-0x18(%rbp)
-	mov    %rsi,-0x20(%rbp)
-	mov    %rdi,%r15
-	callq  21f0 <GifBitSize@plt>
-	mov    %rax,%rcx
-	mov    $0x1,%edx
-	shl    %cl,%edx
-	cmp    %r15d,%edx
-	je     64cf <GifMakeMapObject+0x2f>
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	mov    $0x18,%edi
-	callq  2220 <malloc@plt>
-	test   %rax,%rax
-	jne    64e6 <GifMakeMapObject+0x46>
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	movslq %r15d,%rdi
-	mov    %rdi,-0x8(%rbp)
-	mov    $0x3,%esi
-	mov    %r14,-0x10(%rbp)
-	mov    %rax,%r14
-	callq  2190 <calloc@plt>
-	mov    %rax,0x10(%r14)
-	test   %rax,%rax
-	je     6534 <GifMakeMapObject+0x94>
-	mov    %r15,%rdi
-	mov    %rax,%r15
-	mov    %edi,(%r14)
-	callq  21f0 <GifBitSize@plt>
-	mov    %eax,0x4(%r14)
-	movb   $0x0,0x8(%r14)
-	mov    -0x20(%rbp),%rsi
-	test   %rsi,%rsi
-	jne    6548 <GifMakeMapObject+0xa8>
-	mov    %r14,%rax
-	mov    -0x10(%rbp),%r14
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	mov    %r14,%rdi
-	callq  2030 <free@plt>
-	mov    -0x10(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	mov    -0x8(%rbp),%rax
-	lea    (%rax,%rax,2),%rdx
-	mov    %r15,%rdi
-	callq  21b0 <memcpy@plt>
-	mov    %r14,%rax
-	mov    -0x10(%rbp),%r14
-	mov    -0x18(%rbp),%r15
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-
-0006570 <GifFreeMapObject>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x10,%rsp
-	test   %rdi,%rdi
-	jne    657f <GifFreeMapObject+0xf>
-	leaveq 
-	retq   
-	mov    0x10(%rdi),%rax
-	mov    %r15,-0x8(%rbp)
-	mov    %rdi,%r15
-	mov    %rax,%rdi
-	callq  2030 <free@plt>
-	mov    %r15,%rdi
-	callq  2030 <free@plt>
-	mov    -0x8(%rbp),%r15
-	leaveq 
-	retq   
-
-00065a0 <GifUnionColorMap>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x50,%rsp
-	mov    %rdi,-0x50(%rbp)
-	mov    %rsi,-0x48(%rbp)
-	mov    %rdx,-0x30(%rbp)
-	movslq (%rdi),%rcx
-	movslq (%rsi),%rax
-	cmp    %ecx,%eax
-	jge    65c1 <GifUnionColorMap+0x21>
-	mov    %rcx,%rax
-	lea    (%rax,%rax,1),%edi
-	xor    %esi,%esi
-	callq  2280 <GifMakeMapObject@plt>
-	test   %rax,%rax
-	jne    65d4 <GifUnionColorMap+0x34>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	xor    %ecx,%ecx
-	mov    -0x50(%rbp),%r9
-	jmp    6601 <GifUnionColorMap+0x61>
-	mov    0x10(%r9),%r8
-	movslq %ecx,%rdx
-	lea    (%rdx,%rdx,2),%rdi
-	movzwl (%r8,%rdi,1),%edx
-	mov    0x10(%rax),%rsi
-	mov    %dx,(%rsi,%rdi,1)
-	movzbl 0x2(%r8,%rdi,1),%edx
-	mov    %dl,0x2(%rsi,%rdi,1)
-	add    $0x1,%ecx
-	movslq (%r9),%rdx
-	cmp    %ecx,%edx
-	jg     65dc <GifUnionColorMap+0x3c>
-	mov    $0x3,%r8d
-	jmp    6624 <GifUnionColorMap+0x84>
-	movzbl 0x1(%rcx),%esi
-	test   %sil,%sil
-	jne    6663 <GifUnionColorMap+0xc3>
-	movzbl 0x2(%rcx),%ecx
-	test   %cl,%cl
-	jne    668c <GifUnionColorMap+0xec>
-	mov    %rdi,%rdx
-	lea    -0x1(%rdx),%edi
-	movslq %edi,%rcx
-	lea    (%rcx,%rcx,2),%rcx
-	add    0x10(%r9),%rcx
-	movzbl (%rcx),%esi
-	test   %sil,%sil
-	je     6610 <GifUnionColorMap+0x70>
-	mov    %rax,-0x40(%rbp)
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	mov    %r8,%r12
-	mov    %r9,%r14
-	mov    -0x48(%rbp),%r13
-	xor    %ebx,%ebx
-	mov    %rbx,%rax
-	jmp    66cd <GifUnionColorMap+0x12d>
-	mov    %rax,-0x40(%rbp)
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	mov    %r8,%r12
-	mov    %r9,%r14
-	mov    -0x48(%rbp),%r13
-	xor    %ebx,%ebx
-	mov    %rbx,%rax
-	jmp    66cd <GifUnionColorMap+0x12d>
-	mov    %rax,-0x40(%rbp)
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	mov    %r8,%r12
-	mov    %r9,%r14
-	mov    -0x48(%rbp),%r13
-	xor    %ebx,%ebx
-	mov    %rbx,%rax
-	jmp    66cd <GifUnionColorMap+0x12d>
-	mov    -0x38(%rbp),%rcx
-	mov    -0x30(%rbp),%rax
-	mov    %bl,(%rax,%rcx,1)
-	mov    -0x50(%rbp),%rdx
-	mov    -0x48(%rbp),%rax
-	add    $0x1,%eax
-	xor    %ebx,%ebx
-	cmp    0x0(%r13),%eax
-	jge    66f0 <GifUnionColorMap+0x150>
-	cmp    $0x100,%edx
-	jg     66f0 <GifUnionColorMap+0x150>
-	movslq %eax,%rcx
-	mov    %rcx,-0x38(%rbp)
-	lea    (%rcx,%rcx,2),%r15
-	mov    %rdx,-0x50(%rbp)
-	mov    %rax,-0x48(%rbp)
-	jmp    674a <GifUnionColorMap+0x1aa>
-	cmp    $0x100,%edx
-	jg     6793 <GifUnionColorMap+0x1f3>
-	mov    %rdx,%r13
-	mov    $0x1,%r14d
-	mov    %r13,%rdi
-	callq  21f0 <GifBitSize@plt>
-	mov    %rax,%rcx
-	shl    %cl,%r14d
-	mov    -0x40(%rbp),%rax
-	cmp    (%rax),%r14d
-	je     67f9 <GifUnionColorMap+0x259>
-	mov    0x10(%rax),%rdi
-	jmpq   67ce <GifUnionColorMap+0x22e>
-	movslq %ebx,%rax
-	lea    (%rax,%rax,2),%rdi
-	add    0x10(%r14),%rdi
-	mov    %r15,%rsi
-	add    0x10(%r13),%rsi
-	mov    %r12,%rdx
-	callq  2180 <memcmp@plt>
-	test   %eax,%eax
-	je     674f <GifUnionColorMap+0x1af>
-	add    $0x1,%ebx
-	cmp    (%r14),%ebx
-	jl     6729 <GifUnionColorMap+0x189>
-	movslq (%r14),%rax
-	cmp    %ebx,%eax
-	jg     66b5 <GifUnionColorMap+0x115>
-	add    0x10(%r13),%r15
-	movzwl (%r15),%ecx
-	mov    -0x50(%rbp),%rdx
-	movslq %edx,%rax
-	lea    (%rax,%rax,2),%rax
-	mov    -0x40(%rbp),%rsi
-	add    0x10(%rsi),%rax
-	mov    %cx,(%rax)
-	movzbl 0x2(%r15),%ecx
-	mov    %cl,0x2(%rax)
-	mov    -0x38(%rbp),%rcx
-	mov    -0x30(%rbp),%rax
-	mov    %dl,(%rax,%rcx,1)
-	add    $0x1,%edx
-	jmpq   66c4 <GifUnionColorMap+0x124>
-	mov    -0x40(%rbp),%rdi
-	callq  20a0 <GifFreeMapObject@plt>
-	mov    %rbx,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	movslq %r13d,%rdx
-	lea    (%rdx,%rdx,2),%rdx
-	movb   $0x0,0x2(%rdi,%rdx,1)
-	movb   $0x0,0x1(%rdi,%rdx,1)
-	movb   $0x0,(%rdi,%rdx,1)
-	add    $0x1,%r13d
-	cmp    %r14d,%r13d
-	jl     67b5 <GifUnionColorMap+0x215>
-	cmp    (%rax),%r14d
-	jge    67f9 <GifUnionColorMap+0x259>
-	mov    %r12,%rdx
-	mov    %rax,%r12
-	mov    %rcx,%r13
-	movslq %r14d,%rsi
-	callq  2200 <reallocarray@plt>
-	test   %rax,%rax
-	je     6815 <GifUnionColorMap+0x275>
-	mov    %rax,0x10(%r12)
-	mov    %r12,%rax
-	mov    %r13,%rcx
-	mov    %r14d,(%rax)
-	mov    %ecx,0x4(%rax)
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	mov    %r12,%rdi
-	callq  20a0 <GifFreeMapObject@plt>
-	mov    %rbx,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	nopw   %cs:0x0(%rax,%rax,1)
-
-0006840 <GifBitSize>:
-	push   %rbp
-	mov    %rsp,%rbp
-	mov    $0x1,%eax
-	mov    %rax,%rcx
-	jmp    685a <GifBitSize+0x1a>
-	mov    %rax,%rdx
-	shl    %cl,%edx
-	cmp    %edi,%edx
-	jge    6864 <GifBitSize+0x24>
-	add    $0x1,%ecx
-	cmp    $0x8,%ecx
-	jle    684e <GifBitSize+0xe>
-	mov    %rcx,%rax
-	leaveq 
-	retq   
-	mov    %rcx,%rax
-	leaveq 
-	retq   
-	nopl   0x0(%rax)
-
-0006870 <GifApplyTranslation>:
-	push   %rbp
-	mov    %rsp,%rbp
-	movslq 0x8(%rdi),%rdx
-	imul   0xc(%rdi),%edx
-	xor    %eax,%eax
-	jmp    6896 <GifApplyTranslation+0x26>
-	movslq %eax,%rcx
-	add    0x20(%rdi),%rcx
-	movzbl (%rcx),%r8d
-	movzbl (%r8,%rsi,1),%r8d
-	mov    %r8b,(%rcx)
-	add    $0x1,%eax
-	cmp    %edx,%eax
-	jl     6880 <GifApplyTranslation+0x10>
-	leaveq 
-	retq   
-	nopl   0x0(%rax)
-
-00068a0 <GifAddExtensionBlock>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x30,%rsp
-	mov    %rdx,-0x10(%rbp)
-	mov    %rcx,-0x18(%rbp)
-	mov    %r8,-0x8(%rbp)
-	mov    $0x18,%edx
-	mov    (%rsi),%rcx
-	test   %rcx,%rcx
-	je     68ec <GifAddExtensionBlock+0x4c>
-	movslq (%rdi),%rax
-	add    $0x1,%eax
-	movslq %eax,%rax
-	mov    %rsi,-0x28(%rbp)
-	mov    %rdi,-0x20(%rbp)
-	mov    %rax,%rsi
-	mov    %rcx,%rdi
-	callq  2200 <reallocarray@plt>
-	test   %rax,%rax
-	je     691c <GifAddExtensionBlock+0x7c>
-	mov    -0x20(%rbp),%rdi
-	mov    -0x28(%rbp),%rsi
-	jmp    6910 <GifAddExtensionBlock+0x70>
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	mov    %rdi,%r14
-	mov    %rdx,%rdi
-	mov    %rsi,%r15
-	callq  2220 <malloc@plt>
-	mov    %r15,%rsi
-	mov    %r14,%rdi
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    %rax,(%rsi)
-	test   %rax,%rax
-	jne    6920 <GifAddExtensionBlock+0x80>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movslq (%rdi),%rdx
-	lea    0x1(%rdx),%ecx
-	mov    %ecx,(%rdi)
-	lea    (%rdx,%rdx,2),%rcx
-	lea    (%rax,%rcx,8),%rcx
-	mov    -0x10(%rbp),%rax
-	mov    %eax,0x10(%rcx)
-	mov    -0x18(%rbp),%rax
-	mov    %eax,(%rcx)
-	movslq %eax,%rdi
-	mov    %r15,-0x28(%rbp)
-	mov    %rcx,%r15
-	callq  2220 <malloc@plt>
-	mov    %rax,0x8(%r15)
-	test   %rax,%rax
-	jne    695d <GifAddExtensionBlock+0xbd>
-	mov    -0x28(%rbp),%r15
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    $0x1,%r15d
-	mov    -0x8(%rbp),%rsi
-	test   %rsi,%rsi
-	jne    6975 <GifAddExtensionBlock+0xd5>
-	mov    %r15,%rax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	mov    -0x18(%rbp),%rcx
-	mov    %ecx,%edx
-	mov    %rax,%rdi
-	callq  21b0 <memcpy@plt>
-	mov    %r15,%rax
-	mov    -0x28(%rbp),%r15
-	leaveq 
-	retq   
-	nopl   0x0(%rax)
-
-0006990 <GifFreeExtensions>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    (%rsi),%rax
-	test   %rax,%rax
-	je     69b7 <GifFreeExtensions+0x27>
-	mov    %r13,-0x8(%rbp)
-	mov    %r14,-0x10(%rbp)
-	mov    %r15,-0x18(%rbp)
-	mov    %rsi,%r13
-	mov    %rdi,%r14
-	mov    %rax,%r15
-	jmp    69c6 <GifFreeExtensions+0x36>
-	leaveq 
-	retq   
-	mov    0x8(%r15),%rdi
-	callq  2030 <free@plt>
-	add    $0x18,%r15
-	mov    0x0(%r13),%rdi
-	movslq (%r14),%rax
-	lea    (%rax,%rax,2),%rax
-	lea    (%rdi,%rax,8),%rax
-	cmp    %r15,%rax
-	ja     69b9 <GifFreeExtensions+0x29>
-	callq  2030 <free@plt>
-	movq   $0x0,0x0(%r13)
-	movl   $0x0,(%r14)
-	mov    -0x18(%rbp),%r15
-	mov    -0x10(%rbp),%r14
-	mov    -0x8(%rbp),%r13
-	leaveq 
-	retq   
-	nopl   0x0(%rax)
-
-0006a00 <GifMakeSavedImage>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x20,%rsp
-	mov    %r15,-0x10(%rbp)
-	mov    %rsi,-0x18(%rbp)
-	mov    $0x38,%edx
-	mov    0x48(%rdi),%rcx
-	test   %rcx,%rcx
-	je     6a35 <GifMakeSavedImage+0x35>
-	movslq 0x20(%rdi),%rax
-	add    $0x1,%eax
-	movslq %eax,%rsi
-	mov    %rdi,%r15
-	mov    %rcx,%rdi
-	callq  2200 <reallocarray@plt>
-	jmp    6a40 <GifMakeSavedImage+0x40>
-	mov    %rdi,%r15
-	mov    %rdx,%rdi
-	callq  2220 <malloc@plt>
-	mov    %rax,0x48(%r15)
-	xor    %esi,%esi
-	test   %rax,%rax
-	jne    6a54 <GifMakeSavedImage+0x54>
-	mov    %rsi,%rax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	movslq 0x20(%r15),%rdx
-	lea    0x1(%rdx),%ecx
-	mov    %ecx,0x20(%r15)
-	lea    (%rdx,%rdx,2),%rcx
-	shl    $0x4,%rcx
-	lea    (%rcx,%rdx,8),%rcx
-	add    %rcx,%rax
-	mov    %rax,%rdi
-	mov    $0x38,%edx
-	mov    %r15,-0x8(%rbp)
-	mov    %rax,%r15
-	callq  2150 <memset@plt>
-	mov    -0x18(%rbp),%rax
-	test   %rax,%rax
-	jne    6a94 <GifMakeSavedImage+0x94>
-	mov    %r15,%rax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	mov    %r15,%rdi
-	mov    %rax,%rsi
-	mov    %r14,-0x18(%rbp)
-	mov    %rax,%r14
-	mov    $0x38,%edx
-	callq  21b0 <memcpy@plt>
-	mov    0x18(%r15),%rax
-	test   %rax,%rax
-	jne    6b03 <GifMakeSavedImage+0x103>
-	movslq 0x8(%r14),%rax
-	imul   0xc(%r14),%eax
-	movslq %eax,%rsi
-	mov    $0x1,%edx
-	xor    %edi,%edi
-	callq  2200 <reallocarray@plt>
-	mov    %rax,0x20(%r15)
-	test   %rax,%rax
-	je     6b31 <GifMakeSavedImage+0x131>
-	movslq 0x8(%r14),%rdx
-	movslq 0xc(%r14),%rcx
-	imul   %rcx,%rdx
-	mov    %rax,%rdi
-	mov    0x20(%r14),%rsi
-	callq  21b0 <memcpy@plt>
-	mov    0x30(%r15),%rax
-	test   %rax,%rax
-	jne    6b46 <GifMakeSavedImage+0x146>
-	mov    %r15,%rax
-	mov    -0x18(%rbp),%r14
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	mov    0x18(%r14),%rax
-	movslq (%rax),%rdi
-	mov    0x10(%rax),%rsi
-	callq  2280 <GifMakeMapObject@plt>
-	mov    %rax,0x18(%r15)
-	test   %rax,%rax
-	jne    6ab4 <GifMakeSavedImage+0xb4>
-	mov    -0x8(%rbp),%rdi
-	callq  2120 <FreeLastSavedImage@plt>
-	mov    -0x18(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	mov    -0x8(%rbp),%rdi
-	callq  2120 <FreeLastSavedImage@plt>
-	mov    -0x18(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	movslq 0x28(%r14),%rsi
-	mov    $0x18,%edx
-	xor    %edi,%edi
-	callq  2200 <reallocarray@plt>
-	mov    %rax,0x30(%r15)
-	test   %rax,%rax
-	je     6b84 <GifMakeSavedImage+0x184>
-	mov    0x30(%r14),%rsi
-	movslq 0x28(%r14),%rcx
-	lea    (%rcx,%rcx,2),%rdx
-	shl    $0x3,%rdx
-	mov    %rax,%rdi
-	callq  21b0 <memcpy@plt>
-	mov    %r15,%rax
-	mov    -0x18(%rbp),%r14
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	mov    -0x8(%rbp),%rdi
-	callq  2120 <FreeLastSavedImage@plt>
-	mov    -0x18(%rbp),%r14
-	xor    %eax,%eax
-	mov    -0x10(%rbp),%r15
-	leaveq 
-	retq   
-	nopl   0x0(%rax)
-
-0006ba0 <GifFreeSavedImages>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x10,%rsp
-	test   %rdi,%rdi
-	jne    6baf <GifFreeSavedImages+0xf>
-	leaveq 
-	retq   
-	mov    0x48(%rdi),%rax
-	test   %rax,%rax
-	jne    6bba <GifFreeSavedImages+0x1a>
-	leaveq 
-	retq   
-	mov    %r14,-0x8(%rbp)
-	mov    %r15,-0x10(%rbp)
-	mov    %rdi,%r14
-	mov    %rax,%r15
-	jmp    6bff <GifFreeSavedImages+0x5f>
-	mov    0x18(%r15),%rdi
-	test   %rdi,%rdi
-	je     6be0 <GifFreeSavedImages+0x40>
-	callq  20a0 <GifFreeMapObject@plt>
-	movq   $0x0,0x18(%r15)
-	mov    0x20(%r15),%rdi
-	test   %rdi,%rdi
-	je     6bee <GifFreeSavedImages+0x4e>
-	callq  2030 <free@plt>
-	lea    0x28(%r15),%rdi
-	lea    0x30(%r15),%rsi
-	callq  2290 <GifFreeExtensions@plt>
-	add    $0x38,%r15
-	movslq 0x20(%r14),%rcx
-	lea    (%rcx,%rcx,2),%rax
-	shl    $0x4,%rax
-	lea    (%rax,%rcx,8),%rax
-	mov    0x48(%r14),%rdi
-	add    %rdi,%rax
-	cmp    %r15,%rax
-	ja     6bca <GifFreeSavedImages+0x2a>
-	callq  2030 <free@plt>
-	movq   $0x0,0x48(%r14)
-	mov    -0x10(%rbp),%r15
-	mov    -0x8(%rbp),%r14
-	leaveq 
-	retq   
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nopl   (%rax)
-
-0006c40 <FreeLastSavedImage>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x10,%rsp
-	test   %rdi,%rdi
-	jne    6c4f <FreeLastSavedImage+0xf>
-	leaveq 
-	retq   
-	mov    0x48(%rdi),%rdx
-	test   %rdx,%rdx
-	jne    6c5a <FreeLastSavedImage+0x1a>
-	leaveq 
-	retq   
-	movslq 0x20(%rdi),%rax
-	add    $0xffffffff,%eax
-	mov    %eax,0x20(%rdi)
-	movslq %eax,%rcx
-	lea    (%rcx,%rcx,2),%rax
-	shl    $0x4,%rax
-	lea    (%rax,%rcx,8),%rax
-	add    %rdx,%rax
-	mov    0x18(%rax),%rdi
-	test   %rdi,%rdi
-	je     6c9a <FreeLastSavedImage+0x5a>
-	mov    %r15,-0x8(%rbp)
-	mov    %rax,%r15
-	callq  20a0 <GifFreeMapObject@plt>
-	mov    %r15,%rax
-	movq   $0x0,0x18(%rax)
-	mov    -0x8(%rbp),%r15
-	mov    0x20(%rax),%rdi
-	test   %rdi,%rdi
-	je     6cb6 <FreeLastSavedImage+0x76>
-	mov    %r15,-0x8(%rbp)
-	mov    %rax,%r15
-	callq  2030 <free@plt>
-	mov    %r15,%rax
-	mov    -0x8(%rbp),%r15
-	lea    0x28(%rax),%rdi
-	lea    0x30(%rax),%rsi
-	callq  2290 <GifFreeExtensions@plt>
-	leaveq 
-	retq   
-	nopw   %cs:0x0(%rax,%rax,1)
-	nop
-
-0006cd0 <reallocarray>:
-	push   %rbp
-	mov    %rsp,%rbp
-	mov    $0xffffffff,%eax
-	cmp    %rax,%rsi
-	ja     6cee <reallocarray+0x1e>
-	cmp    %rax,%rdx
-	ja     6cee <reallocarray+0x1e>
-	imul   %rdx,%rsi
-	callq  2260 <realloc@plt>
-	leaveq 
-	retq   
-	test   %rsi,%rsi
-	je     6ce3 <reallocarray+0x13>
-	mov    %rdx,%rcx
-	mov    $0xffffffffffffffff,%rax
-	xor    %edx,%edx
-	div    %rsi
-	cmp    %rax,%rcx
-	ja     6d0c <reallocarray+0x3c>
-	mov    %rcx,%rdx
-	jmp    6ce3 <reallocarray+0x13>
-	callq  2050 <__errno_location@plt>
-	movl   $0xc,(%rax)
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	nopl   0x0(%rax,%rax,1)
-
-0006d20 <GifErrorString>:
-	push   %rbp
-	mov    %rsp,%rbp
-	xor    %eax,%eax
-	lea    -0x1(%rdi),%ecx
-	cmp    $0x70,%ecx
-	jbe    6d30 <GifErrorString+0x10>
-	leaveq 
-	retq   
-	lea    0x170d(%rip),%rdx        # 8444 <GifAsciiTable8x8+0x406>
-	movslq (%rdx,%rcx,4),%rcx
-	add    %rdx,%rcx
-	jmpq   *%rcx
-	lea    0x18c1(%rip),%rax        # 8608 <GifAsciiTable8x8+0x5ca>
-	leaveq 
-	retq   
-	lea    0x18d2(%rip),%rax        # 8622 <GifAsciiTable8x8+0x5e4>
-	leaveq 
-	retq   
-	lea    0x18e7(%rip),%rax        # 8640 <GifAsciiTable8x8+0x602>
-	leaveq 
-	retq   
-	lea    0x1905(%rip),%rax        # 8667 <GifAsciiTable8x8+0x629>
-	leaveq 
-	retq   
-	lea    0x191d(%rip),%rax        # 8688 <GifAsciiTable8x8+0x64a>
-	leaveq 
-	retq   
-	lea    0x1937(%rip),%rax        # 86ab <GifAsciiTable8x8+0x66d>
-	leaveq 
-	retq   
-	lea    0x195a(%rip),%rax        # 86d7 <GifAsciiTable8x8+0x699>
-	leaveq 
-	retq   
-	lea    0x1974(%rip),%rax        # 86fa <GifAsciiTable8x8+0x6bc>
-	leaveq 
-	retq   
-	lea    0x1985(%rip),%rax        # 8714 <GifAsciiTable8x8+0x6d6>
-	leaveq 
-	retq   
-	lea    0x1997(%rip),%rax        # 872f <GifAsciiTable8x8+0x6f1>
-	leaveq 
-	retq   
-	lea    0x19b2(%rip),%rax        # 8753 <GifAsciiTable8x8+0x715>
-	leaveq 
-	retq   
-	lea    0x19c8(%rip),%rax        # 8772 <GifAsciiTable8x8+0x734>
-	leaveq 
-	retq   
-	lea    0x19d9(%rip),%rax        # 878c <GifAsciiTable8x8+0x74e>
-	leaveq 
-	retq   
-	lea    0x19ee(%rip),%rax        # 87aa <GifAsciiTable8x8+0x76c>
-	leaveq 
-	retq   
-	lea    0x1a02(%rip),%rax        # 87c7 <GifAsciiTable8x8+0x789>
-	leaveq 
-	retq   
-	lea    0x1a14(%rip),%rax        # 87e2 <GifAsciiTable8x8+0x7a4>
-	leaveq 
-	retq   
-	lea    0x1a2e(%rip),%rax        # 8805 <GifAsciiTable8x8+0x7c7>
-	leaveq 
-	retq   
-	lea    0x1a4a(%rip),%rax        # 882a <GifAsciiTable8x8+0x7ec>
-	leaveq 
-	retq   
-	leaveq 
-	retq   
-	nopw   %cs:0x0(%rax,%rax,1)
-	xchg   %ax,%ax
-
-0006df0 <GifQuantizeBuffer>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x2070,%rsp
-	mov    %rsi,-0x50(%rbp)
-	mov    %rdi,-0x58(%rbp)
-	mov    %rcx,-0x40(%rbp)
-	mov    %r8,-0x48(%rbp)
-	mov    %r9,-0x38(%rbp)
-	mov    %rdx,-0x30(%rbp)
-	mov    $0xc0000,%edi
-	callq  2220 <malloc@plt>
-	test   %rax,%rax
-	je     6e26 <GifQuantizeBuffer+0x36>
-	xor    %ecx,%ecx
-	jmp    6e5e <GifQuantizeBuffer+0x6e>
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	mov    %rcx,%rdi
-	sar    $0xa,%edi
-	movslq %ecx,%rdx
-	lea    (%rdx,%rdx,2),%rsi
-	mov    %dil,(%rax,%rsi,8)
-	mov    %rcx,%rdx
-	shr    $0x5,%edx
-	and    $0x1f,%dl
-	mov    %dl,0x1(%rax,%rsi,8)
-	mov    %rcx,%rdx
-	and    $0x1f,%dl
-	mov    %dl,0x2(%rax,%rsi,8)
-	movq   $0x0,0x8(%rax,%rsi,8)
-	add    $0x1,%ecx
-	cmp    $0x7fff,%ecx
-	jle    6e2a <GifQuantizeBuffer+0x3a>
-	mov    -0x58(%rbp),%rcx
-	mov    -0x50(%rbp),%r8
-	imul   %ecx,%r8d
-	mov    -0x38(%rbp),%r11
-	mov    -0x48(%rbp),%r9
-	mov    -0x40(%rbp),%r10
-	xor    %edx,%edx
-	jmp    6ec2 <GifQuantizeBuffer+0xd2>
-	movslq %edx,%rdi
-	movzbl (%r10,%rdi,1),%ecx
-	and    $0x1fffff8,%ecx
-	shl    $0x7,%ecx
-	movzbl (%r9,%rdi,1),%esi
-	and    $0x3ffffff8,%esi
-	lea    (%rcx,%rsi,4),%esi
-	movzbl (%r11,%rdi,1),%ecx
-	shr    $0x3,%ecx
-	add    %esi,%ecx
-	mov    %ecx,%ecx
-	lea    (%rcx,%rcx,2),%rsi
-	mov    0x8(%rax,%rsi,8),%rcx
-	add    $0x1,%rcx
-	mov    %rcx,0x8(%rax,%rsi,8)
-	add    $0x1,%edx
-	cmp    %edx,%r8d
-	jg     6e82 <GifQuantizeBuffer+0x92>
-	xor    %edx,%edx
-	mov    %rdx,%rsi
-	jmp    6ee7 <GifQuantizeBuffer+0xf7>
-	movslq %ecx,%r9
-	movb   $0x0,(%rdi,%r9,1)
-	movb   $0xff,0x3(%rdi,%r9,1)
-	add    $0x1,%ecx
-	cmp    $0x2,%ecx
-	jle    6ece <GifQuantizeBuffer+0xde>
-	add    $0x1,%esi
-	cmp    $0xff,%esi
-	jg     6f32 <GifQuantizeBuffer+0x142>
-	movslq %esi,%rcx
-	shl    $0x5,%rcx
-	movq   $0x0,-0x2040(%rbp,%rcx,1)
-	movl   $0x0,-0x2050(%rbp,%rcx,1)
-	movq   $0x0,-0x2048(%rbp,%rcx,1)
-	lea    -0x2058(%rbp,%rcx,1),%rdi
-	mov    %rdx,%rcx
-	jmp    6edf <GifQuantizeBuffer+0xef>
-	mov    0x8(%rsi),%rcx
-	test   %rcx,%rcx
-	jg     6f45 <GifQuantizeBuffer+0x155>
-	add    $0x1,%edx
-	movslq %edx,%rcx
-	lea    (%rcx,%rcx,2),%rcx
-	lea    (%rax,%rcx,8),%rsi
-	cmp    $0x7fff,%edx
-	jle    6f26 <GifQuantizeBuffer+0x136>
-	mov    %rsi,-0x2040(%rbp)
-	mov    $0x1,%ecx
-	jmp    6f71 <GifQuantizeBuffer+0x181>
-	movslq %edx,%rdi
-	lea    (%rdi,%rdi,2),%rdi
-	lea    (%rax,%rdi,8),%r9
-	mov    0x8(%r9),%rdi
-	test   %rdi,%rdi
-	jle    6f71 <GifQuantizeBuffer+0x181>
-	mov    %r9,0x10(%rsi)
-	add    $0x1,%ecx
-	mov    %r9,%rsi
-	add    $0x1,%edx
-	cmp    $0x7fff,%edx
-	jle    6f53 <GifQuantizeBuffer+0x163>
-	movq   $0x0,0x10(%rsi)
-	mov    %ecx,-0x2050(%rbp)
-	mov    -0x50(%rbp),%rcx
-	mov    %ecx,%ecx
-	mov    -0x58(%rbp),%rdx
-	mov    %edx,%edx
-	imul   %rdx,%rcx
-	mov    %rcx,-0x2048(%rbp)
-	movl   $0x1,-0x205c(%rbp)
-	lea    -0x2058(%rbp),%rdi
-	mov    -0x30(%rbp),%rcx
-	mov    (%rcx),%esi
-	lea    -0x205c(%rbp),%rdx
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	mov    %r8,-0x58(%rbp)
-	mov    %rcx,%r14
-	mov    %rax,%r15
-	callq  7290 <SubdivColorMap>
-	cmp    $0x1,%eax
-	jne    6ffb <GifQuantizeBuffer+0x20b>
-	mov    0x18(%rbp),%r9
-	mov    (%r14),%eax
-	mov    -0x205c(%rbp),%ecx
-	cmp    %ecx,%eax
-	ja     702a <GifQuantizeBuffer+0x23a>
-	mov    %r15,-0x50(%rbp)
-	xor    %r8d,%r8d
-	mov    %r8,%rdi
-	jmpq   7099 <GifQuantizeBuffer+0x2a9>
-	mov    %r15,%rdi
-	callq  2030 <free@plt>
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	xor    %eax,%eax
-	leaveq 
-	retq   
-	movslq %ecx,%rax
-	lea    (%rax,%rax,2),%rax
-	movb   $0x0,0x2(%r9,%rax,1)
-	movb   $0x0,0x1(%r9,%rax,1)
-	movb   $0x0,(%r9,%rax,1)
-	add    $0x1,%ecx
-	movslq (%r14),%rax
-	cmp    %ecx,%eax
-	jg     700f <GifQuantizeBuffer+0x21f>
-	mov    %r15,-0x50(%rbp)
-	xor    %r8d,%r8d
-	mov    %r8,%rdi
-	jmp    7099 <GifQuantizeBuffer+0x2a9>
-	mov    0x10(%rdx),%r14
-	mov    %dil,0x3(%rdx)
-	movzbl 0x2(%rdx),%r15d
-	add    %r15,%rcx
-	movzbl 0x1(%rdx),%r15d
-	add    %r15,%rsi
-	movzbl (%rdx),%edx
-	add    %rdx,%rax
-	mov    %r14,%rdx
-	test   %rdx,%rdx
-	jne    703d <GifQuantizeBuffer+0x24d>
-	shl    $0x3,%rax
-	cqto   
-	idiv   %r10
-	lea    (%r11,%r11,2),%r11
-	mov    %al,(%r9,%r11,1)
-	shl    $0x3,%rsi
-	mov    %rsi,%rax
-	cqto   
-	idiv   %r10
-	mov    %al,0x1(%r9,%r11,1)
-	shl    $0x3,%rcx
-	mov    %rcx,%rax
-	cqto   
-	idiv   %r10
-	mov    %al,0x2(%r9,%r11,1)
-	add    $0x1,%edi
-	mov    -0x205c(%rbp),%eax
-	cmp    %edi,%eax
-	ja     70ea <GifQuantizeBuffer+0x2fa>
-	movl   $0x0,-0x2060(%rbp)
-	movl   $0x0,-0x2064(%rbp)
-	movl   $0x0,-0x2068(%rbp)
-	mov    0x10(%rbp),%rsi
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    -0x50(%rbp),%rdi
-	mov    -0x58(%rbp),%r12
-	mov    -0x38(%rbp),%r14
-	mov    -0x48(%rbp),%r13
-	mov    -0x40(%rbp),%r11
-	jmpq   7227 <GifQuantizeBuffer+0x437>
-	movslq %edi,%r11
-	mov    %r11,%rax
-	shl    $0x5,%rax
-	movslq -0x2050(%rbp,%rax,1),%r10
-	test   %r10d,%r10d
-	jle    7096 <GifQuantizeBuffer+0x2a6>
-	mov    -0x2040(%rbp,%rax,1),%rdx
-	mov    %r8,%rax
-	mov    %rax,%rcx
-	mov    %rcx,%rsi
-	jmpq   705e <GifQuantizeBuffer+0x26e>
-	movslq %r8d,%r10
-	movzbl (%r11,%r10,1),%eax
-	and    $0x1fffff8,%eax
-	shl    $0x7,%eax
-	movzbl 0x0(%r13,%r10,1),%ecx
-	and    $0x3ffffff8,%ecx
-	lea    (%rax,%rcx,4),%ecx
-	movzbl (%r14,%r10,1),%eax
-	shr    $0x3,%eax
-	add    %ecx,%eax
-	mov    %eax,%eax
-	lea    (%rax,%rax,2),%rax
-	movzbl 0x3(%rdi,%rax,8),%eax
-	mov    %al,(%rsi,%r10,1)
-	lea    (%rax,%rax,2),%rbx
-	movzbl (%r9,%rbx,1),%edx
-	movzbl (%r11,%r10,1),%eax
-	mov    %rdx,%rcx
-	sub    %eax,%ecx
-	test   %ecx,%ecx
-	jle    725d <GifQuantizeBuffer+0x46d>
-	mov    %rcx,%rax
-	movslq -0x2068(%rbp),%rcx
-	cmp    %ecx,%eax
-	jle    7198 <GifQuantizeBuffer+0x3a8>
-	movzbl (%r9,%rbx,1),%edx
-	movzbl (%r11,%r10,1),%eax
-	mov    %rdx,%rcx
-	sub    %eax,%ecx
-	test   %ecx,%ecx
-	jle    7264 <GifQuantizeBuffer+0x474>
-	mov    %rcx,%rax
-	mov    %eax,-0x2068(%rbp)
-	movslq -0x2064(%rbp),%r15
-	movzbl 0x1(%r9,%rbx,1),%edx
-	movzbl 0x0(%r13,%r10,1),%eax
-	mov    %rdx,%rcx
-	sub    %eax,%ecx
-	test   %ecx,%ecx
-	jle    726b <GifQuantizeBuffer+0x47b>
-	mov    %rcx,%rax
-	cmp    %r15d,%eax
-	jle    71e2 <GifQuantizeBuffer+0x3f2>
-	movzbl 0x1(%r9,%rbx,1),%edx
-	movzbl 0x0(%r13,%r10,1),%eax
-	mov    %rdx,%rcx
-	sub    %eax,%ecx
-	test   %ecx,%ecx
-	jle    7272 <GifQuantizeBuffer+0x482>
-	mov    %rcx,%rax
-	mov    %eax,-0x2064(%rbp)
-	movslq -0x2060(%rbp),%rcx
-	movzbl 0x2(%r9,%rbx,1),%edx
-	movzbl (%r14,%r10,1),%eax
-	mov    %rdx,%r15
-	sub    %eax,%r15d
-	test   %r15d,%r15d
-	jle    7279 <GifQuantizeBuffer+0x489>
-	mov    %r15,%rax
-	cmp    %ecx,%eax
-	jle    7223 <GifQuantizeBuffer+0x433>
-	movzbl 0x2(%r9,%rbx,1),%edx
-	movzbl (%r14,%r10,1),%eax
-	mov    %rdx,%rcx
-	sub    %eax,%ecx
-	test   %ecx,%ecx
-	jle    727d <GifQuantizeBuffer+0x48d>
-	mov    %rcx,%rax
-	mov    %eax,-0x2060(%rbp)
-	add    $0x1,%r8d
-	cmp    %r8d,%r12d
-	jg     7117 <GifQuantizeBuffer+0x327>
-	callq  2030 <free@plt>
-	movslq -0x205c(%rbp),%rcx
-	mov    -0x30(%rbp),%rax
-	mov    %ecx,(%rax)
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	mov    $0x1,%eax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	leaveq 
-	retq   
-	sub    %edx,%eax
-	jmpq   716d <GifQuantizeBuffer+0x37d>
-	sub    %edx,%eax
-	jmpq   7192 <GifQuantizeBuffer+0x3a2>
-	sub    %edx,%eax
-	jmpq   71bb <GifQuantizeBuffer+0x3cb>
-	sub    %edx,%eax
-	jmpq   71dc <GifQuantizeBuffer+0x3ec>
-	sub    %edx,%eax
-	jmp    7202 <GifQuantizeBuffer+0x412>
-	sub    %edx,%eax
-	jmp    721d <GifQuantizeBuffer+0x42d>
-	data16 nopw %cs:0x0(%rax,%rax,1)
-	nopl   0x0(%rax)
-
-0007290 <SubdivColorMap>:
-	push   %rbp
-	mov    %rsp,%rbp
-	sub    $0x40,%rsp
-	mov    %rdx,-0x38(%rbp)
-	mov    %rsi,-0x40(%rbp)
-	mov    %rbx,-0x8(%rbp)
-	mov    %r12,-0x10(%rbp)
-	mov    %r13,-0x18(%rbp)
-	mov    %r14,-0x20(%rbp)
-	mov    %r15,-0x28(%rbp)
-	mov    %rdi,%r13
-	xor    %r12d,%r12d
-	mov    $0x8,%r15d
-	lea    0x299(%rip),%r14        # 7560 <SortCmpRtn>
-	mov    $0xffffffffffffffff,%r8
-	mov    %r12,%rbx
-	jmpq   7372 <SubdivColorMap+0xe2>
-	mov    %esi,%r10d
-	movzbl (%r14,%r10,1),%r9d
-	mov    (%rdx),%ecx
-	shl    $0x5,%rcx
-	lea    0x0(%r13,%rcx,1),%rax
-	mov    %r9b,(%rax,%r10,1)
-	movzbl 0x3(%r14,%r10,1),%r9d
-	mov    (%rdx),%ecx
-	shl    $0x5,%rcx
-	lea    0x0(%r13,%rcx,1),%rax
-	mov    %r9b,0x3(%rax,%r10,1)
-	add    $0x1,%esi
-	cmp    $0x2,%esi
-	jbe    72d6 <SubdivColorMap+0x46>
-	mov    (%rdx),%eax
-	shl    $0x5,%rax
-	lea    0x0(%r13,%rax,1),%rsi
-	movslq 0x2ebf(%rip),%r9        # a1dc <SortRGBAxis>
-	movzbl 0x3(%r9,%rsi,1),%ecx
-	movzbl (%r9,%rsi,1),%eax
-	add    %ecx,%eax
-	shl    $0x3,%r8d
-	sub    %r8b,%al
-	mov    %al,0x3(%r9,%rsi,1)
-	mov    (%rdx),%eax
-	shl    $0x5,%rax
-	add    %r13,%rax
-	mov    %r8b,(%r9,%rax,1)
-	movzbl (%r14,%r9,1),%eax
-	shl    $0x3,%edi
-	sub    %al,%dil
-	mov    %dil,0x3(%r9,%r14,1)
-	mov    (%rdx),%eax
-	add    $0x1,%eax
-	mov    %eax,(%rdx)
-	mov    $0xffffffffffffffff,%r8
-	lea    0x1f8(%rip),%r14        # 7560 <SortCmpRtn>
-	mov    $0x8,%r15d
-	mov    -0x40(%rbp),%rsi
-	mov    (%rdx),%eax
-	cmp    %esi,%eax
-	jb     7393 <SubdivColorMap+0x103>
-	mov    $0x1,%eax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	mov    %r12,%r9
-	jmp    73b0 <SubdivColorMap+0x120>
-	mov    %esi,%eax
-	movzbl 0x3(%rcx,%rax,1),%eax
-	cmp    %r8d,%eax
-	jg     73ef <SubdivColorMap+0x15f>
-	add    $0x1,%esi
-	cmp    $0x2,%esi
-	jbe    7398 <SubdivColorMap+0x108>
-	add    $0x1,%r9d
-	mov    (%rdx),%eax
-	cmp    %r9d,%eax
-	ja     7407 <SubdivColorMap+0x177>
-	cmp    $0xffffffff,%r8d
-	je     7418 <SubdivColorMap+0x188>
-	mov    %ebx,%eax
-	shl    $0x5,%rax
-	mov    0x8(%r13,%rax,1),%edi
-	shl    $0x3,%rdi
-	mov    %rbx,-0x30(%rbp)
-	mov    %rax,%rbx
-	callq  2220 <malloc@plt>
-	test   %rax,%rax
-	je     7433 <SubdivColorMap+0x1a3>
-	lea    0x0(%r13,%rbx,1),%rcx
-	mov    0x18(%rcx),%r8
-	mov    -0x30(%rbp),%rbx
-	mov    %r12,%r9
-	jmp    7460 <SubdivColorMap+0x1d0>
-	mov    0x8(%r13,%r10,1),%edi
-	cmp    $0x1,%edi
-	jbe    73a4 <SubdivColorMap+0x114>
-	mov    %esi,0x2ddd(%rip)        # a1dc <SortRGBAxis>
-	mov    %rax,%r8
-	mov    %r9,%rbx
-	jmp    73a4 <SubdivColorMap+0x114>
-	mov    %r9d,%r10d
-	shl    $0x5,%r10
-	lea    0x0(%r13,%r10,1),%rcx
-	mov    %r12,%rsi
-	jmp    73a7 <SubdivColorMap+0x117>
-	mov    $0x1,%eax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	mov    %r12,%rax
-	mov    -0x28(%rbp),%r15
-	mov    -0x20(%rbp),%r14
-	mov    -0x18(%rbp),%r13
-	mov    -0x10(%rbp),%r12
-	mov    -0x8(%rbp),%rbx
-	leaveq 
-	retq   
-	test   %r8,%r8
-	je     7468 <SubdivColorMap+0x1d8>
-	mov    %r9d,%edx
-	mov    %r8,(%rax,%rdx,8)
-	mov    0x10(%r8),%r8
-	add    $0x1,%r9d
-	mov    0x8(%rcx),%esi
-	cmp    %esi,%r9d
-	jb     744c <SubdivColorMap+0x1bc>
-	mov    %r15,%rdx
-	mov    %rax,%r15
-	mov    %r14,%rax
-	mov    %rcx,%r14
-	mov    %rax,%rcx
-	mov    %r15,%rdi
-	callq  2090 <qsort@plt>
-	mov    %r12,%rsi
-	jmp    749a <SubdivColorMap+0x20a>
-	lea    0x1(%rsi),%eax
-	mov    %eax,%ecx
-	mov    (%r15,%rcx,8),%rdx
-	mov    %esi,%ecx
-	mov    (%r15,%rcx,8),%rcx
-	mov    %rdx,0x10(%rcx)
-	mov    %rax,%rsi
-	mov    0x8(%r14),%ecx
-	add    $0xffffffff,%ecx
-	cmp    %esi,%ecx
-	ja     7484 <SubdivColorMap+0x1f4>
-	mov    %ecx,%eax
-	mov    (%r15,%rax,8),%rax
-	movq   $0x0,0x10(%rax)
-	mov    %r15,%rdi
-	mov    (%rdi),%r15
-	mov    %r15,0x18(%r14)
-	callq  2030 <free@plt>
-	mov    0x10(%r14),%rcx
-	mov    0x8(%r15),%rsi
-	shr    %rcx
-	sub    %rsi,%rcx
-	mov    $0x1,%eax
-	jmp    74f5 <SubdivColorMap+0x265>
-	mov    0x8(%r8),%rdx
-	sub    %rdx,%rcx
-	test   %rcx,%rcx
-	js     74fe <SubdivColorMap+0x26e>
-	mov    0x10(%r8),%rdi
-	test   %rdi,%rdi
-	je     74fe <SubdivColorMap+0x26e>
-	add    $0x1,%eax
-	add    %rdx,%rsi
-	mov    %r8,%r15
-	mov    0x10(%r15),%r8
-	test   %r8,%r8
-	jne    74d7 <SubdivColorMap+0x247>
-	movslq 0x2cd7(%rip),%rcx        # a1dc <SortRGBAxis>
-	movzbl (%r15,%rcx,1),%edi
-	mov    0x10(%r15),%r9
-	movzbl (%r9,%rcx,1),%r8d
-	mov    -0x38(%rbp),%rdx
-	mov    (%rdx),%ecx
-	shl    $0x5,%rcx
-	mov    %r9,0x18(%r13,%rcx,1)
-	movq   $0x0,0x10(%r15)
-	mov    (%rdx),%ecx
-	shl    $0x5,%rcx
-	mov    %rsi,0x10(%r13,%rcx,1)
-	mov    0x10(%r14),%rcx
-	sub    %rsi,%rcx
-	mov    %rcx,0x10(%r14)
-	mov    0x8(%r14),%ecx
-	sub    %eax,%ecx
-	mov    (%rdx),%esi
-	shl    $0x5,%rsi
-	mov    %ecx,0x8(%r13,%rsi,1)
-	mov    %eax,0x8(%r14)
-	mov    %r12,%rsi
-	jmpq   7306 <SubdivColorMap+0x76>
-	nopl   (%rax)
-
-0007560 <SortCmpRtn>:
-	push   %rbp
-	mov    %rsp,%rbp
-	mov    $0x55555556,%r8d
-	mov    (%rdi),%r9
-	movslq 0x2c68(%rip),%rdi        # a1dc <SortRGBAxis>
-	lea    0x1(%rdi),%ecx
-	mov    %r8,%rax
-	imul   %ecx
-	mov    %rdx,%rax
-	shr    $0x1f,%eax
-	add    %edx,%eax
-	lea    (%rax,%rax,2),%eax
-	sub    %eax,%ecx
-	movslq %ecx,%r10
-	movzbl (%rdi,%r9,1),%edi
-	shl    $0x10,%edi
-	mov    (%rsi),%rsi
-	movslq 0x2c3e(%rip),%rcx        # a1dc <SortRGBAxis>
-	add    $0x2,%ecx
-	mov    %r8,%rax
-	imul   %ecx
-	mov    %rdx,%rax
-	shr    $0x1f,%eax
-	add    %edx,%eax
-	lea    (%rax,%rax,2),%eax
-	sub    %eax,%ecx
-	movslq %ecx,%rcx
-	movzbl (%r10,%r9,1),%eax
-	movzbl (%rcx,%r9,1),%ecx
-	shl    $0x8,%eax
-	add    %edi,%eax
-	add    %eax,%ecx
-	movslq 0x2c0e(%rip),%r9        # a1dc <SortRGBAxis>
-	lea    0x1(%r9),%edi
-	mov    %r8,%rax
-	imul   %edi
-	mov    %rdx,%rax
-	shr    $0x1f,%eax
-	add    %edx,%eax
-	lea    (%rax,%rax,2),%eax
-	sub    %eax,%edi
-	movslq %edi,%r10
-	movzbl (%r9,%rsi,1),%r9d
-	movslq 0x2be9(%rip),%rdi        # a1dc <SortRGBAxis>
-	add    $0x2,%edi
-	mov    %r8,%rax
-	imul   %edi
-	mov    %rdx,%rax
-	shr    $0x1f,%eax
-	add    %edx,%eax
-	lea    (%rax,%rax,2),%eax
-	sub    %eax,%edi
-	movslq %edi,%rdx
-	movzbl (%r10,%rsi,1),%eax
-	movzbl (%rdx,%rsi,1),%edx
-	shl    $0x8,%eax
-	shl    $0x10,%r9d
-	add    %r9d,%eax
-	add    %edx,%eax
-	sub    %eax,%ecx
-	mov    %rcx,%rax
-	leaveq 
-	retq   
-
-ly of section .fini:
-
-0007628 <_fini>:
-	endbr64 
-	sub    $0x8,%rsp
-	add    $0x8,%rsp
-	retq   
+libgif/after.so:
+
+
+Disassembly
+
+0000000000002000
+endbr64
+sub
+mov
+test
+je
+callq
+add
+retq
+
+Disassembly
+
+0000000000002020
+pushq
+jmpq
+nopl
+
+0000000000002030
+jmpq
+pushq
+jmpq
+
+0000000000002040
+jmpq
+pushq
+jmpq
+
+0000000000002050
+jmpq
+pushq
+jmpq
+
+0000000000002060
+jmpq
+pushq
+jmpq
+
+0000000000002070
+jmpq
+pushq
+jmpq
+
+0000000000002080
+jmpq
+pushq
+jmpq
+
+0000000000002090
+jmpq
+pushq
+jmpq
+
+00000000000020a0
+jmpq
+pushq
+jmpq
+
+00000000000020b0
+jmpq
+pushq
+jmpq
+
+00000000000020c0
+jmpq
+pushq
+jmpq
+
+00000000000020d0
+jmpq
+pushq
+jmpq
+
+00000000000020e0
+jmpq
+pushq
+jmpq
+
+00000000000020f0
+jmpq
+pushq
+jmpq
+
+0000000000002100
+jmpq
+pushq
+jmpq
+
+0000000000002110
+jmpq
+pushq
+jmpq
+
+0000000000002120
+jmpq
+pushq
+jmpq
+
+0000000000002130
+jmpq
+pushq
+jmpq
+
+0000000000002140
+jmpq
+pushq
+jmpq
+
+0000000000002150
+jmpq
+pushq
+jmpq
+
+0000000000002160
+jmpq
+pushq
+jmpq
+
+0000000000002170
+jmpq
+pushq
+jmpq
+
+0000000000002180
+jmpq
+pushq
+jmpq
+
+0000000000002190
+jmpq
+pushq
+jmpq
+
+00000000000021a0
+jmpq
+pushq
+jmpq
+
+00000000000021b0
+jmpq
+pushq
+jmpq
+
+00000000000021c0
+jmpq
+pushq
+jmpq
+
+00000000000021d0
+jmpq
+pushq
+jmpq
+
+00000000000021e0
+jmpq
+pushq
+jmpq
+
+00000000000021f0
+jmpq
+pushq
+jmpq
+
+0000000000002200
+jmpq
+pushq
+jmpq
+
+0000000000002210
+jmpq
+pushq
+jmpq
+
+0000000000002220
+jmpq
+pushq
+jmpq
+
+0000000000002230
+jmpq
+pushq
+jmpq
+
+0000000000002240
+jmpq
+pushq
+jmpq
+
+0000000000002250
+jmpq
+pushq
+jmpq
+
+0000000000002260
+jmpq
+pushq
+jmpq
+
+0000000000002270
+jmpq
+pushq
+jmpq
+
+0000000000002280
+jmpq
+pushq
+jmpq
+
+0000000000002290
+jmpq
+pushq
+jmpq
+
+00000000000022a0
+jmpq
+pushq
+jmpq
+
+00000000000022b0
+jmpq
+pushq
+jmpq
+
+00000000000022c0
+jmpq
+pushq
+jmpq
+
+00000000000022d0
+jmpq
+pushq
+jmpq
+
+00000000000022e0
+jmpq
+pushq
+jmpq
+
+00000000000022f0
+jmpq
+pushq
+jmpq
+
+0000000000002300
+jmpq
+pushq
+jmpq
+
+0000000000002310
+jmpq
+pushq
+jmpq
+
+0000000000002320
+jmpq
+pushq
+jmpq
+
+0000000000002330
+jmpq
+pushq
+jmpq
+
+0000000000002340
+jmpq
+pushq
+jmpq
+
+0000000000002350
+jmpq
+pushq
+jmpq
+
+0000000000002360
+jmpq
+pushq
+jmpq
+
+0000000000002370
+jmpq
+pushq
+jmpq
+
+0000000000002380
+jmpq
+pushq
+jmpq
+
+0000000000002390
+jmpq
+pushq
+jmpq
+
+Disassembly
+
+00000000000023a0
+lea
+lea
+cmp
+je
+mov
+test
+je
+jmpq
+nopl
+retq
+nopl
+
+00000000000023d0
+lea
+lea
+sub
+sar
+mov
+shr
+add
+sar
+je
+mov
+test
+je
+jmpq
+nopw
+retq
+nopl
+
+0000000000002410
+endbr64
+cmpb
+jne
+push
+cmpq
+mov
+je
+mov
+callq
+callq
+movb
+pop
+retq
+nopw
+retq
+data16
+nopl
+
+0000000000002460
+endbr64
+jmpq
+nopl
+
+0000000000002470
+push
+mov
+sub
+mov
+mov
+xor
+mov
+callq
+cmp
+je
+mov
+mov
+callq
+mov
+leaveq
+retq
+test
+jne
+xor
+mov
+leaveq
+retq
+movl
+xor
+mov
+leaveq
+retq
+nopl
+
+00000000000024c0
+push
+mov
+sub
+mov
+mov
+xor
+mov
+mov
+mov
+mov
+mov
+callq
+test
+je
+mov
+xor
+mov
+mov
+mov
+callq
+movq
+movq
+mov
+mov
+mov
+callq
+test
+je
+mov
+xor
+mov
+mov
+mov
+callq
+lea
+mov
+callq
+mov
+mov
+mov
+movl
+movq
+movq
+mov
+lea
+mov
+mov
+mov
+callq
+cmp
+jne
+movb
+lea
+lea
+mov
+callq
+test
+jne
+mov
+callq
+test
+je
+movl
+movsbq
+cmp
+jne
+pushq
+popq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+test
+je
+movl
+mov
+mov
+callq
+xor
+mov
+mov
+leaveq
+retq
+test
+je
+movl
+mov
+callq
+mov
+callq
+mov
+xor
+mov
+mov
+leaveq
+retq
+test
+je
+movl
+mov
+callq
+mov
+callq
+mov
+callq
+mov
+mov
+xor
+mov
+mov
+leaveq
+retq
+test
+je
+movl
+mov
+callq
+mov
+callq
+mov
+callq
+mov
+mov
+xor
+mov
+mov
+leaveq
+retq
+mov
+callq
+mov
+callq
+mov
+callq
+mov
+mov
+xor
+mov
+mov
+leaveq
+retq
+nopw
+
+0000000000002700
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+lea
+movq
+lea
+movl
+lea
+lea
+mov
+cltd
+mov
+jmp
+mov
+cmp
+je
+cmp
+je
+mov
+xor
+mov
+cmp
+je
+lea
+mov
+mov
+callq
+test
+jne
+xor
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+mov
+callq
+test
+je
+movslq
+add
+movslq
+lea
+shl
+lea
+add
+movslq
+test
+jns
+movslq
+test
+jns
+mov
+mov
+idiv
+cmp
+jg
+movslq
+imul
+movslq
+xor
+mov
+callq
+mov
+test
+je
+movzbl
+test
+jne
+mov
+mov
+mov
+callq
+test
+jne
+xor
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+mov
+lea
+mov
+callq
+test
+je
+mov
+test
+jne
+xor
+jmpq
+movslq
+test
+je
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+xor
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+xor
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+xor
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+movabs
+mov
+movabs
+mov
+movabs
+mov
+movabs
+mov
+mov
+mov
+xor
+jmp
+movslq
+mov
+imul
+movslq
+add
+mov
+callq
+test
+je
+add
+movslq
+cmp
+jg
+add
+cmp
+jle
+mov
+mov
+mov
+test
+jne
+mov
+lea
+xor
+jmpq
+xor
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+movslq
+movzbl
+lea
+mov
+mov
+callq
+test
+je
+xor
+jmp
+mov
+mov
+callq
+test
+je
+mov
+test
+jne
+mov
+test
+jne
+mov
+lea
+jmpq
+movl
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+xor
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+movslq
+movslq
+jmpq
+mov
+movslq
+mov
+movq
+movl
+mov
+lea
+xor
+jmpq
+xor
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+movzbl
+lea
+mov
+mov
+mov
+callq
+test
+jne
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+nopl
+
+0000000000002ae0
+push
+mov
+sub
+mov
+mov
+mov
+xor
+mov
+mov
+mov
+mov
+mov
+callq
+test
+je
+mov
+xor
+mov
+mov
+mov
+callq
+movq
+movq
+mov
+mov
+mov
+callq
+test
+jne
+test
+je
+movl
+mov
+callq
+mov
+mov
+xor
+mov
+leaveq
+retq
+test
+jne
+mov
+mov
+xor
+mov
+leaveq
+retq
+mov
+xor
+mov
+mov
+mov
+callq
+mov
+movl
+movq
+movl
+mov
+mov
+mov
+mov
+mov
+test
+jne
+lea
+mov
+xor
+callq
+jmp
+movl
+mov
+mov
+xor
+mov
+leaveq
+retq
+lea
+mov
+callq
+movslq
+cmp
+jne
+movb
+lea
+lea
+mov
+callq
+test
+jne
+mov
+callq
+test
+je
+movl
+movsbq
+cmp
+jne
+pushq
+popq
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+test
+je
+movl
+mov
+callq
+mov
+callq
+mov
+mov
+xor
+mov
+leaveq
+retq
+test
+je
+movl
+mov
+callq
+mov
+callq
+mov
+mov
+xor
+mov
+leaveq
+retq
+mov
+callq
+mov
+callq
+test
+jne
+mov
+mov
+xor
+mov
+leaveq
+retq
+movl
+mov
+mov
+xor
+mov
+leaveq
+retq
+data16
+xchg
+
+0000000000002d10
+push
+mov
+sub
+xor
+test
+jne
+leaveq
+retq
+mov
+test
+jne
+leaveq
+retq
+mov
+test
+jne
+mov
+mov
+mov
+mov
+jmp
+mov
+mov
+mov
+mov
+mov
+callq
+movq
+mov
+mov
+mov
+test
+je
+mov
+mov
+callq
+movq
+mov
+mov
+mov
+test
+je
+mov
+mov
+mov
+callq
+movq
+mov
+mov
+lea
+lea
+mov
+mov
+callq
+mov
+movslq
+and
+test
+jg
+test
+je
+movl
+mov
+callq
+mov
+callq
+xor
+mov
+mov
+leaveq
+retq
+mov
+test
+jne
+mov
+callq
+mov
+callq
+mov
+test
+jne
+mov
+mov
+leaveq
+retq
+callq
+test
+je
+test
+je
+movl
+mov
+callq
+mov
+callq
+xor
+mov
+mov
+leaveq
+retq
+movl
+mov
+mov
+leaveq
+retq
+data16
+
+0000000000002e80
+push
+mov
+sub
+xor
+mov
+mov
+movslq
+and
+test
+jg
+movl
+leaveq
+retq
+mov
+mov
+mov
+mov
+callq
+test
+jne
+xor
+leaveq
+retq
+mov
+lea
+callq
+test
+jne
+xor
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+mov
+test
+jne
+lea
+mov
+mov
+mov
+callq
+jmp
+lea
+mov
+mov
+mov
+callq
+movslq
+cmp
+jne
+movzbl
+mov
+and
+add
+shr
+add
+mov
+mov
+and
+test
+jle
+pushq
+popq
+movzbl
+mov
+movzbl
+mov
+mov
+and
+test
+jg
+movq
+mov
+mov
+leaveq
+retq
+movl
+mov
+callq
+movq
+mov
+xor
+leaveq
+retq
+and
+add
+mov
+shl
+xor
+callq
+mov
+test
+je
+mov
+mov
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+xor
+jmp
+movl
+mov
+xor
+leaveq
+retq
+mov
+mov
+mov
+callq
+movslq
+cmp
+jne
+movzbl
+mov
+mov
+movslq
+lea
+mov
+movzbl
+mov
+mov
+mov
+movzbl
+mov
+mov
+mov
+add
+mov
+cmp
+jl
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+callq
+movq
+movl
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+mov
+mov
+test
+jne
+mov
+mov
+mov
+mov
+callq
+jmpq
+xchg
+
+00000000000030c0
+push
+mov
+sub
+xor
+mov
+movslq
+and
+test
+jg
+movl
+leaveq
+retq
+mov
+mov
+test
+jne
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+jmp
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+movslq
+cmp
+jne
+movzbl
+cmp
+jbe
+cmp
+je
+cmp
+jne
+mov
+movl
+mov
+mov
+leaveq
+retq
+movl
+xor
+mov
+leaveq
+retq
+cmp
+je
+mov
+movl
+movl
+xor
+mov
+leaveq
+retq
+mov
+movl
+mov
+mov
+leaveq
+retq
+mov
+movl
+mov
+mov
+leaveq
+retq
+data16
+
+00000000000031c0
+push
+mov
+sub
+xor
+mov
+mov
+movslq
+and
+test
+jg
+movl
+leaveq
+retq
+lea
+mov
+mov
+mov
+mov
+mov
+callq
+test
+jne
+xor
+leaveq
+retq
+mov
+lea
+callq
+test
+jne
+xor
+leaveq
+retq
+mov
+lea
+mov
+callq
+test
+jne
+xor
+leaveq
+retq
+mov
+lea
+mov
+callq
+test
+jne
+xor
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+test
+jne
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+jmp
+lea
+mov
+mov
+mov
+callq
+movslq
+cmp
+jne
+movzbl
+mov
+and
+test
+jg
+pushq
+popq
+jmp
+movl
+mov
+callq
+movq
+mov
+xor
+leaveq
+retq
+pushq
+popq
+mov
+test
+jle
+pushq
+popq
+mov
+mov
+mov
+test
+je
+mov
+mov
+callq
+movq
+mov
+mov
+movzbl
+and
+test
+jg
+mov
+mov
+test
+jne
+mov
+callq
+mov
+test
+jne
+movl
+mov
+xor
+leaveq
+retq
+and
+lea
+mov
+shl
+xor
+callq
+mov
+test
+je
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+xor
+jmpq
+movslq
+add
+movslq
+callq
+test
+je
+mov
+movslq
+lea
+shl
+lea
+add
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+test
+jne
+movq
+movl
+movq
+movslq
+add
+mov
+mov
+movslq
+mov
+movslq
+imul
+mov
+mov
+mov
+callq
+mov
+mov
+leaveq
+retq
+movl
+mov
+xor
+leaveq
+retq
+mov
+mov
+mov
+callq
+movslq
+cmp
+jne
+movzbl
+mov
+mov
+mov
+lea
+mov
+movzbl
+mov
+mov
+mov
+movzbl
+mov
+mov
+mov
+add
+mov
+cmp
+jb
+mov
+mov
+mov
+mov
+jmpq
+movl
+mov
+xor
+leaveq
+retq
+movslq
+mov
+callq
+mov
+test
+jne
+movl
+mov
+mov
+xor
+leaveq
+retq
+mov
+callq
+movl
+movq
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+mov
+mov
+test
+jne
+mov
+mov
+mov
+mov
+callq
+jmpq
+data16
+nopl
+
+0000000000003570
+push
+mov
+sub
+xor
+mov
+movslq
+and
+test
+jg
+movl
+leaveq
+retq
+test
+jne
+movslq
+mov
+movslq
+sub
+mov
+mov
+cmp
+ja
+mov
+mov
+mov
+mov
+callq
+cmp
+je
+xor
+leaveq
+retq
+movl
+leaveq
+retq
+mov
+mov
+mov
+test
+je
+leaveq
+retq
+lea
+mov
+mov
+mov
+mov
+jmp
+mov
+test
+je
+mov
+mov
+callq
+test
+jne
+mov
+mov
+xor
+leaveq
+retq
+mov
+mov
+mov
+leaveq
+retq
+data16
+xchg
+
+0000000000003640
+push
+mov
+sub
+mov
+xor
+mov
+movslq
+and
+test
+jg
+movl
+leaveq
+retq
+mov
+add
+mov
+mov
+cmp
+ja
+mov
+lea
+mov
+mov
+mov
+mov
+mov
+callq
+cmp
+je
+xor
+mov
+leaveq
+retq
+movl
+leaveq
+retq
+mov
+test
+je
+mov
+mov
+leaveq
+retq
+lea
+mov
+mov
+jmp
+mov
+test
+je
+mov
+mov
+callq
+test
+jne
+mov
+xor
+mov
+leaveq
+retq
+mov
+mov
+mov
+leaveq
+retq
+data16
+
+0000000000003710
+push
+mov
+sub
+xor
+mov
+movslq
+and
+test
+jg
+movl
+leaveq
+retq
+mov
+mov
+test
+jne
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+jmp
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+movslq
+cmp
+jne
+movzbl
+mov
+mov
+mov
+mov
+callq
+mov
+leaveq
+retq
+movl
+xor
+mov
+leaveq
+retq
+
+00000000000037c0
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+test
+jne
+lea
+mov
+mov
+mov
+mov
+callq
+jmp
+lea
+mov
+callq
+movslq
+xor
+cmp
+jne
+movzbl
+test
+jne
+mov
+movq
+mov
+mov
+leaveq
+retq
+movl
+mov
+mov
+leaveq
+retq
+mov
+add
+mov
+mov
+movzbl
+mov
+mov
+mov
+test
+jne
+mov
+add
+mov
+mov
+callq
+jmp
+mov
+add
+mov
+callq
+movslq
+movzbl
+cmp
+jne
+mov
+mov
+leaveq
+retq
+movl
+xor
+mov
+leaveq
+retq
+nopl
+
+00000000000038b0
+push
+mov
+mov
+movslq
+and
+test
+jg
+movl
+xor
+leaveq
+retq
+movslq
+mov
+mov
+callq
+leaveq
+retq
+nopl
+
+00000000000038e0
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+test
+jne
+lea
+mov
+mov
+mov
+mov
+callq
+jmp
+lea
+mov
+callq
+movslq
+xor
+cmp
+jne
+movzbl
+test
+jne
+mov
+movq
+mov
+movb
+movq
+mov
+mov
+leaveq
+retq
+movl
+mov
+mov
+leaveq
+retq
+mov
+add
+mov
+mov
+movzbl
+mov
+mov
+mov
+test
+jne
+mov
+add
+mov
+mov
+callq
+jmp
+mov
+add
+mov
+callq
+movslq
+movzbl
+cmp
+jne
+mov
+mov
+leaveq
+retq
+movl
+xor
+mov
+leaveq
+retq
+nopl
+
+00000000000039e0
+push
+mov
+sub
+xor
+mov
+movslq
+and
+test
+jg
+movl
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+test
+jne
+xor
+leaveq
+retq
+mov
+mov
+movslq
+mov
+movslq
+cmp
+jne
+lea
+mov
+mov
+mov
+mov
+jmp
+cmp
+je
+leaveq
+retq
+mov
+test
+je
+mov
+mov
+callq
+test
+jne
+mov
+mov
+xor
+leaveq
+retq
+lea
+mov
+movslq
+add
+mov
+mov
+shl
+mov
+leaveq
+retq
+mov
+movl
+mov
+mov
+mov
+leaveq
+retq
+data16
+nopl
+
+0000000000003ac0
+push
+mov
+xor
+cmp
+je
+leaveq
+retq
+movzbl
+and
+shr
+mov
+mov
+movzbl
+and
+test
+jle
+mov
+mov
+movzbl
+movzbl
+shl
+add
+mov
+movzbl
+and
+test
+jg
+movl
+mov
+leaveq
+retq
+movzbl
+mov
+mov
+leaveq
+retq
+
+0000000000003b20
+push
+mov
+xor
+test
+jns
+leaveq
+retq
+movslq
+add
+cmp
+jle
+leaveq
+retq
+movl
+movb
+movl
+movl
+movslq
+lea
+shl
+lea
+mov
+jmp
+movslq
+lea
+shl
+add
+movslq
+cmp
+je
+add
+mov
+cmp
+jl
+leaveq
+retq
+movslq
+mov
+callq
+leaveq
+retq
+
+0000000000003ba0
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+test
+jne
+lea
+mov
+mov
+mov
+callq
+jmp
+lea
+mov
+callq
+movslq
+cmp
+jne
+movzbl
+movzbl
+shl
+add
+mov
+mov
+mov
+mov
+leaveq
+retq
+movl
+xor
+mov
+leaveq
+retq
+nopl
+
+0000000000003c20
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+test
+jne
+lea
+mov
+mov
+callq
+mov
+jmp
+lea
+callq
+movslq
+xor
+test
+jne
+leaveq
+retq
+movzbl
+cmp
+ja
+mov
+movb
+mov
+mov
+mov
+shl
+mov
+lea
+mov
+lea
+mov
+add
+mov
+mov
+shl
+mov
+movl
+movl
+movl
+movq
+jmp
+mov
+movl
+leaveq
+retq
+movslq
+movl
+add
+cmp
+jle
+mov
+leaveq
+retq
+data16
+nopl
+
+0000000000003d00
+push
+mov
+sub
+mov
+mov
+mov
+movslq
+movslq
+movslq
+xor
+movslq
+cmp
+jle
+leaveq
+retq
+mov
+lea
+mov
+lea
+mov
+mov
+test
+jne
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+jmp
+mov
+mov
+mov
+jmpq
+movslq
+movl
+add
+cmp
+jle
+movslq
+add
+mov
+movslq
+add
+mov
+mov
+shl
+mov
+movl
+lea
+mov
+mov
+mov
+cmp
+jl
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+cmp
+jge
+add
+movslq
+movzbl
+movslq
+mov
+add
+test
+jne
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+jmp
+mov
+mov
+callq
+test
+je
+movslq
+cmp
+je
+cmp
+jne
+xor
+mov
+mov
+jmpq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+jmpq
+mov
+mov
+xor
+mov
+mov
+mov
+leaveq
+retq
+mov
+movl
+mov
+mov
+xor
+mov
+mov
+mov
+leaveq
+retq
+cmp
+jl
+mov
+cmp
+je
+mov
+mov
+mov
+mov
+mov
+jmpq
+movslq
+mov
+add
+mov
+mov
+mov
+mov
+cmp
+jne
+movslq
+lea
+mov
+jmpq
+mov
+movslq
+movslq
+add
+cmp
+je
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+movslq
+mov
+lea
+mov
+mov
+mov
+mov
+jmp
+cmp
+jle
+cmp
+jg
+movslq
+movzbl
+mov
+movslq
+add
+movslq
+cmp
+jle
+cmp
+jg
+cmp
+jg
+mov
+add
+mov
+mov
+jmpq
+movslq
+add
+movslq
+mov
+cmp
+jne
+mov
+movslq
+cmp
+je
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+mov
+mov
+mov
+mov
+mov
+jmpq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+movslq
+mov
+lea
+mov
+mov
+mov
+mov
+mov
+jmpq
+mov
+movl
+mov
+mov
+xor
+mov
+mov
+mov
+leaveq
+retq
+cmp
+jge
+add
+movslq
+movzbl
+movslq
+mov
+add
+test
+jne
+mov
+xor
+jmpq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+mov
+mov
+mov
+mov
+mov
+jmpq
+mov
+jmpq
+data16
+nopl
+
+0000000000004160
+push
+mov
+xor
+jmp
+cmp
+jg
+cmp
+jg
+movslq
+movslq
+add
+cmp
+jg
+mov
+leaveq
+retq
+mov
+leaveq
+retq
+mov
+leaveq
+retq
+nopw
+
+00000000000041a0
+push
+mov
+sub
+xor
+mov
+movslq
+cmp
+jg
+lea
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+jmp
+movl
+leaveq
+retq
+mov
+mov
+mov
+callq
+test
+je
+movzbl
+mov
+shl
+or
+mov
+lea
+mov
+movslq
+cmp
+jg
+lea
+movzwl
+and
+mov
+mov
+mov
+mov
+shr
+mov
+movslq
+sub
+mov
+mov
+movslq
+cmp
+jle
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+add
+mov
+movslq
+cmp
+jl
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+cmp
+jle
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+lea
+mov
+add
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+xchg
+
+0000000000004310
+push
+mov
+sub
+mov
+movzbl
+test
+je
+movzbl
+lea
+mov
+movzbl
+mov
+movzbl
+add
+mov
+leaveq
+retq
+mov
+mov
+test
+jne
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+jmp
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+movslq
+xor
+cmp
+jne
+movzbl
+test
+je
+mov
+mov
+test
+jne
+lea
+mov
+mov
+callq
+jmp
+movl
+mov
+mov
+mov
+leaveq
+retq
+movl
+mov
+mov
+mov
+leaveq
+retq
+lea
+mov
+callq
+movslq
+movzbl
+cmp
+jne
+movzbl
+mov
+mov
+movb
+movzbl
+add
+mov
+mov
+mov
+mov
+leaveq
+retq
+movl
+xor
+mov
+mov
+leaveq
+retq
+nop
+
+0000000000004450
+push
+mov
+sub
+mov
+mov
+test
+jne
+mov
+mov
+xor
+mov
+callq
+jmp
+mov
+mov
+xor
+mov
+callq
+xor
+cmp
+je
+mov
+mov
+mov
+callq
+test
+je
+mov
+leaveq
+retq
+test
+jne
+mov
+mov
+leaveq
+retq
+mov
+callq
+xor
+mov
+leaveq
+retq
+movl
+mov
+mov
+leaveq
+retq
+nopw
+
+00000000000044e0
+push
+mov
+sub
+mov
+mov
+mov
+callq
+test
+jne
+xor
+leaveq
+retq
+mov
+xor
+mov
+mov
+mov
+callq
+mov
+callq
+test
+je
+mov
+xor
+mov
+mov
+mov
+callq
+callq
+mov
+test
+je
+lea
+mov
+mov
+mov
+mov
+callq
+mov
+mov
+mov
+movl
+movb
+movq
+mov
+movq
+movl
+mov
+mov
+mov
+leaveq
+retq
+mov
+callq
+mov
+test
+jne
+mov
+xor
+leaveq
+retq
+mov
+callq
+mov
+callq
+mov
+test
+jne
+mov
+mov
+xor
+leaveq
+retq
+movl
+mov
+xor
+leaveq
+retq
+movl
+mov
+mov
+xor
+leaveq
+retq
+xchg
+
+0000000000004610
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+test
+je
+mov
+xor
+mov
+mov
+mov
+callq
+mov
+callq
+test
+je
+mov
+xor
+mov
+mov
+mov
+callq
+callq
+mov
+test
+je
+mov
+movl
+movq
+movl
+mov
+mov
+mov
+mov
+movb
+mov
+movl
+mov
+mov
+mov
+leaveq
+retq
+test
+jne
+mov
+mov
+xor
+mov
+leaveq
+retq
+mov
+callq
+test
+jne
+mov
+mov
+xor
+mov
+leaveq
+retq
+mov
+callq
+mov
+callq
+test
+jne
+mov
+mov
+xor
+mov
+leaveq
+retq
+movl
+mov
+mov
+xor
+mov
+leaveq
+retq
+movl
+mov
+mov
+xor
+mov
+leaveq
+retq
+movl
+mov
+mov
+xor
+mov
+leaveq
+retq
+data16
+nop
+
+0000000000004780
+push
+mov
+sub
+mov
+movslq
+movslq
+movslq
+movslq
+mov
+callq
+test
+jne
+xor
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+mov
+xor
+mov
+mov
+jmp
+mov
+imul
+movslq
+add
+mov
+callq
+test
+je
+add
+mov
+cmp
+jg
+mov
+add
+cmp
+jle
+mov
+mov
+add
+xor
+cmp
+jl
+mov
+mov
+movslq
+mov
+callq
+test
+jne
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+movslq
+movslq
+mov
+jmp
+movslq
+lea
+shl
+lea
+add
+movslq
+movslq
+mov
+test
+je
+mov
+movslq
+mov
+mov
+mov
+mov
+callq
+test
+je
+movslq
+movslq
+movzbl
+test
+jne
+mov
+jmp
+mov
+mov
+callq
+test
+jne
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+callq
+add
+test
+je
+movzbl
+test
+jne
+mov
+mov
+jmpq
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+movabs
+mov
+movabs
+mov
+movabs
+mov
+movabs
+mov
+mov
+mov
+jmpq
+movslq
+add
+mov
+callq
+test
+je
+add
+add
+mov
+cmp
+jl
+mov
+mov
+jmpq
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+data16
+nopl
+
+0000000000004a20
+push
+mov
+mov
+xor
+mov
+jmp
+mov
+movslq
+lea
+movslq
+cmp
+je
+cmp
+je
+cmp
+je
+cmp
+jne
+movb
+add
+mov
+movslq
+cmp
+jg
+add
+movslq
+cmp
+jle
+movslq
+lea
+shl
+lea
+mov
+jmp
+mov
+movslq
+lea
+movslq
+cmp
+je
+cmp
+je
+cmp
+je
+cmp
+jne
+movb
+add
+movslq
+cmp
+jg
+movzbl
+test
+je
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+data16
+nop
+
+0000000000004b00
+push
+mov
+sub
+xor
+test
+jne
+leaveq
+retq
+mov
+test
+jne
+leaveq
+retq
+movslq
+and
+test
+jg
+test
+je
+movl
+callq
+xor
+leaveq
+retq
+mov
+movb
+mov
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+test
+je
+callq
+movq
+mov
+test
+je
+callq
+movq
+mov
+test
+je
+callq
+mov
+callq
+test
+jne
+mov
+callq
+test
+jne
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+callq
+test
+je
+test
+je
+movl
+mov
+callq
+xor
+mov
+mov
+mov
+mov
+leaveq
+retq
+movl
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+nopl
+
+0000000000004c40
+push
+mov
+sub
+xor
+mov
+mov
+mov
+movslq
+mov
+and
+test
+jg
+and
+test
+jg
+movl
+leaveq
+retq
+movl
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+mov
+mov
+callq
+mov
+mov
+mov
+callq
+movslq
+mov
+mov
+callq
+cmp
+jne
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+test
+jne
+movq
+pushq
+popq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+mov
+callq
+mov
+test
+jne
+xor
+jmp
+movl
+mov
+xor
+mov
+mov
+leaveq
+retq
+movslq
+mov
+mov
+mov
+callq
+mov
+test
+je
+mov
+mov
+mov
+mov
+pushq
+popq
+jmpq
+mov
+test
+jne
+mov
+jmp
+movl
+mov
+xor
+mov
+mov
+leaveq
+retq
+movslq
+add
+pushq
+popq
+shl
+lea
+or
+or
+mov
+mov
+test
+jne
+mov
+movzbl
+mov
+lea
+mov
+mov
+mov
+mov
+callq
+test
+je
+xor
+jmp
+movzbl
+test
+je
+or
+mov
+jmp
+mov
+movslq
+or
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+add
+cmp
+jge
+movslq
+lea
+add
+movzbl
+mov
+movzbl
+mov
+movzbl
+mov
+mov
+mov
+mov
+callq
+cmp
+je
+movl
+mov
+mov
+mov
+xor
+mov
+mov
+leaveq
+retq
+nopw
+
+0000000000004eb0
+push
+mov
+sub
+xor
+mov
+mov
+movslq
+and
+test
+jg
+movslq
+and
+test
+jg
+movl
+leaveq
+retq
+mov
+mov
+cmp
+ja
+xor
+jmp
+mov
+mov
+mov
+mov
+mov
+mov
+test
+jne
+mov
+mov
+jmp
+movl
+xor
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+test
+jne
+movq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+movb
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+mov
+callq
+mov
+mov
+callq
+mov
+mov
+callq
+mov
+mov
+callq
+mov
+test
+jne
+xor
+jmp
+mov
+test
+jne
+mov
+mov
+jmp
+mov
+mov
+test
+jne
+xor
+jmpq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+movq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+movslq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+test
+je
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+jmpq
+mov
+mov
+test
+jne
+xor
+jmp
+movl
+mov
+mov
+xor
+leaveq
+retq
+movzbl
+add
+pushq
+popq
+add
+or
+mov
+mov
+lea
+mov
+mov
+callq
+mov
+test
+je
+mov
+mov
+mov
+mov
+xor
+jmp
+movslq
+lea
+add
+movzbl
+mov
+movzbl
+mov
+movzbl
+mov
+mov
+mov
+mov
+callq
+cmp
+jne
+add
+cmp
+jl
+mov
+mov
+mov
+test
+jne
+mov
+test
+jne
+movl
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+movl
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+mov
+movslq
+or
+mov
+movslq
+movslq
+imul
+mov
+mov
+callq
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+
+00000000000051f0
+push
+mov
+mov
+test
+jne
+xor
+jmp
+mov
+mov
+leaveq
+retq
+xchg
+
+0000000000005210
+push
+mov
+xor
+mov
+movslq
+and
+test
+jg
+movl
+leaveq
+retq
+test
+jne
+movslq
+mov
+mov
+cmp
+ja
+movslq
+lea
+movzbl
+movslq
+sub
+mov
+jmp
+movl
+leaveq
+retq
+movslq
+movzbl
+and
+mov
+add
+cmp
+jg
+callq
+leaveq
+retq
+data16
+xchg
+
+0000000000005290
+push
+mov
+sub
+mov
+xor
+mov
+movslq
+and
+test
+jg
+movl
+leaveq
+retq
+mov
+test
+je
+lea
+mov
+movslq
+lea
+movzbl
+movzbl
+and
+mov
+lea
+mov
+callq
+leaveq
+retq
+movl
+leaveq
+retq
+nopw
+
+0000000000005300
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+cmp
+jbe
+mov
+mov
+mov
+mov
+callq
+test
+je
+mov
+mov
+mov
+mov
+mov
+jmp
+mov
+mov
+mov
+mov
+callq
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+mov
+xor
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+callq
+test
+je
+add
+add
+cmp
+ja
+test
+je
+mov
+mov
+mov
+callq
+test
+jne
+mov
+mov
+xor
+mov
+mov
+leaveq
+retq
+mov
+mov
+xor
+mov
+mov
+leaveq
+retq
+mov
+callq
+test
+jne
+mov
+mov
+xor
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+nopl
+
+0000000000005430
+push
+mov
+sub
+mov
+movslq
+and
+test
+jg
+movl
+xor
+leaveq
+retq
+movb
+mov
+lea
+mov
+callq
+mov
+leaveq
+retq
+xchg
+
+0000000000005470
+push
+mov
+sub
+mov
+movslq
+and
+test
+jg
+movl
+xor
+leaveq
+retq
+mov
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+movslq
+mov
+mov
+callq
+mov
+mov
+mov
+mov
+leaveq
+retq
+data16
+
+00000000000054f0
+push
+mov
+sub
+mov
+movslq
+and
+test
+jg
+movl
+xor
+leaveq
+retq
+movb
+lea
+mov
+callq
+mov
+leaveq
+retq
+nopw
+
+0000000000005530
+push
+mov
+sub
+mov
+mov
+movslq
+and
+test
+jg
+movl
+xor
+leaveq
+retq
+lea
+mov
+test
+je
+movb
+mov
+movzbl
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+jmp
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+movslq
+mov
+callq
+mov
+movb
+mov
+mov
+lea
+callq
+mov
+mov
+mov
+leaveq
+retq
+nopl
+
+00000000000055f0
+push
+mov
+mov
+movslq
+and
+test
+jg
+movl
+xor
+leaveq
+retq
+mov
+callq
+leaveq
+retq
+nopw
+
+0000000000005620
+push
+mov
+sub
+mov
+mov
+mov
+mov
+test
+jne
+movb
+lea
+mov
+callq
+cmp
+jne
+movq
+mov
+mov
+mov
+leaveq
+retq
+movzbl
+add
+movslq
+mov
+mov
+callq
+movzbl
+add
+cmp
+jne
+mov
+mov
+mov
+leaveq
+retq
+movl
+xor
+mov
+mov
+leaveq
+retq
+movl
+xor
+mov
+mov
+leaveq
+retq
+
+00000000000056c0
+push
+mov
+movb
+xor
+movslq
+cmp
+je
+mov
+jmp
+mov
+mov
+movzbl
+test
+je
+mov
+add
+mov
+movzbl
+and
+lea
+mov
+movzbl
+mov
+movslq
+shr
+mov
+movzbl
+mov
+mov
+leaveq
+retq
+nopl
+
+0000000000005720
+push
+mov
+sub
+xor
+test
+jns
+leaveq
+retq
+movslq
+add
+cmp
+jle
+leaveq
+retq
+movslq
+lea
+shl
+lea
+jmp
+movslq
+lea
+shl
+add
+movslq
+cmp
+je
+add
+mov
+cmp
+jl
+lea
+mov
+mov
+mov
+mov
+mov
+callq
+add
+lea
+lea
+mov
+mov
+lea
+callq
+test
+jne
+xor
+mov
+mov
+leaveq
+retq
+mov
+callq
+mov
+leaveq
+retq
+mov
+mov
+mov
+leaveq
+retq
+xchg
+
+00000000000057e0
+push
+mov
+sub
+mov
+shr
+mov
+mov
+lea
+mov
+callq
+cmp
+jne
+mov
+leaveq
+retq
+xor
+leaveq
+retq
+data16
+nop
+
+0000000000005820
+push
+mov
+sub
+mov
+xor
+mov
+test
+jne
+mov
+test
+jne
+movl
+leaveq
+retq
+movslq
+cmp
+jg
+mov
+mov
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+movb
+mov
+mov
+mov
+mov
+shl
+mov
+lea
+mov
+lea
+mov
+add
+mov
+mov
+shl
+mov
+movl
+movl
+movq
+mov
+callq
+movslq
+mov
+callq
+test
+je
+mov
+mov
+mov
+mov
+leaveq
+retq
+movslq
+jmpq
+movl
+xor
+mov
+mov
+mov
+leaveq
+retq
+nopw
+
+0000000000005930
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+xor
+mov
+movslq
+cmp
+je
+mov
+mov
+mov
+jmp
+mov
+mov
+mov
+movzbl
+mov
+jmp
+lea
+movslq
+movzbl
+mov
+mov
+shl
+lea
+mov
+mov
+mov
+callq
+test
+js
+mov
+mov
+mov
+mov
+mov
+cmp
+jl
+mov
+mov
+test
+je
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+mov
+callq
+test
+je
+mov
+movslq
+cmp
+jg
+lea
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+mov
+mov
+mov
+mov
+jmpq
+mov
+mov
+mov
+mov
+callq
+test
+je
+movslq
+mov
+callq
+test
+je
+mov
+mov
+callq
+test
+je
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+movl
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+mov
+movslq
+mov
+callq
+test
+je
+movslq
+add
+mov
+movslq
+add
+mov
+mov
+mov
+shl
+mov
+mov
+mov
+callq
+mov
+mov
+mov
+mov
+mov
+jmpq
+movl
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+movl
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+movl
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+movl
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+data16
+nop
+
+0000000000005bc0
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+xor
+cmp
+jne
+lea
+mov
+jmp
+mov
+mov
+add
+movslq
+mov
+shl
+or
+mov
+lea
+jmpq
+movzbl
+mov
+mov
+callq
+test
+jne
+mov
+mov
+shr
+mov
+movslq
+add
+mov
+movslq
+test
+jg
+mov
+mov
+movl
+mov
+callq
+test
+je
+movslq
+cmp
+jle
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+movzbl
+mov
+mov
+callq
+test
+jne
+mov
+mov
+shr
+mov
+movslq
+add
+mov
+cmp
+jg
+jmp
+mov
+jmp
+mov
+cmp
+jle
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+movslq
+add
+mov
+mov
+shl
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+nopl
+
+0000000000005d40
+push
+mov
+sub
+mov
+cmp
+je
+movzbl
+cmp
+je
+movzbl
+add
+mov
+movzbl
+mov
+leaveq
+retq
+movzbl
+test
+jne
+mov
+mov
+movb
+mov
+mov
+mov
+callq
+cmp
+jne
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+movzbl
+add
+cmp
+jne
+mov
+movb
+mov
+mov
+mov
+mov
+jmpq
+lea
+movslq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+movzbl
+add
+cmp
+jne
+mov
+mov
+mov
+mov
+jmpq
+movl
+xor
+mov
+leaveq
+retq
+movl
+xor
+mov
+mov
+leaveq
+retq
+movl
+xor
+mov
+mov
+leaveq
+retq
+nop
+
+0000000000005e70
+push
+mov
+mov
+mov
+test
+jne
+mov
+mov
+mov
+mov
+callq
+leaveq
+retq
+callq
+leaveq
+retq
+nopl
+
+0000000000005ea0
+push
+mov
+sub
+mov
+mov
+test
+jne
+leaveq
+retq
+xor
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+jmp
+movslq
+lea
+movslq
+test
+je
+mov
+callq
+test
+je
+movslq
+mov
+mov
+callq
+test
+je
+cmp
+jne
+mov
+callq
+test
+je
+add
+mov
+cmp
+jl
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+movslq
+test
+jne
+jmp
+mov
+mov
+mov
+mov
+mov
+xor
+leaveq
+retq
+nopw
+
+0000000000005fa0
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+xor
+mov
+mov
+mov
+jmp
+mov
+sub
+mov
+shl
+movsbq
+lea
+movzbl
+and
+test
+jle
+mov
+movslq
+mov
+add
+add
+cmp
+jle
+add
+movsbq
+test
+jne
+add
+mov
+mov
+cmp
+jle
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+jmp
+movslq
+lea
+imul
+lea
+mov
+jmp
+nopw
+
+0000000000006070
+push
+mov
+imul
+lea
+xor
+mov
+jmp
+mov
+imul
+add
+add
+movslq
+mov
+mov
+lea
+movslq
+mov
+add
+cmp
+jl
+jmp
+mov
+imul
+lea
+lea
+movslq
+mov
+mov
+movslq
+mov
+add
+cmp
+jl
+leaveq
+retq
+nopl
+
+00000000000060e0
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+movslq
+mov
+imul
+movslq
+add
+movslq
+lea
+mov
+mov
+mov
+mov
+xor
+jmp
+mov
+imul
+movslq
+lea
+mov
+callq
+add
+mov
+cmp
+jl
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+xchg
+
+0000000000006160
+push
+mov
+sub
+mov
+mov
+mov
+xor
+mov
+mov
+mov
+mov
+jmp
+mov
+mov
+add
+movsbq
+test
+jne
+cmp
+jge
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+lea
+callq
+test
+jne
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+cmp
+je
+cmp
+je
+add
+jmp
+mov
+shl
+lea
+mov
+add
+mov
+lea
+mov
+lea
+mov
+lea
+mov
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+mov
+mov
+mov
+mov
+callq
+movslq
+mov
+movslq
+lea
+mov
+mov
+mov
+mov
+mov
+callq
+add
+add
+mov
+xor
+mov
+jmp
+cmp
+lea
+jl
+mov
+jmpq
+add
+mov
+xor
+movsbq
+cmp
+jne
+lea
+mov
+callq
+mov
+sub
+shr
+mov
+mov
+lea
+mov
+mov
+mov
+callq
+xor
+lea
+callq
+test
+jne
+mov
+callq
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+nopw
+nopl
+
+0000000000006350
+push
+mov
+sub
+mov
+callq
+test
+jne
+xor
+leaveq
+retq
+mov
+mov
+callq
+mov
+leaveq
+retq
+nopl
+
+0000000000006380
+push
+mov
+mov
+mov
+callq
+leaveq
+retq
+data16
+
+00000000000063a0
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+jmp
+add
+and
+movslq
+mov
+and
+cmp
+jbe
+and
+shl
+lea
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+nopw
+
+0000000000006410
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+callq
+jmp
+mov
+shr
+cmp
+je
+add
+and
+movslq
+mov
+mov
+and
+cmp
+jbe
+mov
+mov
+mov
+leaveq
+retq
+mov
+and
+mov
+mov
+leaveq
+retq
+xchg
+
+0000000000006480
+push
+mov
+mov
+shr
+xor
+and
+leaveq
+retq
+nopw
+nopl
+
+00000000000064a0
+push
+mov
+sub
+mov
+mov
+mov
+callq
+mov
+mov
+shl
+cmp
+je
+xor
+mov
+leaveq
+retq
+mov
+callq
+test
+jne
+xor
+mov
+leaveq
+retq
+movslq
+mov
+mov
+mov
+mov
+callq
+mov
+test
+je
+mov
+mov
+mov
+callq
+mov
+movb
+mov
+test
+jne
+mov
+mov
+mov
+leaveq
+retq
+mov
+callq
+mov
+xor
+mov
+leaveq
+retq
+mov
+lea
+mov
+callq
+mov
+mov
+mov
+leaveq
+retq
+data16
+
+0000000000006570
+push
+mov
+sub
+test
+jne
+leaveq
+retq
+mov
+mov
+mov
+mov
+callq
+mov
+callq
+mov
+leaveq
+retq
+
+00000000000065a0
+push
+mov
+sub
+mov
+mov
+mov
+movslq
+movslq
+cmp
+jge
+mov
+lea
+xor
+callq
+test
+jne
+xor
+leaveq
+retq
+xor
+mov
+jmp
+mov
+movslq
+lea
+movzwl
+mov
+mov
+movzbl
+mov
+add
+movslq
+cmp
+jg
+mov
+jmp
+movzbl
+test
+jne
+movzbl
+test
+jne
+mov
+lea
+movslq
+lea
+add
+movzbl
+test
+je
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+xor
+mov
+jmp
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+xor
+mov
+jmp
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+xor
+mov
+jmp
+mov
+mov
+mov
+mov
+mov
+add
+xor
+cmp
+jge
+cmp
+jg
+movslq
+mov
+lea
+mov
+mov
+jmp
+cmp
+jg
+mov
+mov
+mov
+callq
+mov
+shl
+mov
+cmp
+je
+mov
+jmpq
+movslq
+lea
+add
+mov
+add
+mov
+callq
+test
+je
+add
+cmp
+jl
+movslq
+cmp
+jg
+add
+movzwl
+mov
+movslq
+lea
+mov
+add
+mov
+movzbl
+mov
+mov
+mov
+mov
+add
+jmpq
+mov
+callq
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+movslq
+lea
+movb
+movb
+movb
+add
+cmp
+jl
+cmp
+jge
+mov
+mov
+mov
+movslq
+callq
+test
+je
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+callq
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+nopw
+
+0000000000006840
+push
+mov
+mov
+mov
+jmp
+mov
+shl
+cmp
+jge
+add
+cmp
+jle
+mov
+leaveq
+retq
+mov
+leaveq
+retq
+nopl
+
+0000000000006870
+push
+mov
+movslq
+imul
+xor
+jmp
+movslq
+add
+movzbl
+movzbl
+mov
+add
+cmp
+jl
+leaveq
+retq
+nopl
+
+00000000000068a0
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+test
+je
+movslq
+add
+movslq
+mov
+mov
+mov
+mov
+callq
+test
+je
+mov
+mov
+jmp
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+mov
+mov
+mov
+mov
+test
+jne
+xor
+leaveq
+retq
+xor
+leaveq
+retq
+movslq
+lea
+mov
+lea
+lea
+mov
+mov
+mov
+mov
+movslq
+mov
+mov
+callq
+mov
+test
+jne
+mov
+xor
+leaveq
+retq
+mov
+mov
+test
+jne
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+callq
+mov
+mov
+leaveq
+retq
+nopl
+
+0000000000006990
+push
+mov
+sub
+mov
+test
+je
+mov
+mov
+mov
+mov
+mov
+mov
+jmp
+leaveq
+retq
+mov
+callq
+add
+mov
+movslq
+lea
+lea
+cmp
+ja
+callq
+movq
+movl
+mov
+mov
+mov
+leaveq
+retq
+nopl
+
+0000000000006a00
+push
+mov
+sub
+mov
+mov
+mov
+mov
+test
+je
+movslq
+add
+movslq
+mov
+mov
+callq
+jmp
+mov
+mov
+callq
+mov
+xor
+test
+jne
+mov
+mov
+leaveq
+retq
+movslq
+lea
+mov
+lea
+shl
+lea
+add
+mov
+mov
+mov
+mov
+callq
+mov
+test
+jne
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+test
+jne
+movslq
+imul
+movslq
+mov
+xor
+callq
+mov
+test
+je
+movslq
+movslq
+imul
+mov
+mov
+callq
+mov
+test
+jne
+mov
+mov
+mov
+leaveq
+retq
+mov
+movslq
+mov
+callq
+mov
+test
+jne
+mov
+callq
+mov
+xor
+mov
+leaveq
+retq
+mov
+callq
+mov
+xor
+mov
+leaveq
+retq
+movslq
+mov
+xor
+callq
+mov
+test
+je
+mov
+movslq
+lea
+shl
+mov
+callq
+mov
+mov
+mov
+leaveq
+retq
+mov
+callq
+mov
+xor
+mov
+leaveq
+retq
+nopl
+
+0000000000006ba0
+push
+mov
+sub
+test
+jne
+leaveq
+retq
+mov
+test
+jne
+leaveq
+retq
+mov
+mov
+mov
+mov
+jmp
+mov
+test
+je
+callq
+movq
+mov
+test
+je
+callq
+lea
+lea
+callq
+add
+movslq
+lea
+shl
+lea
+mov
+add
+cmp
+ja
+callq
+movq
+mov
+mov
+leaveq
+retq
+data16
+nopl
+
+0000000000006c40
+push
+mov
+sub
+test
+jne
+leaveq
+retq
+mov
+test
+jne
+leaveq
+retq
+movslq
+add
+mov
+movslq
+lea
+shl
+lea
+add
+mov
+test
+je
+mov
+mov
+callq
+mov
+movq
+mov
+mov
+test
+je
+mov
+mov
+callq
+mov
+mov
+lea
+lea
+callq
+leaveq
+retq
+nopw
+nop
+
+0000000000006cd0
+push
+mov
+mov
+cmp
+ja
+cmp
+ja
+imul
+callq
+leaveq
+retq
+test
+je
+mov
+mov
+xor
+div
+cmp
+ja
+mov
+jmp
+callq
+movl
+xor
+leaveq
+retq
+nopl
+
+0000000000006d20
+push
+mov
+xor
+lea
+cmp
+jbe
+leaveq
+retq
+lea
+movslq
+add
+jmpq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+lea
+leaveq
+retq
+leaveq
+retq
+nopw
+xchg
+
+0000000000006df0
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+test
+je
+xor
+jmp
+xor
+leaveq
+retq
+mov
+sar
+movslq
+lea
+mov
+mov
+shr
+and
+mov
+mov
+and
+mov
+movq
+add
+cmp
+jle
+mov
+mov
+imul
+mov
+mov
+mov
+xor
+jmp
+movslq
+movzbl
+and
+shl
+movzbl
+and
+lea
+movzbl
+shr
+add
+mov
+lea
+mov
+add
+mov
+add
+cmp
+jg
+xor
+mov
+jmp
+movslq
+movb
+movb
+add
+cmp
+jle
+add
+cmp
+jg
+movslq
+shl
+movq
+movl
+movq
+lea
+mov
+jmp
+mov
+test
+jg
+add
+movslq
+lea
+lea
+cmp
+jle
+mov
+mov
+jmp
+movslq
+lea
+lea
+mov
+test
+jle
+mov
+add
+mov
+add
+cmp
+jle
+movq
+mov
+mov
+mov
+mov
+mov
+imul
+mov
+movl
+lea
+mov
+mov
+lea
+mov
+mov
+mov
+mov
+mov
+callq
+cmp
+jne
+mov
+mov
+mov
+cmp
+ja
+mov
+xor
+mov
+jmpq
+mov
+callq
+mov
+mov
+xor
+leaveq
+retq
+movslq
+lea
+movb
+movb
+movb
+add
+movslq
+cmp
+jg
+mov
+xor
+mov
+jmp
+mov
+mov
+movzbl
+add
+movzbl
+add
+movzbl
+add
+mov
+test
+jne
+shl
+cqto
+idiv
+lea
+mov
+shl
+mov
+cqto
+idiv
+mov
+shl
+mov
+cqto
+idiv
+mov
+add
+mov
+cmp
+ja
+movl
+movl
+movl
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+jmpq
+movslq
+mov
+shl
+movslq
+test
+jle
+mov
+mov
+mov
+mov
+jmpq
+movslq
+movzbl
+and
+shl
+movzbl
+and
+lea
+movzbl
+shr
+add
+mov
+lea
+movzbl
+mov
+lea
+movzbl
+movzbl
+mov
+sub
+test
+jle
+mov
+movslq
+cmp
+jle
+movzbl
+movzbl
+mov
+sub
+test
+jle
+mov
+mov
+movslq
+movzbl
+movzbl
+mov
+sub
+test
+jle
+mov
+cmp
+jle
+movzbl
+movzbl
+mov
+sub
+test
+jle
+mov
+mov
+movslq
+movzbl
+movzbl
+mov
+sub
+test
+jle
+mov
+cmp
+jle
+movzbl
+movzbl
+mov
+sub
+test
+jle
+mov
+mov
+add
+cmp
+jg
+callq
+movslq
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+sub
+jmpq
+sub
+jmpq
+sub
+jmpq
+sub
+jmpq
+sub
+jmp
+sub
+jmp
+data16
+nopl
+
+0000000000007290
+push
+mov
+sub
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+xor
+mov
+lea
+mov
+mov
+jmpq
+mov
+movzbl
+mov
+shl
+lea
+mov
+movzbl
+mov
+shl
+lea
+mov
+add
+cmp
+jbe
+mov
+shl
+lea
+movslq
+movzbl
+movzbl
+add
+shl
+sub
+mov
+mov
+shl
+add
+mov
+movzbl
+shl
+sub
+mov
+mov
+add
+mov
+mov
+lea
+mov
+mov
+mov
+cmp
+jb
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+jmp
+mov
+movzbl
+cmp
+jg
+add
+cmp
+jbe
+add
+mov
+cmp
+ja
+cmp
+je
+mov
+shl
+mov
+shl
+mov
+mov
+callq
+test
+je
+lea
+mov
+mov
+mov
+jmp
+mov
+cmp
+jbe
+mov
+mov
+mov
+jmp
+mov
+shl
+lea
+mov
+jmp
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+mov
+mov
+mov
+mov
+mov
+mov
+leaveq
+retq
+test
+je
+mov
+mov
+mov
+add
+mov
+cmp
+jb
+mov
+mov
+mov
+mov
+mov
+mov
+callq
+mov
+jmp
+lea
+mov
+mov
+mov
+mov
+mov
+mov
+mov
+add
+cmp
+ja
+mov
+mov
+movq
+mov
+mov
+mov
+callq
+mov
+mov
+shr
+sub
+mov
+jmp
+mov
+sub
+test
+js
+mov
+test
+je
+add
+add
+mov
+mov
+test
+jne
+movslq
+movzbl
+mov
+movzbl
+mov
+mov
+shl
+mov
+movq
+mov
+shl
+mov
+mov
+sub
+mov
+mov
+sub
+mov
+shl
+mov
+mov
+mov
+jmpq
+nopl
+
+0000000000007560
+push
+mov
+mov
+mov
+movslq
+lea
+mov
+imul
+mov
+shr
+add
+lea
+sub
+movslq
+movzbl
+shl
+mov
+movslq
+add
+mov
+imul
+mov
+shr
+add
+lea
+sub
+movslq
+movzbl
+movzbl
+shl
+add
+add
+movslq
+lea
+mov
+imul
+mov
+shr
+add
+lea
+sub
+movslq
+movzbl
+movslq
+add
+mov
+imul
+mov
+shr
+add
+lea
+sub
+movslq
+movzbl
+movzbl
+shl
+shl
+add
+add
+sub
+mov
+leaveq
+retq
+
+Disassembly
+
+0000000000007628
+endbr64
+sub
+add
+retq
