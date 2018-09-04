@@ -1,0 +1,696 @@
+rm -f pnglibconf.c pnglibconf.tf[45]
+gawk -f ./scripts/options.awk out=pnglibconf.tf4 version=search\
+    ./pngconf.h ./scripts/pnglibconf.dfa\
+    ./pngusr.dfa  1>&2
+gawk -f ./scripts/options.awk out=pnglibconf.tf5 pnglibconf.tf4 1>&2
+rm pnglibconf.tf4
+mv pnglibconf.tf5 pnglibconf.c
+rm -f pnglibconf.out pnglibconf.tf[12]
+test -d scripts || mkdir scripts || test -d scripts
+cparser -E -DHAVE_CONFIG_H -I. \
+     -DPNGLIB_LIBNAME='PNG16_0' -DPNGLIB_VERSION='1.6.34' -DSYMBOL_PREFIX='' -DPNG_NO_USE_READ_MACROS -DPNG_BUILDING_SYMBOL_TABLE  pnglibconf.c > pnglibconf.tf1
+gawk -f "./scripts/dfn.awk" out="pnglibconf.tf2" pnglibconf.tf1 1>&2
+rm -f pnglibconf.tf1
+mv pnglibconf.tf2 pnglibconf.out
+rm -f pnglibconf.h
+cp pnglibconf.out pnglibconf.h
+:>pngprefix.h
+depbase=`echo png.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT png.lo -MD -MP -MF $depbase.Tpo -c -o png.lo png.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT png.lo -MD -MP -MF .deps/png.Tpo -c png.c  -fPIC -DPIC -o .libs/png.o
+no_name_set:png_set_sig_bytes,8,33,14,4,26,25
+no_name_set:png_sig_cmp,13,56,30,9,56,43
+no_name_set:png_convert_to_rfc1123_buffer,64,43,16,42,47,22
+no_name_set:png_build_grayscale_palette,23,37,15,11,35,27
+no_name_set:png_free_data,145,41,23,90,37,30
+no_name_set:png_data_freer,10,35,20,7,32,27
+no_name_set:png_handle_as_unknown,15,43,12,7,33,21
+no_name_set:png_set_option,23,33,19,16,32,26
+no_name_set:png_fixed,1,32,0,1,32,0
+no_name_set:png_user_version_check,30,34,18,20,33,25
+no_name_set:png_zalloc,7,54,36,6,53,42
+no_name_set:png_reset_crc,5,51,15,2,48,32
+no_name_set:png_calculate_crc,30,44,26,19,45,35
+>>>>>>>>>>>>>>:HIT png_calculate_crc
+no_name_set:png_calculate_crc,30,44,26,19,45,35
+no_name_set:png_chunk_unknown_handling,21,32,11,12,24,17
+no_name_set:png_colorspace_set_gamma,29,30,15,18,26,19
+no_name_set:png_colorspace_sync_info,40,32,19,24,30,25
+no_name_set:png_colorspace_set_chromaticities,15,29,18,12,26,21
+no_name_set:png_colorspace_set_endpoints,15,29,18,12,26,21
+no_name_set:png_colorspace_set_sRGB,43,33,16,28,29,22
+no_name_set:png_colorspace_set_ICC,14,35,16,9,30,23
+no_name_set:png_icc_check_length,10,44,23,6,42,37
+no_name_set:png_icc_check_header,178,36,17,128,28,20
+no_name_set:png_icc_check_tag_table,89,34,15,65,27,18
+no_name_set:png_icc_set_sRGB,25,34,17,17,28,21
+no_name_set:png_colorspace_set_rgb_coefficients,58,34,23,43,30,28
+no_name_set:png_check_IHDR,58,35,15,36,32,19
+no_name_set:png_ascii_from_fp,139,37,27,106,38,34
+no_name_set:png_ascii_from_fixed,41,32,21,26,34,29
+no_name_set:png_check_fp_number,64,34,21,39,35,31
+no_name_set:png_muldiv,7,32,14,5,32,19
+no_name_set:png_reciprocal,4,32,8,3,32,11
+no_name_set:png_reciprocal2,5,32,13,4,32,16
+no_name_set:png_gamma_significant,6,32,11,2,32,16
+no_name_set:png_gamma_correct,9,22,14,7,18,17
+no_name_set:png_gamma_16bit_correct,8,26,16,6,24,18
+no_name_set:png_gamma_8bit_correct,10,24,13,7,21,17
+no_name_set:png_destroy_gamma_table,35,44,24,24,40,32
+no_name_set:png_build_gamma_table,81,33,17,52,26,22
+no_name_set:png_colorspace_check_gamma,19,32,17,13,29,22
+no_name_set:png_xy_from_XYZ,50,37,25,39,32,31
+no_name_set:png_XYZ_from_xy,122,34,27,108,32,30
+no_name_set:png_XYZ_normalize,43,37,24,31,32,31
+no_name_set:png_colorspace_endpoints_match,43,37,25,34,32,31
+no_name_set:png_colorspace_set_xy_and_XYZ,32,32,13,21,27,17
+no_name_set:png_icc_tag_char,8,23,13,4,20,19
+no_name_set:png_icc_tag_name,17,34,8,8,20,14
+no_name_set:is_ICC_signature_char,11,55,10,2,48,32
+no_name_set:is_ICC_signature,18,46,29,12,50,42
+no_name_set:png_icc_profile_error,36,49,29,21,51,47
+no_name_set:icc_check_length,6,37,18,4,40,26
+no_name_set:png_compare_ICC_profile_with_sRGB,162,36,16,119,29,20
+no_name_set:png_gt,5,44,26,3,53,43
+no_name_set:png_pow10,11,32,18,7,32,27
+no_name_set:png_product2,5,32,13,4,32,16
+no_name_set:png_build_16bit_table,51,38,20,36,38,25
+no_name_set:png_build_16to8_table,64,39,23,46,39,28
+no_name_set:png_build_8bit_table,16,35,10,11,33,12
+no_name_set:png_image_free_function,16,38,19,9,32,28
+no_name_set:png_image_free_function,24,48,28,14,45,43
+no_name_set:png_build_8bit_table,15,35,10,10,33,13
+no_name_set:png_build_16to8_table,62,37,21,46,38,25
+no_name_set:png_build_16bit_table,49,37,20,37,38,25
+no_name_set:png_product2,5,32,13,4,32,16
+no_name_set:png_pow10,11,32,18,7,32,27
+no_name_set:png_gt,5,44,26,3,53,43
+no_name_set:png_compare_ICC_profile_with_sRGB,166,36,16,119,29,20
+no_name_set:icc_check_length,6,37,18,4,40,26
+no_name_set:png_icc_profile_error,30,48,25,15,51,47
+no_name_set:is_ICC_signature,18,46,29,12,50,42
+no_name_set:is_ICC_signature_char,11,55,10,2,48,32
+no_name_set:png_icc_tag_name,17,34,8,8,20,14
+no_name_set:png_icc_tag_char,8,23,13,4,20,19
+no_name_set:png_colorspace_set_xy_and_XYZ,47,43,20,23,38,34
+no_name_set:png_colorspace_endpoints_match,43,37,25,34,32,31
+no_name_set:png_XYZ_normalize,43,37,24,31,32,31
+no_name_set:png_XYZ_from_xy,122,34,27,108,32,30
+no_name_set:png_xy_from_XYZ,50,37,25,39,32,31
+no_name_set:png_colorspace_check_gamma,19,32,17,13,29,22
+no_name_set:png_build_gamma_table,74,32,18,46,26,23
+no_name_set:png_destroy_gamma_table,35,44,24,24,40,32
+no_name_set:png_gamma_8bit_correct,8,23,12,6,20,14
+no_name_set:png_gamma_16bit_correct,8,26,16,6,24,18
+no_name_set:png_gamma_correct,9,22,14,7,18,17
+no_name_set:png_gamma_significant,6,32,11,2,32,16
+no_name_set:png_reciprocal2,5,32,13,4,32,16
+no_name_set:png_reciprocal,4,32,8,3,32,11
+no_name_set:png_muldiv,7,32,14,5,32,19
+no_name_set:png_check_fp_number,70,34,21,41,35,32
+no_name_set:png_ascii_from_fixed,44,32,18,28,33,24
+no_name_set:png_ascii_from_fp,146,37,25,113,38,32
+no_name_set:png_check_IHDR,58,35,15,36,32,19
+no_name_set:png_colorspace_set_rgb_coefficients,53,34,22,38,30,28
+no_name_set:png_icc_set_sRGB,24,34,15,16,28,20
+no_name_set:png_icc_check_tag_table,89,34,14,65,27,18
+no_name_set:png_icc_check_header,195,35,17,130,28,20
+no_name_set:png_icc_check_length,10,44,23,6,42,37
+no_name_set:png_colorspace_set_ICC,14,35,16,9,30,23
+no_name_set:png_colorspace_set_sRGB,52,42,14,21,29,24
+no_name_set:png_colorspace_sync_info,40,32,19,24,30,25
+no_name_set:png_colorspace_set_gamma,26,29,15,14,25,20
+no_name_set:png_chunk_unknown_handling,17,32,8,9,21,13
+no_name_set:png_calculate_crc,30,44,26,19,45,35
+no_name_set:png_reset_crc,5,51,15,2,48,32
+no_name_set:png_zalloc,7,54,36,6,53,42
+no_name_set:png_user_version_check,30,34,18,20,33,25
+no_name_set:png_fixed,1,32,0,1,32,0
+no_name_set:png_set_option,23,33,19,16,32,26
+no_name_set:png_handle_as_unknown,16,42,11,8,33,19
+no_name_set:png_data_freer,10,35,20,7,32,27
+no_name_set:png_free_data,156,43,23,98,39,30
+no_name_set:png_build_grayscale_palette,25,38,14,11,38,27
+no_name_set:png_convert_to_rfc1123_buffer,65,43,15,42,47,22
+no_name_set:png_sig_cmp,14,57,30,9,56,43
+no_name_set:png_set_sig_bytes,8,33,14,4,26,25
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT png.lo -MD -MP -MF .deps/png.Tpo -c png.c -o png.o >/dev/null 2>&1
+depbase=`echo pngerror.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngerror.lo -MD -MP -MF $depbase.Tpo -c -o pngerror.lo pngerror.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngerror.lo -MD -MP -MF .deps/pngerror.Tpo -c pngerror.c  -fPIC -DPIC -o .libs/pngerror.o
+no_name_set:png_warning,14,34,10,8,38,15
+no_name_set:png_fixed_error,16,45,12,11,50,17
+no_name_set:png_format_number,38,42,27,26,45,39
+no_name_set:png_warning_parameter,10,48,7,4,48,13
+no_name_set:png_formatted_warning,27,43,8,16,42,12
+no_name_set:png_safe_execute,9,35,18,6,32,26
+no_name_set:png_format_buffer,60,35,19,39,39,26
+no_name_set:png_format_buffer,57,33,18,36,37,26
+no_name_set:png_safe_execute,9,35,18,6,32,26
+no_name_set:png_formatted_warning,27,43,9,15,41,15
+no_name_set:png_warning_parameter_signed,13,49,23,7,50,41
+no_name_set:png_warning_parameter,10,48,6,4,48,13
+no_name_set:png_format_number,41,41,28,28,44,38
+no_name_set:png_fixed_error,12,38,9,6,38,16
+no_name_set:png_warning,16,38,7,8,38,11
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngerror.lo -MD -MP -MF .deps/pngerror.Tpo -c pngerror.c -o pngerror.o >/dev/null 2>&1
+depbase=`echo pngget.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngget.lo -MD -MP -MF $depbase.Tpo -c -o pngget.lo pngget.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngget.lo -MD -MP -MF .deps/pngget.Tpo -c pngget.c  -fPIC -DPIC -o .libs/pngget.o
+no_name_set:png_get_compression_buffer_size,13,49,20,7,45,32
+no_name_set:png_get_rgb_to_gray_status,6,29,7,4,20,8
+no_name_set:png_get_pixel_aspect_ratio_fixed,17,37,21,9,32,31
+no_name_set:png_get_bKGD,7,41,12,3,32,23
+no_name_set:png_get_cHRM,25,42,15,12,30,25
+no_name_set:png_get_cHRM_XYZ,27,43,15,13,30,26
+no_name_set:png_get_cHRM_fixed,25,42,15,12,30,25
+no_name_set:png_get_cHRM_XYZ_fixed,27,43,15,13,30,26
+no_name_set:png_get_eXIf_1,9,42,16,4,32,28
+no_name_set:png_get_gAMA,11,36,8,5,28,16
+no_name_set:png_get_gAMA_fixed,11,36,8,5,28,16
+no_name_set:png_get_hIST,7,41,13,3,32,23
+no_name_set:png_get_IHDR,33,30,9,25,22,11
+no_name_set:png_get_oFFs,13,40,14,7,28,21
+no_name_set:png_get_pCAL,19,42,13,9,26,19
+no_name_set:png_get_pHYs,15,38,13,9,29,18
+no_name_set:png_get_PLTE,10,40,12,5,28,20
+no_name_set:png_get_sBIT,7,41,11,3,32,22
+no_name_set:png_get_sRGB,9,37,14,5,28,21
+no_name_set:png_get_iCCP,29,35,13,17,26,18
+no_name_set:png_get_tIME,7,41,13,3,32,24
+no_name_set:png_get_tRNS,17,37,9,9,27,13
+no_name_set:png_get_sCAL,11,41,12,5,27,19
+no_name_set:png_get_sCAL_fixed,13,40,15,7,28,22
+no_name_set:png_get_sCAL_s,11,41,12,5,27,19
+no_name_set:png_get_pHYs_dpi,20,36,16,13,30,22
+no_name_set:ppi_from_ppm,10,32,21,5,32,31
+no_name_set:ppi_from_ppm,10,32,21,5,32,31
+no_name_set:png_get_pHYs_dpi,20,36,16,13,30,22
+no_name_set:png_get_sCAL_s,11,41,12,5,27,19
+no_name_set:png_get_sCAL_fixed,13,40,15,7,28,22
+no_name_set:png_get_sCAL,11,41,12,5,27,19
+no_name_set:png_get_tRNS,17,37,9,9,27,13
+no_name_set:png_get_tIME,7,41,13,3,32,24
+no_name_set:png_get_iCCP,29,35,12,17,26,18
+no_name_set:png_get_sRGB,9,37,14,5,28,21
+no_name_set:png_get_sBIT,7,41,11,3,32,22
+no_name_set:png_get_PLTE,10,40,12,5,28,20
+no_name_set:png_get_pHYs,15,38,13,9,29,18
+no_name_set:png_get_pCAL,19,42,13,9,26,19
+no_name_set:png_get_oFFs,13,40,14,7,28,21
+no_name_set:png_get_IHDR,33,30,9,25,22,11
+no_name_set:png_get_hIST,7,41,13,3,32,23
+no_name_set:png_get_gAMA_fixed,11,36,8,5,28,16
+no_name_set:png_get_gAMA,11,36,8,5,28,16
+no_name_set:png_get_eXIf_1,9,42,16,4,32,28
+no_name_set:png_get_cHRM_XYZ_fixed,27,43,15,13,30,26
+no_name_set:png_get_cHRM_fixed,25,42,15,12,30,25
+no_name_set:png_get_cHRM_XYZ,27,43,15,13,30,26
+no_name_set:png_get_cHRM,25,42,15,12,30,25
+no_name_set:png_get_bKGD,7,41,12,3,32,23
+no_name_set:png_get_pixel_aspect_ratio_fixed,17,37,21,9,32,31
+no_name_set:png_get_compression_buffer_size,13,49,20,7,45,32
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngget.lo -MD -MP -MF .deps/pngget.Tpo -c pngget.c -o pngget.o >/dev/null 2>&1
+depbase=`echo pngmem.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngmem.lo -MD -MP -MF $depbase.Tpo -c -o pngmem.lo pngmem.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngmem.lo -MD -MP -MF .deps/pngmem.Tpo -c pngmem.c  -fPIC -DPIC -o .libs/pngmem.o
+no_name_set:png_realloc_array,15,46,36,12,48,42
+no_name_set:png_realloc_array,15,46,36,12,48,42
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngmem.lo -MD -MP -MF .deps/pngmem.Tpo -c pngmem.c -o pngmem.o >/dev/null 2>&1
+depbase=`echo pngpread.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngpread.lo -MD -MP -MF $depbase.Tpo -c -o pngpread.lo pngpread.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngpread.lo -MD -MP -MF .deps/pngpread.Tpo -c pngpread.c  -fPIC -DPIC -o .libs/pngpread.o
+no_name_set:png_push_read_chunk,200,42,29,144,43,34
+no_name_set:png_push_read_sig,24,44,11,14,43,15
+no_name_set:png_push_read_IDAT,82,45,26,54,40,35
+no_name_set:png_process_IDAT_data,60,44,18,36,40,27
+no_name_set:png_push_process_row,119,32,9,82,26,11
+no_name_set:png_push_have_row,6,44,13,3,24,16
+no_name_set:png_read_push_finish_row,74,32,15,50,28,19
+no_name_set:png_read_push_finish_row,70,30,15,46,25,20
+no_name_set:png_push_have_row,6,44,13,3,24,16
+no_name_set:png_push_process_row,119,32,9,82,26,11
+no_name_set:png_process_IDAT_data,60,41,18,36,37,26
+no_name_set:png_push_read_IDAT,82,45,25,54,40,35
+no_name_set:png_push_read_sig,23,41,11,13,37,16
+no_name_set:png_push_read_chunk,200,42,29,144,42,34
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngpread.lo -MD -MP -MF .deps/pngpread.Tpo -c pngpread.c -o pngpread.o >/dev/null 2>&1
+depbase=`echo pngread.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngread.lo -MD -MP -MF $depbase.Tpo -c -o pngread.lo pngread.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngread.lo -MD -MP -MF .deps/pngread.Tpo -c pngread.c  -fPIC -DPIC -o .libs/pngread.o
+no_name_set:png_read_row,109,39,17,66,32,25
+no_name_set:png_read_end,57,34,24,22,30,29
+no_name_set:png_read_png,64,39,21,36,38,33
+no_name_set:png_image_finish_read,59,36,23,41,32,31
+no_name_set:png_do_read_intrapixel,83,30,13,61,26,16
+no_name_set:png_image_format,31,30,5,16,26,6
+no_name_set:png_image_read_header,37,40,13,18,27,20
+no_name_set:decode_gamma,22,37,21,16,34,28
+no_name_set:png_colormap_compose,40,33,19,30,32,24
+no_name_set:png_create_colormap_entry,268,35,18,229,34,20
+no_name_set:make_gray_file_colormap,7,32,8,3,32,16
+no_name_set:make_gray_colormap,7,32,8,3,32,16
+no_name_set:make_ga_colormap,26,32,13,15,32,19
+no_name_set:make_rgb_colormap,20,32,11,14,32,15
+no_name_set:png_image_read_colormap,463,32,16,397,31,18
+no_name_set:png_image_read_and_map,186,31,15,142,30,18
+no_name_set:png_image_read_colormapped,58,34,18,33,31,28
+no_name_set:png_image_read_composite,131,35,16,99,34,20
+no_name_set:png_image_read_background,264,35,19,222,34,22
+no_name_set:png_image_read_direct,167,35,20,120,32,24
+no_name_set:png_image_read_direct,167,35,20,120,32,24
+no_name_set:png_image_read_background,243,36,16,197,35,19
+no_name_set:png_image_read_composite,121,36,13,89,34,16
+no_name_set:png_image_read_colormapped,60,34,18,34,31,28
+no_name_set:png_image_read_and_map,201,31,12,156,30,14
+no_name_set:png_image_read_colormap,482,32,16,415,31,18
+no_name_set:make_rgb_colormap,23,32,17,17,32,22
+no_name_set:make_ga_colormap,30,32,16,18,32,23
+no_name_set:make_gray_colormap,7,32,8,3,32,16
+no_name_set:make_gray_file_colormap,7,32,8,3,32,16
+no_name_set:png_create_colormap_entry,309,35,17,272,34,18
+no_name_set:png_colormap_compose,40,32,19,31,32,23
+no_name_set:decode_gamma,27,35,17,18,33,24
+no_name_set:png_image_read_header,38,38,12,17,27,21
+no_name_set:png_gamma_not_sRGB,20,32,19,12,32,27
+no_name_set:png_image_format,31,30,5,16,26,6
+no_name_set:png_do_read_intrapixel,63,29,9,44,24,12
+no_name_set:png_image_finish_read,61,38,22,41,32,31
+no_name_set:png_image_begin_read_from_memory,17,48,17,8,40,32
+no_name_set:png_image_begin_read_from_stdio,13,44,16,7,36,27
+no_name_set:png_image_begin_read_from_file,19,42,18,11,34,29
+no_name_set:png_read_png,64,39,21,36,38,33
+no_name_set:png_read_end,57,34,24,22,30,29
+no_name_set:png_read_row,109,39,17,66,32,25
+no_name_set:png_read_rows,13,41,17,8,36,28
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngread.lo -MD -MP -MF .deps/pngread.Tpo -c pngread.c -o pngread.o >/dev/null 2>&1
+depbase=`echo pngrio.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngrio.lo -MD -MP -MF $depbase.Tpo -c -o pngrio.lo pngrio.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngrio.lo -MD -MP -MF .deps/pngrio.Tpo -c pngrio.c  -fPIC -DPIC -o .libs/pngrio.o
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngrio.lo -MD -MP -MF .deps/pngrio.Tpo -c pngrio.c -o pngrio.o >/dev/null 2>&1
+depbase=`echo pngrtran.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngrtran.lo -MD -MP -MF $depbase.Tpo -c -o pngrtran.lo pngrtran.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngrtran.lo -MD -MP -MF .deps/pngrtran.Tpo -c pngrtran.c  -fPIC -DPIC -o .libs/pngrtran.o
+no_name_set:png_set_rgb_to_gray_fixed,43,31,20,24,28,27
+no_name_set:png_set_alpha_mode_fixed,57,36,22,34,31,28
+no_name_set:png_set_quantize,309,34,16,281,32,17
+no_name_set:png_set_gamma_fixed,14,36,18,9,28,24
+no_name_set:png_read_transform_info,136,31,14,88,27,18
+no_name_set:png_do_read_transformations,165,36,20,103,32,26
+no_name_set:png_init_read_transformations,530,29,17,459,27,18
+no_name_set:png_rtran_ok,16,36,16,8,32,28
+no_name_set:convert_gamma_value,1,32,0,1,32,0
+no_name_set:png_gamma_threshold,9,32,20,6,32,26
+no_name_set:png_init_palette_transformations,72,35,13,46,30,14
+no_name_set:png_init_rgb_transformations,62,36,15,34,27,19
+no_name_set:png_do_unpack,82,33,20,60,32,24
+no_name_set:png_do_unshift,95,33,16,75,31,19
+no_name_set:png_do_scale_16_to_8,32,34,12,20,28,16
+no_name_set:png_do_chop,20,37,12,11,29,20
+no_name_set:png_do_read_invert_alpha,53,30,15,40,26,19
+no_name_set:png_do_read_filler,129,38,20,99,37,25
+no_name_set:png_do_gray_to_rgb,97,37,14,72,33,18
+no_name_set:png_do_rgb_to_gray,262,33,15,223,31,17
+no_name_set:png_do_compose,1073,28,17,1008,27,18
+no_name_set:png_do_gamma,261,32,16,228,31,17
+no_name_set:png_do_encode_alpha,55,38,11,35,34,14
+no_name_set:png_do_expand_palette,146,35,17,107,34,22
+no_name_set:png_do_expand,247,33,19,196,32,22
+no_name_set:png_do_expand_16,24,41,15,11,32,28
+no_name_set:png_do_quantize,87,38,15,64,38,19
+no_name_set:png_do_quantize,87,38,15,64,38,19
+no_name_set:png_do_expand_16,21,38,9,9,32,17
+no_name_set:png_do_expand,228,31,16,179,30,19
+no_name_set:png_do_expand_palette,145,35,15,108,35,20
+no_name_set:png_do_encode_alpha,53,39,11,32,34,14
+no_name_set:png_do_gamma,259,32,15,226,31,17
+no_name_set:png_do_compose,976,25,15,899,24,15
+no_name_set:png_do_rgb_to_gray,246,33,15,206,30,17
+no_name_set:png_do_gray_to_rgb,84,35,13,58,29,18
+no_name_set:png_do_read_filler,121,37,19,93,35,24
+no_name_set:png_do_read_invert_alpha,40,30,16,28,23,22
+no_name_set:png_do_chop,18,36,12,9,28,21
+no_name_set:png_do_scale_16_to_8,32,32,12,20,26,16
+no_name_set:png_do_unshift,101,32,14,76,30,18
+no_name_set:png_do_unpack,80,31,18,57,30,22
+no_name_set:png_init_rgb_transformations,70,30,12,39,21,14
+no_name_set:png_init_palette_transformations,71,37,13,46,32,14
+no_name_set:png_gamma_threshold,9,32,20,6,32,26
+no_name_set:convert_gamma_value,1,32,0,1,32,0
+no_name_set:png_rtran_ok,16,36,16,8,32,28
+no_name_set:png_init_read_transformations,517,28,17,446,25,18
+no_name_set:png_do_read_transformations,162,36,20,100,32,26
+no_name_set:png_read_transform_info,128,31,15,77,26,20
+no_name_set:png_set_quantize,329,34,16,299,33,17
+no_name_set:png_set_alpha_mode_fixed,58,35,21,32,31,29
+no_name_set:png_set_rgb_to_gray_fixed,54,33,17,29,30,24
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngrtran.lo -MD -MP -MF .deps/pngrtran.Tpo -c pngrtran.c -o pngrtran.o >/dev/null 2>&1
+depbase=`echo pngrutil.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngrutil.lo -MD -MP -MF $depbase.Tpo -c -o pngrutil.lo pngrutil.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngrutil.lo -MD -MP -MF .deps/pngrutil.Tpo -c pngrutil.c  -fPIC -DPIC -o .libs/pngrutil.o
+no_name_set:png_get_uint_32,20,32,14,14,25,16
+no_name_set:png_get_uint_16,9,28,9,7,22,11
+no_name_set:png_get_int_32,30,32,18,21,27,21
+no_name_set:png_get_uint_31,21,32,15,14,25,16
+no_name_set:png_read_sig,22,41,10,9,43,16
+no_name_set:png_read_chunk_header,29,37,13,16,26,18
+no_name_set:png_crc_read,2,48,32,2,48,32
+no_name_set:png_crc_finish,22,34,18,13,32,25
+no_name_set:png_crc_error,41,35,15,23,27,20
+no_name_set:png_combine_row,238,45,21,192,44,25
+no_name_set:png_do_read_interlace,227,35,25,196,34,28
+no_name_set:png_read_filter_row,9,46,7,4,48,12
+no_name_set:png_read_IDAT_data,52,47,28,32,44,39
+no_name_set:png_read_finish_row,60,36,15,41,31,19
+no_name_set:png_read_start_row,160,39,20,98,34,27
+no_name_set:png_zlib_inflate,17,35,13,8,26,22
+no_name_set:png_handle_IHDR,59,42,12,32,36,17
+no_name_set:png_handle_PLTE,59,33,15,34,26,23
+no_name_set:png_handle_bKGD,82,31,10,59,26,12
+no_name_set:png_handle_cHRM,47,37,18,28,30,27
+no_name_set:png_handle_eXIf,25,33,19,15,31,27
+no_name_set:png_handle_hIST,34,36,14,22,31,19
+no_name_set:png_handle_iCCP,137,38,16,88,32,21
+no_name_set:png_handle_iTXt,70,41,21,44,39,30
+no_name_set:png_handle_oFFs,98,31,17,79,27,19
+no_name_set:png_handle_pCAL,125,32,16,94,29,19
+no_name_set:png_handle_pHYs,55,33,14,37,26,19
+no_name_set:png_handle_sBIT,50,33,9,26,22,14
+no_name_set:png_handle_sCAL,45,37,19,28,38,28
+no_name_set:png_handle_sPLT,99,33,15,72,27,19
+no_name_set:png_handle_sRGB,22,33,14,13,27,20
+no_name_set:png_handle_tEXt,33,43,16,14,37,32
+no_name_set:png_handle_tIME,37,33,12,21,23,19
+no_name_set:png_handle_tRNS,71,32,11,43,24,15
+no_name_set:png_handle_zTXt,51,44,20,26,41,35
+no_name_set:png_check_chunk_name,15,32,13,7,32,22
+no_name_set:png_check_chunk_length,53,47,25,31,46,36
+no_name_set:png_handle_unknown,33,37,20,19,32,28
+no_name_set:png_get_fixed_point,24,32,16,16,26,18
+no_name_set:png_inflate_claim,52,37,14,26,28,24
+no_name_set:png_inflate,49,45,28,32,43,38
+no_name_set:png_decompress_chunk,51,47,26,34,46,36
+no_name_set:png_inflate_read,41,44,26,26,40,37
+no_name_set:png_cache_unknown_chunk,39,42,10,17,30,18
+no_name_set:png_read_filter_row_sub,24,40,17,17,35,23
+no_name_set:png_read_filter_row_up,15,42,17,10,34,25
+no_name_set:png_read_filter_row_avg,41,37,19,32,34,23
+no_name_set:png_read_filter_row_paeth_1byte_pixel,32,30,19,28,28,21
+no_name_set:png_read_filter_row_paeth_multibyte_pixel,44,32,15,38,30,17
+no_name_set:png_init_filter_functions,13,42,9,5,27,17
+no_name_set:png_init_filter_functions,12,43,12,4,26,14
+no_name_set:png_read_filter_row_paeth_multibyte_pixel,37,30,14,31,27,16
+no_name_set:png_read_filter_row_paeth_1byte_pixel,32,30,19,28,28,21
+no_name_set:png_read_filter_row_avg,35,37,13,27,32,17
+no_name_set:png_read_filter_row_sub,18,42,15,12,37,21
+no_name_set:png_cache_unknown_chunk,35,43,10,14,30,16
+no_name_set:png_inflate_read,41,44,26,26,40,37
+no_name_set:png_decompress_chunk,51,47,26,34,46,36
+no_name_set:png_inflate,49,45,28,32,43,38
+no_name_set:png_inflate_claim,48,37,14,23,27,23
+no_name_set:png_get_fixed_point,24,32,14,16,26,18
+no_name_set:png_handle_unknown,34,37,20,19,32,28
+no_name_set:png_check_chunk_length,54,48,25,32,46,35
+no_name_set:png_check_chunk_name,15,32,13,7,32,22
+no_name_set:png_handle_zTXt,50,44,20,25,40,35
+no_name_set:png_handle_tRNS,68,29,11,39,18,15
+no_name_set:png_handle_tIME,36,32,12,20,20,19
+no_name_set:png_handle_tEXt,33,43,16,14,37,32
+no_name_set:png_handle_sRGB,22,33,14,12,27,21
+no_name_set:png_handle_sPLT,97,31,15,71,26,19
+no_name_set:png_handle_sCAL,45,37,19,28,38,28
+no_name_set:png_handle_sBIT,50,33,9,26,22,14
+no_name_set:png_handle_pHYs,55,33,13,37,26,19
+no_name_set:png_handle_pCAL,117,32,15,86,29,19
+no_name_set:png_handle_oFFs,91,31,16,71,26,19
+no_name_set:png_handle_iTXt,69,41,21,43,39,30
+no_name_set:png_handle_iCCP,136,38,16,87,33,21
+no_name_set:png_handle_hIST,33,33,14,21,28,20
+no_name_set:png_handle_eXIf,25,33,19,15,31,27
+no_name_set:png_handle_cHRM,47,37,18,26,30,28
+no_name_set:png_handle_bKGD,76,28,9,52,20,13
+no_name_set:png_handle_PLTE,71,34,16,41,28,23
+no_name_set:png_handle_IHDR,56,42,12,28,37,19
+no_name_set:png_zlib_inflate,17,35,13,8,26,22
+no_name_set:png_read_start_row,159,38,20,95,33,28
+no_name_set:png_read_finish_row,56,34,16,37,28,21
+no_name_set:png_read_IDAT_data,54,48,27,33,44,37
+no_name_set:png_read_filter_row,9,46,7,4,48,11
+no_name_set:png_do_read_interlace,209,32,21,176,32,24
+no_name_set:png_combine_row,223,44,20,179,44,24
+no_name_set:png_crc_error,41,35,14,23,27,19
+no_name_set:png_crc_finish,22,34,18,13,32,25
+no_name_set:png_crc_read,2,48,32,2,48,32
+no_name_set:png_read_chunk_header,29,37,12,16,26,18
+no_name_set:png_read_sig,22,41,10,9,43,16
+no_name_set:png_get_uint_31,21,32,13,14,25,16
+no_name_set:png_get_int_32,30,32,16,21,27,21
+no_name_set:png_get_uint_16,8,20,8,6,13,10
+no_name_set:png_get_uint_32,20,32,12,14,25,16
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngrutil.lo -MD -MP -MF .deps/pngrutil.Tpo -c pngrutil.c -o pngrutil.o >/dev/null 2>&1
+depbase=`echo pngset.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngset.lo -MD -MP -MF $depbase.Tpo -c -o pngset.lo pngset.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngset.lo -MD -MP -MF .deps/pngset.Tpo -c pngset.c  -fPIC -DPIC -o .libs/pngset.o
+no_name_set:png_set_compression_buffer_size,18,49,19,8,40,31
+no_name_set:png_set_cHRM_fixed,25,42,16,13,29,27
+no_name_set:png_set_cHRM_XYZ_fixed,27,42,16,14,29,27
+no_name_set:png_set_eXIf_1,20,40,22,12,35,32
+no_name_set:png_set_hIST,24,39,13,12,33,21
+no_name_set:png_set_IHDR,58,36,12,41,32,16
+no_name_set:png_set_pCAL,48,47,22,30,44,32
+no_name_set:png_set_PLTE,36,40,15,17,30,25
+no_name_set:png_set_sRGB_gAMA_and_cHRM,10,35,14,6,26,21
+no_name_set:png_set_iCCP,29,43,18,16,34,29
+no_name_set:png_set_sPLT,37,45,22,22,39,34
+no_name_set:png_set_tRNS,43,36,14,22,26,22
+no_name_set:png_set_keep_unknown_chunks,38,38,21,24,35,31
+no_name_set:png_set_unknown_chunks,33,45,19,17,38,33
+no_name_set:png_set_unknown_chunk_location,20,40,17,10,36,30
+no_name_set:png_set_invalid,6,37,16,5,32,19
+no_name_set:png_set_text_2,77,48,30,52,48,41
+no_name_set:png_check_keyword,30,27,11,14,26,18
+no_name_set:check_location,22,31,19,15,28,26
+no_name_set:check_location,22,29,18,15,27,24
+no_name_set:png_check_keyword,30,27,11,14,26,18
+no_name_set:png_set_text_2,79,49,29,53,48,41
+no_name_set:png_set_invalid,6,37,22,5,32,25
+no_name_set:png_set_unknown_chunk_location,20,40,17,10,36,30
+no_name_set:png_set_unknown_chunks,33,45,19,17,38,33
+no_name_set:png_set_keep_unknown_chunks,42,37,21,27,34,30
+no_name_set:png_set_tRNS,46,37,15,24,27,23
+no_name_set:png_set_sPLT,42,46,21,24,41,34
+no_name_set:png_set_iCCP,27,43,19,14,34,30
+no_name_set:png_set_PLTE,37,41,15,18,32,25
+no_name_set:png_set_pCAL,48,47,22,30,44,31
+no_name_set:png_set_IHDR,55,37,13,38,32,17
+no_name_set:png_set_hIST,24,38,13,12,33,21
+no_name_set:png_set_eXIf_1,20,40,22,12,35,32
+no_name_set:png_set_compression_buffer_size,17,50,20,7,41,36
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngset.lo -MD -MP -MF .deps/pngset.Tpo -c pngset.c -o pngset.o >/dev/null 2>&1
+depbase=`echo pngtrans.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngtrans.lo -MD -MP -MF $depbase.Tpo -c -o pngtrans.lo pngtrans.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngtrans.lo -MD -MP -MF .deps/pngtrans.Tpo -c pngtrans.c  -fPIC -DPIC -o .libs/pngtrans.o
+no_name_set:png_set_filler,29,35,16,14,27,24
+no_name_set:png_set_interlace_handling,10,33,10,4,26,18
+no_name_set:png_do_swap,16,32,11,9,21,18
+no_name_set:png_do_packswap,12,31,9,5,30,19
+no_name_set:png_do_invert,43,37,17,29,32,24
+no_name_set:png_do_bgr,42,28,11,25,18,16
+no_name_set:png_do_check_palette_indexes,78,31,19,62,28,22
+no_name_set:png_do_check_palette_indexes,79,29,17,56,27,22
+no_name_set:png_do_bgr,42,28,11,25,18,16
+no_name_set:png_do_invert,35,38,19,21,32,30
+no_name_set:png_do_packswap,12,31,9,5,30,19
+no_name_set:png_do_swap,16,32,11,9,21,18
+no_name_set:png_set_interlace_handling,10,33,10,4,26,18
+no_name_set:png_set_filler,29,34,16,13,27,25
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngtrans.lo -MD -MP -MF .deps/pngtrans.Tpo -c pngtrans.c -o pngtrans.o >/dev/null 2>&1
+depbase=`echo pngwio.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngwio.lo -MD -MP -MF $depbase.Tpo -c -o pngwio.lo pngwio.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngwio.lo -MD -MP -MF .deps/pngwio.Tpo -c pngwio.c  -fPIC -DPIC -o .libs/pngwio.o
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngwio.lo -MD -MP -MF .deps/pngwio.Tpo -c pngwio.c -o pngwio.o >/dev/null 2>&1
+depbase=`echo pngwrite.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngwrite.lo -MD -MP -MF $depbase.Tpo -c -o pngwrite.lo pngwrite.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngwrite.lo -MD -MP -MF .deps/pngwrite.Tpo -c pngwrite.c  -fPIC -DPIC -o .libs/pngwrite.o
+no_name_set:png_write_info_before_PLTE,76,35,15,49,27,20
+no_name_set:png_write_info,147,39,17,85,31,25
+no_name_set:png_write_row,99,38,16,62,31,22
+no_name_set:png_write_end,53,43,19,29,38,31
+no_name_set:png_set_filter,86,38,19,53,36,28
+no_name_set:write_unknown_chunks,29,44,16,15,37,28
+no_name_set:png_do_write_intrapixel,77,32,13,57,28,16
+no_name_set:png_write_image_16bit,62,38,18,37,36,26
+no_name_set:png_unpremultiply,36,30,16,23,30,21
+no_name_set:png_write_image_8bit,96,37,18,65,35,24
+no_name_set:png_image_set_PLTE,205,36,16,172,35,19
+no_name_set:png_image_write_main,118,37,22,76,36,30
+no_name_set:image_memory_write,11,64,31,6,64,53
+no_name_set:image_memory_write,11,64,31,6,64,53
+no_name_set:png_image_write_main,118,38,21,75,36,28
+no_name_set:png_image_set_PLTE,189,36,15,156,35,18
+no_name_set:png_write_image_8bit,95,37,15,66,35,19
+no_name_set:png_unpremultiply,35,29,15,23,30,21
+no_name_set:png_write_image_16bit,61,38,16,37,36,22
+no_name_set:png_do_write_intrapixel,67,32,11,48,27,14
+no_name_set:write_unknown_chunks,30,45,16,15,37,28
+no_name_set:png_image_write_to_memory,26,50,22,14,43,38
+no_name_set:png_image_write_to_stdio,19,47,15,9,35,28
+no_name_set:png_image_write_to_file,23,37,22,17,33,30
+no_name_set:png_set_filter,82,38,20,48,37,30
+no_name_set:png_write_end,53,44,18,27,38,31
+no_name_set:png_write_row,97,38,16,59,31,23
+no_name_set:png_write_info,145,40,17,81,31,25
+no_name_set:png_write_info_before_PLTE,76,35,15,49,27,20
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngwrite.lo -MD -MP -MF .deps/pngwrite.Tpo -c pngwrite.c -o pngwrite.o >/dev/null 2>&1
+depbase=`echo pngwtran.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngwtran.lo -MD -MP -MF $depbase.Tpo -c -o pngwtran.lo pngwtran.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngwtran.lo -MD -MP -MF .deps/pngwtran.Tpo -c pngwtran.c  -fPIC -DPIC -o .libs/pngwtran.o
+no_name_set:png_do_write_transformations,46,36,19,25,31,28
+no_name_set:png_do_pack,86,32,18,64,31,22
+no_name_set:png_do_shift,151,31,16,122,29,19
+no_name_set:png_do_write_invert_alpha,54,29,12,39,22,15
+no_name_set:png_do_write_invert_alpha,41,28,12,27,18,16
+no_name_set:png_do_shift,137,31,16,108,29,20
+no_name_set:png_do_pack,86,32,18,62,31,23
+no_name_set:png_do_write_transformations,46,36,19,25,31,28
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngwtran.lo -MD -MP -MF .deps/pngwtran.Tpo -c pngwtran.c -o pngwtran.o >/dev/null 2>&1
+depbase=`echo pngwutil.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT pngwutil.lo -MD -MP -MF $depbase.Tpo -c -o pngwutil.lo pngwutil.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngwutil.lo -MD -MP -MF .deps/pngwutil.Tpo -c pngwutil.c  -fPIC -DPIC -o .libs/pngwutil.o
+no_name_set:png_write_sig,15,37,14,8,34,21
+no_name_set:png_write_chunk,21,33,16,15,27,19
+no_name_set:png_write_chunk_start,21,32,15,15,25,17
+no_name_set:png_save_uint_32,18,32,11,11,23,16
+no_name_set:png_save_uint_16,9,30,14,6,24,20
+no_name_set:png_write_IHDR,87,38,12,41,33,18
+no_name_set:png_write_PLTE,41,33,13,22,23,19
+no_name_set:png_compress_IDAT,61,44,25,38,41,35
+no_name_set:png_write_sBIT,34,37,7,18,27,10
+no_name_set:png_write_eXIf,10,36,20,6,33,28
+no_name_set:png_write_iCCP,53,34,16,35,31,21
+no_name_set:png_write_sPLT,49,39,16,32,32,22
+no_name_set:png_write_tRNS,38,31,12,23,22,17
+no_name_set:png_write_bKGD,47,30,11,27,19,15
+no_name_set:png_write_hIST,18,39,14,11,34,19
+no_name_set:png_write_tEXt,19,44,24,12,48,33
+no_name_set:png_write_zTXt,21,41,22,11,43,37
+no_name_set:png_write_iTXt,52,44,28,38,47,35
+no_name_set:png_write_pCAL,46,48,28,32,48,39
+no_name_set:png_write_tIME,23,25,7,11,10,9
+no_name_set:png_write_finish_row,92,38,18,67,34,23
+no_name_set:png_write_start_row,97,38,16,59,33,23
+no_name_set:png_do_write_interlace,146,34,20,122,33,23
+no_name_set:png_write_find_filter,57,45,23,35,44,34
+no_name_set:png_write_complete_chunk,4,48,39,3,42,42
+no_name_set:png_image_size,90,41,20,66,40,26
+no_name_set:optimize_cmf,42,33,17,27,32,22
+no_name_set:png_deflate_claim,123,39,18,70,30,26
+no_name_set:png_text_compress,56,46,26,33,42,37
+no_name_set:png_write_compressed_data_out,13,46,20,7,36,32
+no_name_set:png_setup_sub_row,38,44,23,29,44,29
+no_name_set:png_setup_sub_row_only,22,42,19,15,38,25
+no_name_set:png_setup_up_row,28,43,21,18,42,30
+no_name_set:png_setup_up_row_only,18,42,16,10,34,25
+no_name_set:png_setup_avg_row,52,37,20,40,35,25
+no_name_set:png_setup_avg_row_only,35,32,17,26,28,21
+no_name_set:png_setup_paeth_row,60,38,19,49,37,22
+no_name_set:png_setup_paeth_row_only,44,35,15,35,32,18
+no_name_set:png_setup_paeth_row_only,36,36,16,28,31,20
+no_name_set:png_setup_paeth_row,52,39,20,42,37,24
+no_name_set:png_setup_avg_row_only,29,30,15,22,25,18
+no_name_set:png_setup_avg_row,46,36,19,36,34,24
+no_name_set:png_setup_up_row,23,46,24,14,45,36
+no_name_set:png_setup_sub_row_only,17,45,22,11,40,32
+no_name_set:png_setup_sub_row,33,46,25,25,46,32
+no_name_set:png_write_compressed_data_out,13,46,20,7,36,32
+no_name_set:png_text_compress,56,46,26,33,42,37
+no_name_set:png_deflate_claim,117,40,17,64,30,26
+no_name_set:optimize_cmf,47,33,15,31,32,19
+no_name_set:png_image_size,85,42,17,62,42,21
+no_name_set:png_write_complete_chunk,4,48,39,3,42,42
+no_name_set:png_write_find_filter,56,45,23,34,44,33
+no_name_set:png_do_write_interlace,135,33,18,112,33,21
+no_name_set:png_write_start_row,92,38,17,55,33,24
+no_name_set:png_write_finish_row,82,37,20,57,32,26
+no_name_set:png_write_tIME,23,25,7,11,10,9
+no_name_set:png_write_pCAL,46,48,27,32,48,37
+no_name_set:png_write_iTXt,54,42,26,37,44,35
+no_name_set:png_write_zTXt,21,41,22,11,43,37
+no_name_set:png_write_tEXt,17,38,26,11,41,35
+no_name_set:png_write_hIST,17,37,14,11,34,17
+no_name_set:png_write_bKGD,47,30,11,27,19,15
+no_name_set:png_write_tRNS,38,31,12,23,22,17
+no_name_set:png_write_sPLT,53,38,14,33,30,20
+no_name_set:png_write_iCCP,43,34,15,25,31,22
+no_name_set:png_write_eXIf,10,36,20,6,33,28
+no_name_set:png_write_sBIT,32,36,7,16,26,11
+no_name_set:png_compress_IDAT,61,44,26,38,41,36
+no_name_set:png_write_PLTE,39,34,12,22,23,18
+no_name_set:png_write_IHDR,93,38,12,42,33,19
+no_name_set:png_save_uint_16,6,29,10,4,20,14
+no_name_set:png_save_uint_32,14,32,7,8,20,11
+no_name_set:png_write_chunk_start,21,32,13,15,25,17
+no_name_set:png_write_chunk,21,33,15,15,27,19
+no_name_set:png_write_sig,16,39,15,8,34,21
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT pngwutil.lo -MD -MP -MF .deps/pngwutil.Tpo -c pngwutil.c -o pngwutil.o >/dev/null 2>&1
+depbase=`echo mips/mips_init.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT mips/mips_init.lo -MD -MP -MF $depbase.Tpo -c -o mips/mips_init.lo mips/mips_init.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT mips/mips_init.lo -MD -MP -MF mips/.deps/mips_init.Tpo -c mips/mips_init.c  -fPIC -DPIC -o mips/.libs/mips_init.o
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT mips/mips_init.lo -MD -MP -MF mips/.deps/mips_init.Tpo -c mips/mips_init.c -o mips/mips_init.o >/dev/null 2>&1
+depbase=`echo mips/filter_msa_intrinsics.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT mips/filter_msa_intrinsics.lo -MD -MP -MF $depbase.Tpo -c -o mips/filter_msa_intrinsics.lo mips/filter_msa_intrinsics.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT mips/filter_msa_intrinsics.lo -MD -MP -MF mips/.deps/filter_msa_intrinsics.Tpo -c mips/filter_msa_intrinsics.c  -fPIC -DPIC -o mips/.libs/filter_msa_intrinsics.o
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT mips/filter_msa_intrinsics.lo -MD -MP -MF mips/.deps/filter_msa_intrinsics.Tpo -c mips/filter_msa_intrinsics.c -o mips/filter_msa_intrinsics.o >/dev/null 2>&1
+depbase=`echo intel/intel_init.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT intel/intel_init.lo -MD -MP -MF $depbase.Tpo -c -o intel/intel_init.lo intel/intel_init.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT intel/intel_init.lo -MD -MP -MF intel/.deps/intel_init.Tpo -c intel/intel_init.c  -fPIC -DPIC -o intel/.libs/intel_init.o
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT intel/intel_init.lo -MD -MP -MF intel/.deps/intel_init.Tpo -c intel/intel_init.c -o intel/intel_init.o >/dev/null 2>&1
+depbase=`echo intel/filter_sse2_intrinsics.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT intel/filter_sse2_intrinsics.lo -MD -MP -MF $depbase.Tpo -c -o intel/filter_sse2_intrinsics.lo intel/filter_sse2_intrinsics.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT intel/filter_sse2_intrinsics.lo -MD -MP -MF intel/.deps/filter_sse2_intrinsics.Tpo -c intel/filter_sse2_intrinsics.c  -fPIC -DPIC -o intel/.libs/filter_sse2_intrinsics.o
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT intel/filter_sse2_intrinsics.lo -MD -MP -MF intel/.deps/filter_sse2_intrinsics.Tpo -c intel/filter_sse2_intrinsics.c -o intel/filter_sse2_intrinsics.o >/dev/null 2>&1
+depbase=`echo powerpc/powerpc_init.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT powerpc/powerpc_init.lo -MD -MP -MF $depbase.Tpo -c -o powerpc/powerpc_init.lo powerpc/powerpc_init.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT powerpc/powerpc_init.lo -MD -MP -MF powerpc/.deps/powerpc_init.Tpo -c powerpc/powerpc_init.c  -fPIC -DPIC -o powerpc/.libs/powerpc_init.o
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT powerpc/powerpc_init.lo -MD -MP -MF powerpc/.deps/powerpc_init.Tpo -c powerpc/powerpc_init.c -o powerpc/powerpc_init.o >/dev/null 2>&1
+depbase=`echo powerpc/filter_vsx_intrinsics.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cparser -DHAVE_CONFIG_H -I.     -fPIC -MT powerpc/filter_vsx_intrinsics.lo -MD -MP -MF $depbase.Tpo -c -o powerpc/filter_vsx_intrinsics.lo powerpc/filter_vsx_intrinsics.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT powerpc/filter_vsx_intrinsics.lo -MD -MP -MF powerpc/.deps/filter_vsx_intrinsics.Tpo -c powerpc/filter_vsx_intrinsics.c  -fPIC -DPIC -o powerpc/.libs/filter_vsx_intrinsics.o
+libtool: compile:  cparser -DHAVE_CONFIG_H -I. -fPIC -MT powerpc/filter_vsx_intrinsics.lo -MD -MP -MF powerpc/.deps/filter_vsx_intrinsics.Tpo -c powerpc/filter_vsx_intrinsics.c -o powerpc/filter_vsx_intrinsics.o >/dev/null 2>&1
+rm -f scripts/vers.out scripts/vers.tf[12]
+test -d scripts || mkdir scripts || test -d scripts
+cparser -E -DHAVE_CONFIG_H -I. \
+     -DPNGLIB_LIBNAME='PNG16_0' -DPNGLIB_VERSION='1.6.34' -DSYMBOL_PREFIX='' -DPNG_NO_USE_READ_MACROS -DPNG_BUILDING_SYMBOL_TABLE  scripts/vers.c > scripts/vers.tf1
+gawk -f "./scripts/dfn.awk" out="scripts/vers.tf2" scripts/vers.tf1 1>&2
+rm -f scripts/vers.tf1
+mv scripts/vers.tf2 scripts/vers.out
+rm -f libpng.vers
+cp scripts/vers.out libpng.vers
+/bin/sh ./libtool  --tag=CC   --mode=link cparser  -fPIC -no-undefined -export-dynamic -version-number 16:34:0  -Wl,--version-script=libpng.vers   -o libpng16.la -rpath /usr/local/lib png.lo pngerror.lo pngget.lo pngmem.lo pngpread.lo pngread.lo pngrio.lo pngrtran.lo pngrutil.lo pngset.lo pngtrans.lo pngwio.lo pngwrite.lo pngwtran.lo pngwutil.lo  mips/mips_init.lo mips/filter_msa_intrinsics.lo intel/intel_init.lo intel/filter_sse2_intrinsics.lo powerpc/powerpc_init.lo powerpc/filter_vsx_intrinsics.lo   -lm -lz -lm 
+libtool: link: cparser -shared  -fPIC -DPIC  .libs/png.o .libs/pngerror.o .libs/pngget.o .libs/pngmem.o .libs/pngpread.o .libs/pngread.o .libs/pngrio.o .libs/pngrtran.o .libs/pngrutil.o .libs/pngset.o .libs/pngtrans.o .libs/pngwio.o .libs/pngwrite.o .libs/pngwtran.o .libs/pngwutil.o mips/.libs/mips_init.o mips/.libs/filter_msa_intrinsics.o intel/.libs/intel_init.o intel/.libs/filter_sse2_intrinsics.o powerpc/.libs/powerpc_init.o powerpc/.libs/filter_vsx_intrinsics.o   -lz -lm -lc  -Wl,--version-script=libpng.vers   -Wl,-soname -Wl,libpng16.so.16 -o .libs/libpng16.so.16.34.0
+libtool: link: (cd ".libs" && rm -f "libpng16.so.16" && ln -s "libpng16.so.16.34.0" "libpng16.so.16")
+libtool: link: (cd ".libs" && rm -f "libpng16.so" && ln -s "libpng16.so.16.34.0" "libpng16.so")
+libtool: link: ar cru .libs/libpng16.a  png.o pngerror.o pngget.o pngmem.o pngpread.o pngread.o pngrio.o pngrtran.o pngrutil.o pngset.o pngtrans.o pngwio.o pngwrite.o pngwtran.o pngwutil.o mips/mips_init.o mips/filter_msa_intrinsics.o intel/intel_init.o intel/filter_sse2_intrinsics.o powerpc/powerpc_init.o powerpc/filter_vsx_intrinsics.o
+libtool: link: ranlib .libs/libpng16.a
+libtool: link: ( cd ".libs" && rm -f "libpng16.la" && ln -s "../libpng16.la" "libpng16.la" )
