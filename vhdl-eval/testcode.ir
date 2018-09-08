@@ -1,0 +1,170 @@
+modes {
+	float_mode "F" ieee754 8 23 1 
+	float_mode "D" ieee754 11 52 1 
+	int_mode "Bs" twos_complement 8 1 32 
+	int_mode "Bu" twos_complement 8 0 32 
+	int_mode "Hs" twos_complement 16 1 32 
+	int_mode "Hu" twos_complement 16 0 32 
+	int_mode "Is" twos_complement 32 1 32 
+	int_mode "Iu" twos_complement 32 0 32 
+	int_mode "Ls" twos_complement 64 1 64 
+	int_mode "Lu" twos_complement 64 0 64 
+	reference_mode "P" twos_complement 64 64 "Ls" 1 
+	int_mode "x86_xmm" twos_complement 128 0 0 
+	float_mode "E" x86_extended_float 15 64 0 
+	float_mode "F32" ieee754 8 23 0 
+	float_mode "F64" ieee754 11 52 0 
+}
+
+typegraph {
+	type 0 primitive 0 1 layout_fixed 2 "BB" 
+	type 1 primitive 0 1 layout_fixed 2 "X" 
+	type 3 primitive 0 1 layout_fixed 2 "T" 
+	type 4 primitive 0 1 layout_fixed 2 "ANY" 
+	type 5 primitive 0 1 layout_fixed 2 "BAD" 
+	type 6 primitive 4294967295 1 layout_fixed 2 "b" 
+	type 7 primitive 4 4 layout_fixed 2 "F" 
+	type 8 primitive 8 8 layout_fixed 2 "D" 
+	type 9 primitive 1 1 layout_fixed 2 "Bs" 
+	type 10 primitive 1 1 layout_fixed 2 "Bu" 
+	type 11 primitive 2 2 layout_fixed 2 "Hs" 
+	type 12 primitive 2 2 layout_fixed 2 "Hu" 
+	type 13 primitive 4 4 layout_fixed 2 "Is" 
+	type 14 primitive 4 4 layout_fixed 2 "Iu" 
+	type 15 primitive 8 8 layout_fixed 2 "Ls" 
+	type 16 primitive 8 8 layout_fixed 2 "Lu" 
+	type 19 struct 0 0 layout_undefined 1 "$dummy_owner$" 
+	type 21 segment 0 0 layout_undefined 1 "GlobalType" 
+	type 22 segment 0 0 layout_undefined 1 "ThreadLocal" 
+	type 23 segment 0 0 layout_undefined 9 "Constructors" 
+	type 24 segment 0 0 layout_undefined 9 "Destructors" 
+	type 25 segment 0 0 layout_undefined 9 "Java Class Registry" 
+	type 26 class 0 0 layout_undefined 5 "<frame_type>" 
+	type 37 primitive 8 8 layout_fixed 2 "P" 
+	type 38 primitive 16 16 layout_fixed 2 "x86_xmm" 
+	type 39 primitive 12 4 layout_fixed 2 "E" 
+	type 40 pointer 8 8 layout_fixed 2 4 
+	type 41 struct 24 8 layout_fixed 3 "builtin:va_list" 
+	type 46 primitive 4 4 layout_fixed 2 "F32" 
+	type 47 primitive 8 8 layout_fixed 2 "F64" 
+	type 50 primitive 1 1 layout_fixed 2 "Bu" 
+	type 49 primitive 4 4 layout_fixed 2 "Iu" 
+	type 48 method 0 1 layout_fixed 2 0 0 3 1 0 50 49 49 49 
+	type 52 struct 12 4 layout_fixed 3 "__anonymous_struct.0" 
+	type 56 array 336 4 layout_fixed 2 52 28 
+	type 58 primitive 4 4 layout_fixed 2 "Is" 
+	type 60 class 0 0 layout_undefined 5 "<frame_type>" 
+	type 73 primitive 2 2 layout_fixed 2 "Hs" 
+	unknown 20 
+	method 51 "test_atom" "test_atom" external [constant ] 48 21 volatility_non_volatile 0 
+	entity 57 "patterns" "patterns" external [] 56 21 volatility_non_volatile initializer IR_INITIALIZER_COMPOUND 28 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 10001 IR_INITIALIZER_TARVAL "Iu" 10001 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 80018001 IR_INITIALIZER_TARVAL "Iu" 80018001 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" FFFFFFFF IR_INITIALIZER_TARVAL "Iu" FFFFFFFF IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 80428666 IR_INITIALIZER_TARVAL "Iu" 8007800B IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 52E32E8 IR_INITIALIZER_TARVAL "Iu" 25AC30FB IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 33383541 IR_INITIALIZER_TARVAL "Iu" 4DDEA695 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" FA24DBF4 IR_INITIALIZER_TARVAL "Iu" 2FEBF20C IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" D3F7C22D IR_INITIALIZER_TARVAL "Iu" 749CF9FB IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 9E5FFD9B IR_INITIALIZER_TARVAL "Iu" AC017DF4 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" A6737487 IR_INITIALIZER_TARVAL "Iu" 31B0EA8F IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" FE57219F IR_INITIALIZER_TARVAL "Iu" 73907090 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" CD862C0F IR_INITIALIZER_TARVAL "Iu" 7F75BA21 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 6DC02DA1 IR_INITIALIZER_TARVAL "Iu" 6DFD68AC IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" BA76D265 IR_INITIALIZER_TARVAL "Iu" BC9286CD IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 301CD9FD IR_INITIALIZER_TARVAL "Iu" 195EDCEA IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 1382ACDA IR_INITIALIZER_TARVAL "Iu" 3C432A IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 98CE8009 IR_INITIALIZER_TARVAL "Iu" 6838FE72 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 531DA800 IR_INITIALIZER_TARVAL "Iu" 9AF1A229 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" A8D3A10E IR_INITIALIZER_TARVAL "Iu" 22FBA5 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" F86BD58B IR_INITIALIZER_TARVAL "Iu" 80B3C425 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 79D2F273 IR_INITIALIZER_TARVAL "Iu" BB873B07 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" D0FFD1CE IR_INITIALIZER_TARVAL "Iu" 777BA571 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" A8C2572D IR_INITIALIZER_TARVAL "Iu" 4B0E2842 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" FEA0DCF6 IR_INITIALIZER_TARVAL "Iu" B0C65D83 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 97D10D00 IR_INITIALIZER_TARVAL "Iu" B01571D6 IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" A93C028F IR_INITIALIZER_TARVAL "Iu" 4C86529F IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 367BE445 IR_INITIALIZER_TARVAL "Iu" AD1E1E2B IR_INITIALIZER_COMPOUND 3 IR_INITIALIZER_TARVAL "Bu" 0 IR_INITIALIZER_TARVAL "Iu" 1FF18EEF IR_INITIALIZER_TARVAL "Iu" 6C7901AA 
+	entity 59 "npatterns" "npatterns" external [] 58 21 volatility_non_volatile initializer IR_INITIALIZER_CONST 190 
+	compound_member 42 "gp_offset" "gp_offset" external [] 13 41 volatility_non_volatile 0 0 0 
+	compound_member 43 "xmm_offset" "xmm_offset" external [] 13 41 volatility_non_volatile 4 0 0 
+	compound_member 44 "stack_args_ptr" "stack_args_ptr" external [] 40 41 volatility_non_volatile 8 0 0 
+	compound_member 45 "reg_save_ptr" "reg_save_ptr" external [] 40 41 volatility_non_volatile 16 0 0 
+	compound_member 53 "control" "control" external [] 50 52 volatility_non_volatile 0 0 0 
+	compound_member 54 "input0" "input0" external [] 49 52 volatility_non_volatile 4 0 0 
+	compound_member 55 "input1" "input1" external [] 49 52 volatility_non_volatile 8 0 0 
+}
+
+irg 51 60 {
+	Anchor 61 [62 64 63 66 67 69 68 65 ] 
+	Block 62 [182 ] 
+	Block 64 [] 
+	End 63 [] 
+	Start 66 
+	Proj 67 66 "P" 1 
+	Proj 69 66 "M" 0 
+	Proj 68 66 "T" 2 
+	NoMem 65 
+	Block 160 [159 161 ] 
+	Block 100 [99 101 ] 
+	Phi 102 100 "Is" noloop [97 98 ] 
+	Conv 103 100 102 "Hs" 
+	Conv 167 160 103 "Is" 
+	Block 119 [118 120 ] 
+	Phi 121 119 "Is" noloop [116 117 ] 
+	Conv 122 119 121 "Hs" 
+	Conv 170 160 122 "Is" 
+	Add 171 160 167 170 
+	Block 139 [138 140 ] 
+	Phi 141 139 "Is" noloop [136 137 ] 
+	Conv 142 139 141 "Hs" 
+	Conv 173 160 142 "Is" 
+	Add 174 160 171 173 
+	Phi 162 160 "Is" noloop [157 158 ] 
+	Conv 163 160 162 "Hs" 
+	Conv 175 160 163 "Is" 
+	Add 176 160 174 175 
+	Conv 177 160 176 "Iu" 
+	Return 182 160 69 [177 ] 
+	Block 154 [152 ] 
+	Jmp 159 154 
+	Block 155 [153 ] 
+	Jmp 161 155 
+	Block 94 [92 ] 
+	Jmp 99 94 
+	Block 95 [93 ] 
+	Jmp 101 95 
+	Proj 71 68 "Iu" 1 
+	Conv 74 64 71 "Hs" 
+	Conv 96 94 74 "Is" 
+	Minus 97 94 96 
+	Conv 98 95 74 "Is" 
+	Block 113 [111 ] 
+	Jmp 118 113 
+	Block 114 [112 ] 
+	Jmp 120 114 
+	Const 77 "Iu" 10 
+	Shr 78 64 71 77 
+	Conv 79 64 78 "Hs" 
+	Conv 115 113 79 "Is" 
+	Minus 116 113 115 
+	Conv 117 114 79 "Is" 
+	Block 133 [131 ] 
+	Jmp 138 133 
+	Block 134 [132 ] 
+	Jmp 140 134 
+	Proj 72 68 "Iu" 2 
+	Conv 80 64 72 "Hs" 
+	Conv 135 133 80 "Is" 
+	Minus 136 133 135 
+	Conv 137 134 80 "Is" 
+	Shr 84 64 72 77 
+	Conv 85 64 84 "Hs" 
+	Conv 156 154 85 "Is" 
+	Minus 157 154 156 
+	Conv 158 155 85 "Is" 
+	Const 89 "Hs" 0 
+	Cmp 150 139 85 89 2 
+	Cond 151 139 150 COND_JMP_PRED_NONE 
+	Proj 152 151 "X" 1 
+	Proj 153 151 "X" 0 
+	Cmp 90 64 74 89 2 
+	Cond 91 64 90 COND_JMP_PRED_NONE 
+	Proj 92 91 "X" 1 
+	Proj 93 91 "X" 0 
+	Cmp 109 100 79 89 2 
+	Cond 110 100 109 COND_JMP_PRED_NONE 
+	Proj 111 110 "X" 1 
+	Proj 112 110 "X" 0 
+	Cmp 129 119 80 89 2 
+	Cond 130 119 129 COND_JMP_PRED_NONE 
+	Proj 131 130 "X" 1 
+	Proj 132 130 "X" 0 
+}
+
+constirg 30 {
+	Const 190 "Is" 1C 
+	Const 190 "Is" 1C 
+}
+
+program {
+	segment_type global 21 
+	segment_type thread_local 22 
+	segment_type constructors 23 
+	segment_type destructors 24 
+	segment_type jcr 25 
+}
+
