@@ -11,7 +11,7 @@ for(project in c("zlib", "libjpeg", "libpng", "libgif", "libtiff")) {
                   ((number_nodes - number_nodes_nc) / number_nodes),
                   mean(csv$pre), mean(csv$after), 
                   mean(csv$pre_nc), mean(csv$after_nc))
-  colnames(pd) <- c("Library", "Nodes", "Const Nodes", "Percent of Nodes", "mode usage(0)", "bitwidth usage(0)", "mode usage(1)", "bitwidth usage(1)")
+  colnames(pd) <- c("Library", "Nodes", "Const Nodes", "Ratio of Const-Nodes", "mode usage(0)", "bitwidth usage(0)", "mode usage(1)", "bitwidth usage(1)")
   data = rbind(data, pd)
 }
 write.csv(data, 'result.csv', quote = FALSE)
